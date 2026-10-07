@@ -1,0 +1,26 @@
+{
+  "caseId": "order-partially-shipped",
+  "recordedAt": "2026-10-07T12:44:38.179Z",
+  "models": [
+    "openai/gpt-oss-120b"
+  ],
+  "responses": [
+    {
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "fc_5d623e4d-1f02-42ea-b242-17a84d593da8",
+          "name": "getOrderStatus",
+          "args": {
+            "email": "liam.oconnor@example.com",
+            "orderId": "O-1027"
+          }
+        }
+      ]
+    },
+    {
+      "content": "**Order O‑1027 – Liam O’Connor**  \n- **Status:** Partially shipped  \n- **Items:**  \n  • *Trail Runner Y* (size 11, Slate) – **Delivered** on Oct 4 2026  \n  • *Trailhead Sport Sandal* (size 11, Olive) – **Processing** (back‑ordered)  \n- **Estimated delivery for the remaining item:** Oct 13 2026  \n- **Carrier / Tracking:** UPS – Tracking # 1Z999AA10000000127  \n\nLet me know if you’d like to:\n\n- Check return/exchange eligibility for the delivered shoes  \n- Update the shipping address for the pending sandal  \n- Anything else about this order  \n\nI’m here to help!",
+      "tool_calls": []
+    }
+  ]
+}

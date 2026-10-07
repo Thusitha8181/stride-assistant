@@ -1,0 +1,37 @@
+{
+  "caseId": "faq-free-shipping",
+  "recordedAt": "2026-10-07T12:42:05.563Z",
+  "models": [
+    "openai/gpt-oss-120b"
+  ],
+  "responses": [
+    {
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "fc_e5e196c8-91ca-43db-babc-a03618871ff6",
+          "name": "searchKnowledgeBase",
+          "args": {
+            "query": "free shipping policy Stride footwear"
+          }
+        }
+      ]
+    },
+    {
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "fc_bd47a773-9797-4c33-853a-78d5b3951e08",
+          "name": "searchKnowledgeBase",
+          "args": {
+            "query": "shipping policy free shipping Stride"
+          }
+        }
+      ]
+    },
+    {
+      "content": "Standard shipping is free on U.S. orders over $75. Orders under that amount incur a flat $6.95 fee; express and overnight options have additional charges. [[shipping#shipping-costs]]",
+      "tool_calls": []
+    }
+  ]
+}

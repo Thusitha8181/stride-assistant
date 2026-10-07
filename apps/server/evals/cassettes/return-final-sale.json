@@ -1,0 +1,42 @@
+{
+  "caseId": "return-final-sale",
+  "recordedAt": "2026-10-07T12:45:15.985Z",
+  "models": [
+    "openai/gpt-oss-120b",
+    "openai/gpt-oss-20b"
+  ],
+  "responses": [
+    {
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "fc_5a3e3f52-6e6f-4732-8658-12f6af88a64b",
+          "name": "getOrderStatus",
+          "args": {
+            "email": "maria.garcia@example.com",
+            "orderId": "O-1011"
+          }
+        }
+      ]
+    },
+    {
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "fc_dde7bc47-bf5b-447f-9bd0-9f46121740ed",
+          "name": "checkReturnEligibility",
+          "args": {
+            "email": "maria.garcia@example.com",
+            "itemCondition": "unworn",
+            "itemId": "O-1011-1",
+            "orderId": "O-1011"
+          }
+        }
+      ]
+    },
+    {
+      "content": "I’m sorry, but the Coastline Slides in your order are marked as **final‑sale items**, so they can’t be returned or exchanged. They are still covered by our 1‑year warranty against defects [[returns-policy#final-sale-items]].\n\nYou have two options:\n\n- **Warranty claim** – if the slides are defective, we can start a warranty repair or replacement.  \n- **Contact support** – for any other assistance, email support@stride.example.\n\nLet me know which option you’d like to pursue, and I’ll help you get it started.",
+      "tool_calls": []
+    }
+  ]
+}

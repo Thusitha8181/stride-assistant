@@ -5,7 +5,7 @@ import type { Clock } from "../clock";
 import type { ToolHandlers } from "../tools/handlers";
 import { toolRoundLimitMiddleware } from "./limits";
 import { systemPrompt } from "./prompt";
-import { modelResilienceMiddleware } from "./resilience";
+import { modelResilienceMiddleware, type ResilienceOptions } from "./resilience";
 import { createAgentTools } from "./tools";
 
 /** PRD §6: max 5 tool-calling iterations per turn, enforced by toolRoundLimitMiddleware. */
@@ -22,6 +22,8 @@ export type StrideAgentDeps = {
   checkpointer?: MemorySaver;
   /** Backup model for outages and rate limits (F1/F2). */
   fallbackModel?: BaseChatModel;
+  /** Tuning for retries/queueing (e.g. evals queue longer than interactive chat). */
+  resilience?: Omit<ResilienceOptions, "fallback" | "log">;
   log?: (msg: string, meta: Record<string, unknown>) => void;
   /** Extra middleware (guards) added in later milestones. */
   middleware?: AgentMiddleware[];
@@ -35,7 +37,7 @@ export function createStrideAgent(deps: StrideAgentDeps) {
     middleware: [
       dynamicSystemPromptMiddleware(() => systemPrompt(deps.clock.now())),
       toolRoundLimitMiddleware(MAX_TOOL_ROUNDS),
-      modelResilienceMiddleware({ fallback: deps.fallbackModel, log: deps.log }),
+      modelResilienceMiddleware({ ...deps.resilience, fallback: deps.fallbackModel, log: deps.log }),
       ...(deps.middleware ?? []),
     ],
   });

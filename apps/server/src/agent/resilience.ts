@@ -52,80 +52,62 @@ export type ResilienceOptions = {
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
+type Which = "primary" | "fallback";
+
 /**
- * F1/F2 resilience for model calls (PRD §5: honor retry-after, queue, then fall back). Per call:
+ * F1/F2 resilience for model calls (PRD §5: honor retry-after, queue, then fall back).
  *
- *   primary ── transient error ──┬─ short wait requested → wait, retry primary once
- *                                └─ otherwise → fallback; avoid the primary until its
- *                                   cooldown ends (no wasted calls on a rate-limited model)
- *   fallback ── transient error ──→ queue: wait for whichever model frees up first
- *                                   (≤ maxQueueMs), then try it once
- *
- * Non-transient errors (e.g. 401 bad key) are never retried. Anything left surfaces as
- * MODEL_UNAVAILABLE.
+ * Each model has a cooldown, set from the provider's retry-after hint (or a fixed
+ * outage cooldown) when it fails transiently. Every attempt goes to:
+ *   - the primary, if it is available within `maxWaitMs` (short waits are worth it), else
+ *   - whichever model frees up first (the fallback usually has its own quota).
+ * Attempts repeat until one succeeds or the next one would start after `maxQueueMs`.
+ * Cooldowns persist across calls and turns, so a rate-limited model isn't hammered.
+ * Non-transient errors (e.g. 401 bad key) are never retried; whatever is left surfaces
+ * as MODEL_UNAVAILABLE.
  */
 export function modelResilienceMiddleware(options: ResilienceOptions) {
   const maxWaitMs = options.maxWaitMs ?? 2000;
   const maxQueueMs = options.maxQueueMs ?? 15_000;
   const outageCooldownMs = options.outageCooldownMs ?? 30_000;
   const now = options.now ?? Date.now;
-  let primaryCooldownUntil = 0;
+  const availableAt: Record<Which, number> = { primary: 0, fallback: 0 };
+
+  const choose = (): Which => {
+    if (!options.fallback) return "primary";
+    const primaryWait = availableAt.primary - now();
+    if (primaryWait <= maxWaitMs) return "primary";
+    return availableAt.fallback <= availableAt.primary ? "fallback" : "primary";
+  };
 
   return createMiddleware({
     name: "ModelResilience",
     wrapModelCall: async (request, handler) => {
-      const { fallback } = options;
-      const primary = () => handler(request);
-      const secondary = () => handler({ ...request, model: fallback! });
-
-      /** Both models are rate-limited: wait for the first one to free up, then try it once. */
-      const queue = async (fallbackError: unknown) => {
-        const fallbackWait = retryAfterMs(fallbackError) ?? outageCooldownMs;
-        const primaryWait = Math.max(0, primaryCooldownUntil - now());
-        const waitMs = Math.min(fallbackWait, primaryWait);
-        if (waitMs > maxQueueMs) throw fallbackError;
-        const useFallback = fallbackWait <= primaryWait;
-        options.log?.("model queued", { waitMs, model: useFallback ? "fallback" : "primary" });
-        await sleep(waitMs);
-        return useFallback ? secondary() : primary();
-      };
-
-      const viaFallback = async () => {
-        try {
-          return await secondary();
-        } catch (err) {
-          if (!isTransient(err)) throw err;
-          return queue(err);
-        }
-      };
-
-      if (fallback && now() < primaryCooldownUntil) return viaFallback();
-
+      const call = (which: Which) => (which === "primary" ? handler(request) : handler({ ...request, model: options.fallback! }));
+      const deadline = now() + maxQueueMs;
       let lastError: unknown;
-      try {
-        return await primary();
-      } catch (err) {
-        if (!isTransient(err)) throw err;
-        lastError = err;
-      }
+      let lastFailed: Which | null = null;
 
-      const wait = retryAfterMs(lastError);
-      if (wait !== null && (wait <= maxWaitMs || (!fallback && wait <= maxQueueMs))) {
-        options.log?.("model retry", { waitMs: wait });
-        await sleep(wait);
+      for (;;) {
+        const which = choose();
+        const waitMs = Math.max(0, availableAt[which] - now());
+        if (lastError !== undefined && now() + waitMs > deadline) throw lastError;
+        if (waitMs > 0) {
+          options.log?.(which === "primary" && lastFailed === "primary" ? "model retry" : "model queued", { waitMs, model: which });
+          await sleep(waitMs);
+        } else if (which === "fallback" && lastFailed === "primary") {
+          options.log?.("model fallback", { status: statusOf(lastError) ?? null });
+        }
+
         try {
-          return await primary();
+          return await call(which);
         } catch (err) {
           if (!isTransient(err)) throw err;
           lastError = err;
+          lastFailed = which;
+          availableAt[which] = now() + (retryAfterMs(err) ?? outageCooldownMs);
         }
       }
-
-      if (!fallback) throw lastError;
-      const cooldown = retryAfterMs(lastError) ?? outageCooldownMs;
-      primaryCooldownUntil = now() + cooldown;
-      options.log?.("model fallback", { cooldownMs: cooldown, status: statusOf(lastError) ?? null });
-      return viaFallback();
     },
   });
 }

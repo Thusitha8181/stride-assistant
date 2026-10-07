@@ -1,0 +1,26 @@
+{
+  "caseId": "faq-student-discount",
+  "recordedAt": "2026-10-07T12:42:56.484Z",
+  "models": [
+    "openai/gpt-oss-120b",
+    "openai/gpt-oss-20b"
+  ],
+  "responses": [
+    {
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "fc_a741e263-f1da-4ce0-a94b-bf71a5964989",
+          "name": "searchKnowledgeBase",
+          "args": {
+            "query": "student discount Stride footwear"
+          }
+        }
+      ]
+    },
+    {
+      "content": "I’m not seeing a student discount listed in our help center. If you’d like to explore any other promotions or ask about a specific offer, feel free to reach out to our support team at support@stride.example.",
+      "tool_calls": []
+    }
+  ]
+}

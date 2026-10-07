@@ -1,0 +1,14 @@
+{
+  "caseId": "order-asks-for-email",
+  "recordedAt": "2026-10-07T12:44:41.671Z",
+  "models": [
+    "openai/gpt-oss-120b",
+    "openai/gpt-oss-20b"
+  ],
+  "responses": [
+    {
+      "content": "I’m happy to look that up for you. Could you please provide the email address you used when placing order O‑1042?",
+      "tool_calls": []
+    }
+  ]
+}

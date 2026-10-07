@@ -1,0 +1,26 @@
+{
+  "caseId": "faq-wide-fit",
+  "recordedAt": "2026-10-07T12:42:22.670Z",
+  "models": [
+    "openai/gpt-oss-120b",
+    "openai/gpt-oss-20b"
+  ],
+  "responses": [
+    {
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "fc_92e7f2bc-d49c-449a-be0d-47979873cb60",
+          "name": "searchKnowledgeBase",
+          "args": {
+            "query": "wide sizes availability"
+          }
+        }
+      ]
+    },
+    {
+      "content": "Yes! Many of our adult styles are available in a wide fit (2E for men, D for women). Look for “wide” in the width options on each product page. [[sizing-guide#wide-fit]]",
+      "tool_calls": []
+    }
+  ]
+}
