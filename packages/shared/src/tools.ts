@@ -12,9 +12,15 @@ const OrderId = z
   .string()
   .trim()
   .transform((s) => s.toUpperCase())
-  .pipe(z.string().regex(/^O-\d{4}$/, "Order IDs look like O-1234"));
+  .pipe(z.string().regex(/^O-\d{4}$/, "Order IDs look like O-1234"))
+  .describe("Order number, e.g. O-1042");
 
-const Email = z.string().trim().toLowerCase().pipe(z.email());
+const Email = z.string().trim().toLowerCase().pipe(z.email()).describe("Email address the order was placed with");
+const ItemId = z
+  .string()
+  .trim()
+  .min(1)
+  .describe('Item id from getOrderStatus, e.g. "O-1042-1". Look it up yourself; never ask the customer for it');
 
 export const ToolErrorCode = z.enum([
   "NOT_FOUND",
@@ -36,7 +42,7 @@ const toolError = <C extends ToolErrorCode>(code: C) =>
 // ---------------------------------------------------------------- searchKnowledgeBase
 
 export const SearchKnowledgeBaseInput = z.strictObject({
-  query: z.string().trim().min(1).max(300),
+  query: z.string().trim().min(1).max(300).describe("The customer's question, rephrased as a search query"),
 });
 export type SearchKnowledgeBaseInput = z.infer<typeof SearchKnowledgeBaseInput>;
 
@@ -59,10 +65,10 @@ export type SearchKnowledgeBaseOutput = z.infer<typeof SearchKnowledgeBaseOutput
 // ---------------------------------------------------------------- searchProducts
 
 export const SearchProductsInput = z.strictObject({
-  query: z.string().trim().min(1).max(300),
-  category: Category.optional(),
-  maxPrice: z.number().positive().optional(),
-  size: ShoeSize.optional(),
+  query: z.string().trim().min(1).max(300).describe('What the customer wants, e.g. "waterproof trail running shoe"'),
+  category: Category.optional().describe("Only set when the customer clearly asks for one category"),
+  maxPrice: z.number().positive().optional().describe("Maximum price in USD"),
+  size: ShoeSize.optional().describe("US shoe size; half sizes allowed, e.g. 10.5"),
 });
 export type SearchProductsInput = z.infer<typeof SearchProductsInput>;
 
@@ -84,10 +90,10 @@ export type SearchProductsOutput = z.infer<typeof SearchProductsOutput>;
 
 export const CheckStockInput = z.strictObject({
   /** Product id ("P-001") or name ("Trail Runner X"). */
-  product: z.string().trim().min(1).max(100),
-  size: ShoeSize,
-  width: Width.optional(),
-  color: z.string().trim().min(1).optional(),
+  product: z.string().trim().min(1).max(100).describe('Product id ("P-006") or exact product name ("Trail Runner X")'),
+  size: ShoeSize.describe("US shoe size; half sizes allowed, e.g. 10.5"),
+  width: Width.optional().describe("Defaults to standard"),
+  color: z.string().trim().min(1).optional().describe("Only if the customer named a color"),
 });
 export type CheckStockInput = z.infer<typeof CheckStockInput>;
 
@@ -99,21 +105,24 @@ export const VariantStock = z.strictObject({
 });
 export type VariantStock = z.infer<typeof VariantStock>;
 
-export const CheckStockOutput = z.union([
-  z.strictObject({
-    ok: z.literal(true),
-    product: ProductRef,
-    requested: z.strictObject({ size: ShoeSize, width: Width, color: z.string().nullable() }),
-    available: z.boolean(),
-    quantity: z.number().int(),
-    /** Filled when the requested variant is unavailable (F8). */
-    alternatives: z.strictObject({
-      nearbySizes: z.array(VariantStock),
-      otherWidths: z.array(VariantStock),
-      otherColors: z.array(VariantStock),
-      similarProducts: z.array(ProductRef),
-    }),
+export const StockResult = z.strictObject({
+  ok: z.literal(true),
+  product: ProductRef,
+  requested: z.strictObject({ size: ShoeSize, width: Width, color: z.string().nullable() }),
+  available: z.boolean(),
+  quantity: z.number().int(),
+  /** Filled when the requested variant is unavailable (F8). */
+  alternatives: z.strictObject({
+    nearbySizes: z.array(VariantStock),
+    otherWidths: z.array(VariantStock),
+    otherColors: z.array(VariantStock),
+    similarProducts: z.array(ProductRef),
   }),
+});
+export type StockResult = z.infer<typeof StockResult>;
+
+export const CheckStockOutput = z.union([
+  StockResult,
   z.strictObject({
     ok: z.literal(false),
     code: z.literal("NOT_FOUND"),
@@ -175,8 +184,8 @@ export type ReturnType = z.infer<typeof ReturnType>;
 export const CheckReturnEligibilityInput = z.strictObject({
   orderId: OrderId,
   email: Email,
-  itemId: z.string().trim().min(1),
-  itemCondition: ItemCondition.default("unworn"),
+  itemId: ItemId,
+  itemCondition: ItemCondition.default("unworn").describe("Ask the customer if unclear; defaults to unworn"),
 });
 export type CheckReturnEligibilityInput = z.input<typeof CheckReturnEligibilityInput>;
 
@@ -209,6 +218,9 @@ const ItemNotFound = z.strictObject({
   items: z.array(ItemRef),
 });
 
+export const EligibilityResult = z.union([Eligible, Ineligible]);
+export type EligibilityResult = z.infer<typeof EligibilityResult>;
+
 export const CheckReturnEligibilityOutput = z.union([
   Eligible,
   Ineligible,
@@ -223,11 +235,11 @@ export const CreateReturnInput = z
   .strictObject({
     orderId: OrderId,
     email: Email,
-    itemId: z.string().trim().min(1),
-    reason: z.string().trim().min(1).max(500),
-    type: ReturnType,
-    exchangeSize: ShoeSize.optional(),
-    itemCondition: ItemCondition.default("unworn"),
+    itemId: ItemId,
+    reason: z.string().trim().min(1).max(500).describe("The customer's reason for the return, in their words"),
+    type: ReturnType.describe("refund or exchange, as confirmed by the customer"),
+    exchangeSize: ShoeSize.optional().describe("Required for exchanges: the new US size"),
+    itemCondition: ItemCondition.default("unworn").describe("Ask the customer if unclear; defaults to unworn"),
   })
   .refine((v) => v.type !== "exchange" || v.exchangeSize !== undefined, {
     message: "exchangeSize is required for exchanges",
@@ -235,16 +247,19 @@ export const CreateReturnInput = z
   });
 export type CreateReturnInput = z.input<typeof CreateReturnInput>;
 
+export const ReturnCreated = z.strictObject({
+  ok: z.literal(true),
+  rma: z.string().regex(/^RMA-\d{6}$/),
+  item: ItemRef,
+  type: ReturnType,
+  refundAmount: z.number().nullable(),
+  exchangeSize: ShoeSize.nullable(),
+  nextSteps: z.array(z.string()),
+});
+export type ReturnCreated = z.infer<typeof ReturnCreated>;
+
 export const CreateReturnOutput = z.union([
-  z.strictObject({
-    ok: z.literal(true),
-    rma: z.string().regex(/^RMA-\d{6}$/),
-    item: ItemRef,
-    type: ReturnType,
-    refundAmount: z.number().nullable(),
-    exchangeSize: ShoeSize.nullable(),
-    nextSteps: z.array(z.string()),
-  }),
+  ReturnCreated,
   z.strictObject({
     ok: z.literal(false),
     code: z.literal("NOT_ELIGIBLE"),

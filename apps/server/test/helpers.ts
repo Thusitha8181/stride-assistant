@@ -1,3 +1,5 @@
+import type { BaseChatModel } from "@langchain/core/language_models/chat_models";
+import { createStrideAgent } from "../src/agent/agent";
 import { fixedClock } from "../src/clock";
 import { loadCompanyDocs, loadOrders, loadProducts } from "../src/data/load";
 import type { OrderRecord } from "../src/data/orderRecord";
@@ -99,3 +101,27 @@ export function findPii(value: unknown): string[] {
     .filter((re) => re.test(text))
     .map((re) => re.source);
 }
+
+// ---------------------------------------------------------------- agent helpers (Milestone 2)
+
+export function agentSetup(model: BaseChatModel) {
+  const base = setup();
+  const agent = createStrideAgent({ model, handlers: base.tools, clock });
+  const sources = new Map(loadCompanyDocs().flatMap(chunkMarkdown).map((c) => [c.id, c.title]));
+  return { ...base, agent, sources };
+}
+
+/** Collects every event of one chat turn. */
+export async function collect<T>(events: AsyncIterable<T>): Promise<T[]> {
+  const out: T[] = [];
+  for await (const e of events) out.push(e);
+  return out;
+}
+
+/** Parses a text/event-stream body into its JSON `data:` payloads. */
+export const parseSse = (body: string): unknown[] =>
+  body
+    .split("\n\n")
+    .map((frame) => frame.trim())
+    .filter((frame) => frame.startsWith("data: "))
+    .map((frame) => JSON.parse(frame.slice("data: ".length)));

@@ -24,7 +24,7 @@ export default defineConfig({
       provider: "v8",
       include: ["src/**/*.ts"],
       // Thin adapters covered by the integration suite.
-      exclude: ["src/**/*.test.ts", "src/rag/qdrant.ts", "src/services.ts", "src/env.ts"],
+      exclude: ["src/**/*.test.ts", "src/rag/qdrant.ts", "src/services.ts", "src/env.ts", "src/index.ts"],
       thresholds: { lines: 80 },
     },
   },
