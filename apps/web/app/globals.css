@@ -9,3 +9,22 @@
 body {
   @apply bg-stone-50 text-stone-900 antialiased;
 }
+
+/* Assistant message typography (markdown). */
+.prose-chat {
+  @apply space-y-2 leading-relaxed;
+}
+.prose-chat ul {
+  @apply list-disc space-y-1 pl-5;
+}
+.prose-chat ol {
+  @apply list-decimal space-y-1 pl-5;
+}
+.prose-chat strong {
+  @apply font-semibold text-stone-900;
+}
+.prose-chat h1,
+.prose-chat h2,
+.prose-chat h3 {
+  @apply font-semibold text-stone-900;
+}

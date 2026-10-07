@@ -24,7 +24,8 @@
     "chat": "npm run chat --workspace=@stride/server",
     "eval": "npm run eval --workspace=@stride/server --",
     "eval:mock": "npm run eval:mock --workspace=@stride/server --",
-    "eval:record": "npm run eval:record --workspace=@stride/server --"
+    "eval:record": "npm run eval:record --workspace=@stride/server --",
+    "test:e2e": "npm run test:e2e --workspace=@stride/web"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

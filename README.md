@@ -14,7 +14,7 @@ The agent is built to answer from real data only, to fail gracefully across 16 d
 
 ```
  Next.js web (:3000) ── /api ──▶  Express API (:4000)  ── POST /api/chat streams SSE events
-   (chat UI: Milestone 5)         │
+   chat UI (streaming, cards)     │
                                   ├─ LangChain agent (createAgent + per-session memory)
                                   │    ├─ middleware: system prompt · 5-tool-round limit · retry / fallback / queue
                                   │    └─ 6 tools ──▶ catalog · orders (PII stays inside) · returns
@@ -132,9 +132,29 @@ Set `LANGSMITH_TRACING=true` and `LANGSMITH_API_KEY` in `.env`. The `run …` id
 
 > ⚠️ Until the Milestone 4 redaction layer lands, traces record exactly what users type. Use fake data only.
 
-### Web app
+### Web chat UI
 
-`npm run dev --workspace=@stride/web` serves http://localhost:3000. It's a placeholder shell; the chat UI is Milestone 5. API calls to `/api/*` are proxied to the Express server (set `API_BASE_URL` to change the target).
+```bash
+npm run dev                            # terminal 1: API on :4000
+npm run dev --workspace=@stride/web    # terminal 2: web on http://localhost:3000
+```
+
+Open **http://localhost:3000**. The UI includes:
+- **Streaming answers** with a typing indicator, and progress like "Checking stock…" while tools run.
+- **Cards** built from tool results:
+  - products (in stock or not in your size)
+  - stock, with one-tap alternatives when a size is sold out
+  - an order with a delivery-progress timeline
+  - return eligibility
+  - return created (RMA number and next steps)
+- **Citation pills** for help-center sources. Citations the server didn't confirm are never shown.
+- **Quick replies:** starter chips, plus follow-up chips based on what was just shown.
+- **Friendly errors** with *Try again* when retrying makes sense, and a *Stop* button while an answer streams.
+- **Conversation memory:** history survives a reload; *New chat* starts a fresh session.
+- **Inspector panel:** each turn's tool calls, failure codes, timings and LangSmith run id.
+- **Works on mobile;** components are checked with axe for accessibility.
+
+`/api/*` on :3000 is proxied to the Express API (set `API_BASE_URL` to point elsewhere), so the browser makes same-origin requests.
 
 ## 4. Configuration
 
@@ -164,12 +184,18 @@ npm run lint
 npm run typecheck
 npm run test:unit          # shared + server (≥ 80% line-coverage gate) + web
 npm run test:integration   # real Qdrant via Testcontainers (Docker); + live Groq smoke tests if GROQ_API_KEY is set
+npm run test:e2e           # Playwright, desktop + mobile; chat API mocked (uses your Chrome locally)
 npm run build
 ```
 
 - **Failure-code tags:** tests are tagged with the failure codes they cover (`@F3`, `@F6`, `@F16`, …), matching the PRD's failure table.
 - **Pre-commit:** a husky hook runs lint-staged, typecheck and the unit tests.
-- **CI:** [.github/workflows/ci.yml](.github/workflows/ci.yml) runs lint, typecheck, unit tests, build, integration tests and the replayed evals on `main` and on pull requests.
+- **Web tests:**
+  - unit tests for the stream parser, message state, citations and suggestions
+  - hook tests: streaming, session reuse, stop, retry, reload persistence, blocked storage
+  - component tests with axe accessibility checks
+  - Playwright end-to-end tests in desktop and mobile viewports
+- **CI:** [.github/workflows/ci.yml](.github/workflows/ci.yml) runs lint, typecheck, unit tests, build, integration tests, the replayed evals and the E2E tests on `main` and on pull requests.
 
 ## 6. Agent evals
 
@@ -230,6 +256,8 @@ npm run eval:record -- --missing   # record only cases that have no cassette yet
 | Health shows `✖ qdrant: unreachable` | `docker compose up -d` |
 | Health shows `missing collections` | `npm run ingest` |
 | `EADDRINUSE :4000` | Another API is running: `lsof -i :4000`, or set `PORT`. |
+| "Another next dev server is already running" | Next 16 allows one dev server per app. Reuse it at http://localhost:3000 (the E2E tests do), or stop it. |
+| `npx playwright install` times out | Locally the E2E tests use your installed Google Chrome (`channel: "chrome"`), so the download isn't needed. |
 | Embedding model download fails | Check network access to huggingface.co, or use `EMBEDDINGS_PROVIDER=hash`. |
 | `npm run eval:mock` says "no cassette" | `npm run eval:record` (needs `GROQ_API_KEY`). |
 
@@ -245,7 +273,7 @@ apps/server/
   src/tools/      Tool implementations (validated input, typed results)
   evals/          Eval harness: cases/*.yaml, evaluators, record/replay, reports
   scripts/        ingest, chat CLI, tool playground (npm run play), data generator
-apps/web/         Next.js app (chat UI: Milestone 5)
+apps/web/         Next.js chat UI: components/ (chat, cards), lib/ (SSE client, useChat, citations), e2e/
 packages/shared/  zod contracts shared by server, web and the model
 data/             Fake catalog, orders and help-center docs
 docs/PRD.md       Product requirements
@@ -275,5 +303,5 @@ Other useful commands:
 | 2 | LangChain agent on Groq, streaming chat API, resilience | ✅ |
 | 3 | Eval harness: datasets, evaluators, record/replay, gates | ✅ (LangSmith dataset sync pending a LangSmith key) |
 | 4 | Input/output guards, redaction, remaining failure modes (F1–F16) | ⏳ |
-| 5 | Next.js chat UI (cards, chips, citations, demo panel) | ⏳ |
+| 5 | Next.js chat UI: streaming, cards, chips, citations, inspector, E2E tests | ✅ |
 | 6 | LLM-as-judge, live experiments, model comparison, demo | ⏳ |
