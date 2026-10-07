@@ -1,6 +1,6 @@
 {
   "caseId": "order-status-shipped",
-  "recordedAt": "2026-10-07T12:44:27.285Z",
+  "recordedAt": "2026-10-07T13:08:40.311Z",
   "models": [
     "openai/gpt-oss-120b",
     "openai/gpt-oss-20b"
@@ -10,7 +10,7 @@
       "content": "",
       "tool_calls": [
         {
-          "id": "fc_e8e88a66-0632-4b93-a61d-ee076c24cb3c",
+          "id": "fc_ba957600-83b4-491d-b2fd-a731470ad907",
           "name": "getOrderStatus",
           "args": {
             "email": "jane@example.com",
@@ -20,7 +20,7 @@
       ]
     },
     {
-      "content": "Your order **O‑1042** was shipped on 2026‑10‑06 via UPS.  \n- **Tracking number:** 1Z999AA10000000142  \n- **Estimated delivery:** 2026‑10‑09 at 12:00 PM to Austin, TX  \n\nYou can view the full tracking history on the UPS website or on your Stride account. If you have any questions or need to update the delivery address, let me know!",
+      "content": "Your order **O‑1042** was shipped on 2026‑10‑06 via UPS.  \n• **Tracking number:** 1Z999AA10000000142  \n• **Estimated delivery:** 2026‑10‑09 at 12:00 PM (Austin, TX)\n\nYou can view the full shipment details and status on your Stride account page. If you need anything else—like a return, exchange, or help with a different order—just let me know!",
       "tool_calls": []
     }
   ]

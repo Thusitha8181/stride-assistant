@@ -29,6 +29,24 @@ const textOf = (content: BaseMessage["content"]) =>
   typeof content === "string" ? content : content.map((b) => ("text" in b ? String(b.text) : "")).join("");
 
 /**
+ * Token usage lives in different places depending on the provider and on streaming:
+ * `usage_metadata` (LangChain standard), Groq's streamed `response_metadata.usage`,
+ * or `llmOutput.tokenUsage` (non-streaming).
+ */
+export function tokensUsed(
+  message: { usage_metadata?: { total_tokens?: number }; response_metadata?: { usage?: { prompt_tokens?: number; completion_tokens?: number } } },
+  output?: { llmOutput?: { tokenUsage?: { totalTokens?: number } } },
+): number {
+  const streamed = message.response_metadata?.usage;
+  return (
+    message.usage_metadata?.total_tokens ??
+    (streamed?.prompt_tokens !== undefined ? streamed.prompt_tokens + (streamed.completion_tokens ?? 0) : undefined) ??
+    output?.llmOutput?.tokenUsage?.totalTokens ??
+    0
+  );
+}
+
+/**
  * Callback handler that records what happened inside a turn: every model call (input,
  * output, model name, tokens) and every tool call (args, output). Evaluators score this
  * trace; the recorded model outputs become replay cassettes.
@@ -69,12 +87,13 @@ export class TraceRecorder extends BaseCallbackHandler {
     const message = generation.message as BaseMessage & {
       tool_calls?: RecordedResponse["tool_calls"];
       usage_metadata?: { total_tokens?: number };
+      response_metadata?: { usage?: { prompt_tokens?: number; completion_tokens?: number } };
     };
     call.output = {
       content: textOf(message.content),
       tool_calls: (message.tool_calls ?? []).map(({ id, name, args }) => ({ id, name, args })),
     };
-    call.tokens = message.usage_metadata?.total_tokens ?? 0;
+    call.tokens = tokensUsed(message, output);
   }
 
   override handleToolStart(

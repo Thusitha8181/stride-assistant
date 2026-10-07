@@ -1,16 +1,15 @@
 {
   "caseId": "faq-international-shipping",
-  "recordedAt": "2026-10-07T12:42:08.877Z",
+  "recordedAt": "2026-10-07T13:05:51.764Z",
   "models": [
-    "openai/gpt-oss-120b",
-    "openai/gpt-oss-20b"
+    "openai/gpt-oss-120b"
   ],
   "responses": [
     {
       "content": "",
       "tool_calls": [
         {
-          "id": "fc_47928c70-b0a5-45dc-ac91-d9fda5ae04d4",
+          "id": "fc_66846073-bc9d-4575-be98-33997c6ce1be",
           "name": "searchKnowledgeBase",
           "args": {
             "query": "shipping to Canada cost"
@@ -19,7 +18,7 @@
       ]
     },
     {
-      "content": "Yes, we ship to Canada. International shipping to Canada is a flat **$14.95** and includes customs duties and taxes [[shipping#international-shipping]].",
+      "content": "Yes – we ship to Canada.  \n- **Cost:** flat $14.95 per order (duties are already included).  \n- **Delivery time:** 7‑14 business days.  \n\nIf you need more details or want to place an order, just let me know!",
       "tool_calls": []
     }
   ]

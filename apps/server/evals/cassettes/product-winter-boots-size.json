@@ -1,6 +1,6 @@
 {
   "caseId": "product-winter-boots-size",
-  "recordedAt": "2026-10-07T12:43:47.921Z",
+  "recordedAt": "2026-10-07T13:07:40.893Z",
   "models": [
     "openai/gpt-oss-120b",
     "openai/gpt-oss-20b"
@@ -10,18 +10,18 @@
       "content": "",
       "tool_calls": [
         {
-          "id": "fc_3e8c5953-ffba-4454-b21c-89ba4045ed29",
+          "id": "fc_39220c4e-1ae0-49a4-a8b2-784ef1266089",
           "name": "searchProducts",
           "args": {
             "category": "boots",
-            "query": "warm snow boots",
+            "query": "warm boots for snow",
             "size": 9
           }
         }
       ]
     },
     {
-      "content": "Here are a few warm‑snow boots in size 9 that are currently in stock:\n\n| Product | Price | Key features | Colors |\n|---------|-------|--------------|--------|\n| **Summit Winter Boot** | $189 | Insulated, waterproof, rated to –25 °C, slip‑resistant ice grip | Black, Tan |\n| **Workline Steel Toe** | $165 | Waterproof leather, steel‑toe, slip‑ and oil‑resistant outsole | Wheat, Black |\n| **Highland Chelsea Boot** | $175 | Full‑grain leather, elastic gussets, stacked heel | Brown, Black |\n\nAll three are available in size 9 right now.  \nWhich style or color would you like to order? If you need a different size or have any other preferences, just let me know.",
+      "content": "Here are a few warm boot options that fit a US 9:\n\n| Product | Key features | Price | Colors | In‑stock size 9 |\n|---------|--------------|-------|--------|-----------------|\n| **Summit Winter Boot** | Insulated, waterproof, ice‑grip outsole | $189 | Black, Tan | ✔️ |\n| **Workline Steel Toe** | Steel‑toe, slip‑/oil‑resistant, waterproof leather | $165 | Wheat, Black | ✔️ |\n| **Highland Chelsea Boot** | Full‑grain leather, elastic gussets | $175 | Brown, Black | ✔️ |\n\nAll three are currently in stock for size 9.  \nWhich style and color would you like to order? If you need a different size or have any other preferences, just let me know.",
       "tool_calls": []
     }
   ]

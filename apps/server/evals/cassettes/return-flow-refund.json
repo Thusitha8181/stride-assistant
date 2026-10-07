@@ -1,0 +1,63 @@
+{
+  "caseId": "return-flow-refund",
+  "recordedAt": "2026-10-07T13:13:01.212Z",
+  "models": [
+    "openai/gpt-oss-120b",
+    "openai/gpt-oss-20b"
+  ],
+  "responses": [
+    {
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "fc_2695f31c-3cbc-4c67-a91c-3253ab694e71",
+          "name": "getOrderStatus",
+          "args": {
+            "email": "jane@example.com",
+            "orderId": "O-1046"
+          }
+        }
+      ]
+    },
+    {
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "fc_1d8f0f9d-d5d0-49cc-a0f5-9e350834228b",
+          "name": "checkReturnEligibility",
+          "args": {
+            "email": "jane@example.com",
+            "itemCondition": "unworn",
+            "itemId": "O-1046-1",
+            "orderId": "O-1046"
+          }
+        }
+      ]
+    },
+    {
+      "content": "Your Everyday Knit Sneaker (O‑1046‑1) is eligible for a return.  \nWould you like a **refund** or an **exchange** (and if so, what size)?  \nAlso, could you share the reason for the return? Once I have that, I’ll start the return process.",
+      "tool_calls": []
+    },
+    {
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "fc_7190a8db-53d1-41ed-9480-457da6898b2a",
+          "name": "createReturn",
+          "args": {
+            "email": "jane@example.com",
+            "itemCondition": "unworn",
+            "itemId": "O-1046-1",
+            "orderId": "O-1046",
+            "reason": "They're too small",
+            "type": "refund"
+          }
+        }
+      ]
+    },
+    {
+      "content": "✅ Your return has been set up.  \n**RMA number:** RMA‑100001  \n**Refund amount:** $79  \n\n**Next steps**\n\n- A prepaid return label has been emailed to the address on the order.  \n- Print the label, write “RMA‑100001” on the outside of the package, and drop it off at any UPS location.  \n- Once we receive the sneakers, the refund will be issued to your original payment method within 5–7 business days.  \n\nLet me know if you need anything else!",
+      "tool_calls": []
+    }
+  ]
+}

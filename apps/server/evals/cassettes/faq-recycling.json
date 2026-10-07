@@ -1,6 +1,6 @@
 {
   "caseId": "faq-recycling",
-  "recordedAt": "2026-10-07T12:43:29.459Z",
+  "recordedAt": "2026-10-07T13:06:53.815Z",
   "models": [
     "openai/gpt-oss-120b",
     "openai/gpt-oss-20b"
@@ -10,16 +10,16 @@
       "content": "",
       "tool_calls": [
         {
-          "id": "fc_3c171596-d985-43fd-bdc7-4661131e9a46",
+          "id": "fc_60371151-b7ee-4e63-b676-baffa8ea7242",
           "name": "searchKnowledgeBase",
           "args": {
-            "query": "Stride shoe recycling program worn-out shoes"
+            "query": "recycle old shoes"
           }
         }
       ]
     },
     {
-      "content": "Absolutely! Stride has a **Take‑back program** for worn‑out shoes. Just send us the pair with the free label we’ll provide, and we’ll recycle them into playground surfaces. For each pair you’ll receive a $10 voucher toward your next purchase [[sustainability#take-back-program]]. Let me know if you’d like the label sent to you!",
+      "content": "Yes! Stride offers a free **take‑back program** for any worn‑out Stride shoes. Just request a take‑back label, ship the shoes to us, and we’ll recycle them into playground surfaces. You’ll also receive a **$10 voucher** for each pair you return [[sustainability#take-back-program]].\n\n**How to start:**\n- Request the free label (via your account or by contacting support).  \n- Pack the shoes in a box, attach the label, and drop it off at any carrier.  \n- Once we receive them, we’ll process the recycling and send you the voucher.  \n\nIf you need the label or have any other questions, let me know!",
       "tool_calls": []
     }
   ]

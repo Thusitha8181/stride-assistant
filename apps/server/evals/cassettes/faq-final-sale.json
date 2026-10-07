@@ -1,6 +1,6 @@
 {
   "caseId": "faq-final-sale",
-  "recordedAt": "2026-10-07T12:42:12.486Z",
+  "recordedAt": "2026-10-07T13:05:56.042Z",
   "models": [
     "openai/gpt-oss-120b",
     "openai/gpt-oss-20b"
@@ -10,16 +10,16 @@
       "content": "",
       "tool_calls": [
         {
-          "id": "fc_4821ee45-d46f-4241-8946-7b3b8470d5dc",
+          "id": "fc_e700cd03-c94c-464d-b919-506d746cf0d1",
           "name": "searchKnowledgeBase",
           "args": {
-            "query": "return clearance items policy"
+            "query": "return clearance item"
           }
         }
       ]
     },
     {
-      "content": "Clearance items are considered final‑sale. They can’t be returned or exchanged [[returns-policy#final-sale-items]]. However, they’re still covered by our 1‑year warranty against manufacturing defects. If you suspect a defect, let us know and we’ll help you with a warranty claim.",
+      "content": "Clearance items are marked as final sale and **cannot be returned or exchanged** [[returns-policy#final-sale-items]]. They are still covered by our 1‑year warranty against manufacturing defects. If you think the shoe is defective, let us know and we can help with a warranty claim.",
       "tool_calls": []
     }
   ]

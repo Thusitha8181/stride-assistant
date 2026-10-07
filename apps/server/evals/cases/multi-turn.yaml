@@ -16,6 +16,7 @@ cases:
           mustContain: ["RMA-\\d{6}"]
 
   - id: exchange-flow
+    pendingRecording: Groq free-tier daily token quota exhausted on 2026-10-07; record with npm run eval:record -- --missing
     turns:
       - user: I'd like to exchange my Swift 3 from O-1001 for a bigger size. My email is alex.morgan@example.com
         expect:
@@ -29,6 +30,7 @@ cases:
           mustContain: ["RMA-\\d{6}"]
 
   - id: email-in-second-turn
+    pendingRecording: Groq free-tier daily token quota exhausted on 2026-10-07; record with npm run eval:record -- --missing
     turns:
       - user: Where is my order O-1042?
         expect:
@@ -41,17 +43,19 @@ cases:
           mustContain: ["shipped"]
 
   - id: remembers-shoe-size
+    pendingRecording: Groq free-tier daily token quota exhausted on 2026-10-07; record with npm run eval:record -- --missing
     turns:
       - user: I'm looking for running shoes. I wear a size 10.5.
         expect:
           toolsCalled: [searchProducts]
       - user: Anything under $100?
+        # Searching again or filtering turn 1's results are both fine; the answer must respect both constraints.
         expect:
-          toolsCalled: [searchProducts]
-          toolArgs: { searchProducts: { size: 10.5, maxPrice: 100 } }
           mustContain: ["Daily Jog"]
+          mustNotContain: ["Stability GT", "Swift 3", "Cloudpace", "Tempo Pro"]
 
   - id: stock-follow-up
+    pendingRecording: Groq free-tier daily token quota exhausted on 2026-10-07; record with npm run eval:record -- --missing
     turns:
       - user: Do you have the Trail Runner X in 10 wide?
         expect:

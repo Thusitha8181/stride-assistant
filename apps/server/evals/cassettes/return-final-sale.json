@@ -1,6 +1,6 @@
 {
   "caseId": "return-final-sale",
-  "recordedAt": "2026-10-07T12:45:15.985Z",
+  "recordedAt": "2026-10-07T13:11:25.504Z",
   "models": [
     "openai/gpt-oss-120b",
     "openai/gpt-oss-20b"
@@ -10,7 +10,7 @@
       "content": "",
       "tool_calls": [
         {
-          "id": "fc_5a3e3f52-6e6f-4732-8658-12f6af88a64b",
+          "id": "fc_1c904f1e-a73e-43a7-9bea-2e01d3e5f983",
           "name": "getOrderStatus",
           "args": {
             "email": "maria.garcia@example.com",
@@ -23,7 +23,7 @@
       "content": "",
       "tool_calls": [
         {
-          "id": "fc_dde7bc47-bf5b-447f-9bd0-9f46121740ed",
+          "id": "fc_ebccb9d8-2368-4e05-ad1e-1a9e0626cc99",
           "name": "checkReturnEligibility",
           "args": {
             "email": "maria.garcia@example.com",
@@ -35,7 +35,7 @@
       ]
     },
     {
-      "content": "I’m sorry, but the Coastline Slides in your order are marked as **final‑sale items**, so they can’t be returned or exchanged. They are still covered by our 1‑year warranty against defects [[returns-policy#final-sale-items]].\n\nYou have two options:\n\n- **Warranty claim** – if the slides are defective, we can start a warranty repair or replacement.  \n- **Contact support** – for any other assistance, email support@stride.example.\n\nLet me know which option you’d like to pursue, and I’ll help you get it started.",
+      "content": "I’m sorry, but the Coastline Slide (item O‑1011‑1) was sold as a final‑sale item, so it can’t be returned or exchanged [[returns-policy#final-sale-items]].  \nIt is still covered by our 1‑year warranty against defects, so if you notice any issues you can file a warranty claim.  \nIf you’d like to proceed with a warranty claim or need help with anything else, just let me know or contact support@stride.example.",
       "tool_calls": []
     }
   ]

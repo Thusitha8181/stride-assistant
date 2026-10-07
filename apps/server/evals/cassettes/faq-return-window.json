@@ -1,6 +1,6 @@
 {
   "caseId": "faq-return-window",
-  "recordedAt": "2026-10-07T12:42:01.975Z",
+  "recordedAt": "2026-10-07T13:05:37.760Z",
   "models": [
     "openai/gpt-oss-120b"
   ],
@@ -9,16 +9,16 @@
       "content": "",
       "tool_calls": [
         {
-          "id": "fc_02d5c415-2efd-46ae-b7a6-31c732d1811c",
+          "id": "fc_da4abb68-26be-4fd1-9593-37e4b65c9a96",
           "name": "searchKnowledgeBase",
           "args": {
-            "query": "return window days"
+            "query": "how many days to return shoes"
           }
         }
       ]
     },
     {
-      "content": "You can return or exchange items within **30 days of delivery**. The clock starts on the day each item arrives, not when you placed the order. [[returns-policy#return-window]]",
+      "content": "You have 30 days from the day your shoes are delivered to return or exchange them [[returns-policy#return-window]].",
       "tool_calls": []
     }
   ]

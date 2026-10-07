@@ -1,0 +1,41 @@
+{
+  "caseId": "return-eligible-needs-confirmation",
+  "recordedAt": "2026-10-07T13:10:13.246Z",
+  "models": [
+    "openai/gpt-oss-120b",
+    "openai/gpt-oss-20b"
+  ],
+  "responses": [
+    {
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "fc_b97a4204-c234-4156-b5dd-f84c976e03fe",
+          "name": "getOrderStatus",
+          "args": {
+            "email": "jane@example.com",
+            "orderId": "O-1046"
+          }
+        }
+      ]
+    },
+    {
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "fc_de6a1736-e7f8-4a33-b463-6057ba759c14",
+          "name": "checkReturnEligibility",
+          "args": {
+            "email": "jane@example.com",
+            "itemId": "O-1046-1",
+            "orderId": "O-1046"
+          }
+        }
+      ]
+    },
+    {
+      "content": "Your Everyday Knit Sneaker (O‑1046‑1) is eligible for a return.  \nWould you like a **refund** or an **exchange**? If you choose an exchange, please let me know the new size you’d like. Also, could you share the reason for the return?",
+      "tool_calls": []
+    }
+  ]
+}

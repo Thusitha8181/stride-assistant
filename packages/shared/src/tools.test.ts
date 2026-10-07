@@ -1,5 +1,7 @@
 import { describe, expect, it } from "vitest";
+import { z } from "zod";
 import {
+  CheckReturnEligibilityInput,
   CheckStockInput,
   CreateReturnInput,
   GetOrderStatusInput,
@@ -25,6 +27,18 @@ describe("tool input validation @F3", () => {
     expect(CheckStockInput.safeParse({ product: "P-001", size: 10.3 }).success).toBe(false);
     expect(CheckStockInput.safeParse({ product: "P-001", size: 40 }).success).toBe(false);
     expect(CheckStockInput.safeParse({ product: "P-001", size: 10.5 }).success).toBe(true);
+  });
+
+  it("strips zero-width characters and Unicode hyphens models put in identifiers", () => {
+    expect(GetOrderStatusInput.parse({ orderId: "O\u20111042", email: "pri\u200bya@example.com" })).toEqual({
+      orderId: "O-1042",
+      email: "priya@example.com",
+    });
+  });
+
+  it("does not mark defaulted/optional fields as required for the model (Groq rejects such calls)", () => {
+    const schema = z.toJSONSchema(CheckReturnEligibilityInput, { io: "input" }) as { required?: string[] };
+    expect(schema.required).toEqual(["orderId", "email", "itemId"]);
   });
 
   it("requires an exchange size for exchanges", () => {

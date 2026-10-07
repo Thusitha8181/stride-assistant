@@ -1,0 +1,42 @@
+{
+  "caseId": "product-budget-running",
+  "recordedAt": "2026-10-07T13:07:32.153Z",
+  "models": [
+    "openai/gpt-oss-120b",
+    "openai/gpt-oss-20b"
+  ],
+  "responses": [
+    {
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "fc_6044c3e3-320b-4a9a-922a-fae49213a937",
+          "name": "searchProducts",
+          "args": {
+            "category": "running",
+            "maxPrice": 90,
+            "query": "running shoes"
+          }
+        }
+      ]
+    },
+    {
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "fc_d32976cb-5c5c-4586-b24d-efb70ffec796",
+          "name": "searchProducts",
+          "args": {
+            "category": "running",
+            "maxPrice": 90,
+            "query": "budget running shoes"
+          }
+        }
+      ]
+    },
+    {
+      "content": "Here’s a running shoe that fits your budget:\n\n**Daily Jog** – $85  \n*Category:* Running  \n*Description:* Affordable, durable shoe great for beginners, gym sessions and casual jogs.  \n\n- **Available colors:** Navy, Black, Red  \n- **US sizes in stock:** 6 – 13 (including half‑sizes)  \n\nWould you like to check stock for a specific size or color, or see similar options?",
+      "tool_calls": []
+    }
+  ]
+}

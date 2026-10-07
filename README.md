@@ -184,6 +184,7 @@ npm run eval:mock      # replay recorded conversations: deterministic, offline, 
 npm run eval           # live against Groq; paces itself under free-tier rate limits (takes minutes)
 npm run eval:record    # live, and re-record the cassettes that eval:mock replays
 npm run eval -- --dataset happy-path --case order- --repeats 3 --model openai/gpt-oss-20b
+npm run eval:record -- --missing   # record only cases that have no cassette yet
 ```
 
 - **Datasets** live in [apps/server/evals/cases/](apps/server/evals/cases):
@@ -211,6 +212,11 @@ npm run eval -- --dataset happy-path --case order- --repeats 3 --model openai/gp
   - privacy violations = 0
 
   The runner exits non-zero if any gate fails, or if any case regresses against [evals/baseline.json](apps/server/evals/baseline.json).
+- **Current results** (`gpt-oss-120b`, recorded 2026-10-07):
+  - 27 of 27 recorded conversations pass every gate.
+  - Retrieval hit@3: 18 of 18.
+  - Hallucination 0%, privacy violations 0.
+  - 4 multi-turn cases are marked `pendingRecording`: Groq's free-tier daily quota ran out while they were recording. Replays skip them visibly. Record them with `npm run eval:record -- --missing`, then remove the flag; a test enforces this.
 - **Reports:** each run writes Markdown and JSON reports to `apps/server/evals/reports/`. Failing cases include full transcripts, tool arguments and server logs.
 
 ## 7. Troubleshooting
@@ -220,6 +226,7 @@ npm run eval -- --dataset happy-path --case order- --repeats 3 --model openai/gp
 | `✖ GROQ_API_KEY is not set` | Add the key to `.env` (not `.env.example`). |
 | `model … does not exist` (404) | Groq retires models. List the available ones (see Configuration) and set `LLM_MODEL` / `LLM_FALLBACK_MODEL`. |
 | Slow replies or "I'm having trouble thinking right now" | Groq's free tier allows 8,000 tokens/min per model (about 2 tool-using turns/min). The agent waits as long as Groq asks, switches to the fallback model, and queues up to 15 s. Wait a minute, or upgrade the tier. |
+| Errors mentioning `tokens per day (TPD)` | The free tier also caps each model at 200,000 tokens/day. A full live eval run uses roughly 150,000 tokens across both models, so plan on about one per day. Use `npm run eval:mock` (free) for everyday checks, and `npm run eval:record -- --missing` to finish a recording later. |
 | Health shows `✖ qdrant: unreachable` | `docker compose up -d` |
 | Health shows `missing collections` | `npm run ingest` |
 | `EADDRINUSE :4000` | Another API is running: `lsof -i :4000`, or set `PORT`. |

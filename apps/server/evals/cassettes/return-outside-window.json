@@ -1,6 +1,6 @@
 {
   "caseId": "return-outside-window",
-  "recordedAt": "2026-10-07T12:45:07.253Z",
+  "recordedAt": "2026-10-07T13:10:48.848Z",
   "models": [
     "openai/gpt-oss-120b",
     "openai/gpt-oss-20b"
@@ -10,7 +10,7 @@
       "content": "",
       "tool_calls": [
         {
-          "id": "fc_50a5444b-988d-496c-a7c9-f6c6a92c1046",
+          "id": "fc_d5527e10-d22d-4172-832c-27578294198f",
           "name": "getOrderStatus",
           "args": {
             "email": "sam.lee@example.com",
@@ -23,7 +23,7 @@
       "content": "",
       "tool_calls": [
         {
-          "id": "fc_0a5a4190-e940-4f99-ad06-80d0789bc2cd",
+          "id": "fc_02017ea5-464b-4af9-a6e9-813a296e174f",
           "name": "checkReturnEligibility",
           "args": {
             "email": "sam.lee@example.com",
@@ -35,7 +35,7 @@
       ]
     },
     {
-      "content": "I’m sorry, but the Highland Chelsea Boot from order **O‑1007** can’t be returned because it’s past the return window. It was delivered 45 days ago, and returns are only accepted within 30 days of delivery [[returns-policy#return-window]].\n\nYou still have a couple of options:\n\n- **Warranty claim** – if the boot is defective or has an issue, we can start a warranty process.  \n- **Contact support** – for any other assistance, you can email support@stride.example.\n\nLet me know which option you’d like to pursue, and I’ll help you get it started.",
+      "content": "I’m sorry, but the Highland Chelsea Boot from order O‑1007 is outside our return window.  \nReturns are accepted within 30 days of delivery [[returns-policy#return-window]].\n\n**What you can do next:**\n\n- **Warranty claim** – if the boots have a defect, you can file a warranty claim.  \n- **Contact support** – we can discuss any other options or help you with a replacement if needed.\n\nFeel free to reach out at support@stride.example or visit your account page for more details.",
       "tool_calls": []
     }
   ]

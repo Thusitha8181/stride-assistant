@@ -47,6 +47,7 @@ const fmt = (metric: keyof Metrics, v: number | null) => {
 export function renderSummary(args: {
   mode: RunMode;
   results: CaseResult[];
+  skipped?: CaseResult[];
   metrics: Metrics;
   gates: GateResult[];
   diff: BaselineDiff | null;
@@ -83,8 +84,14 @@ export function renderSummary(args: {
         lines.push(`  - 🤖 ${t.text.replace(/\s+/g, " ").slice(0, 400) || "(no text)"}`);
       }
       if (r.ranked) lines.push(`- ranked: ${r.ranked.slice(0, 5).join(", ")}`);
+      for (const l of r.logs ?? []) lines.push(`- 🪵 ${l.slice(0, 500)}`);
       lines.push("");
     }
+  }
+
+  if (args.skipped?.length) {
+    lines.push("", "## Pending recording (not scored)", "");
+    for (const r of args.skipped) lines.push(`- ${caseKey(r)}: ${r.skipped}`);
   }
 
   if (diff) {

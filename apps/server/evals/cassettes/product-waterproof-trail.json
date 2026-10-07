@@ -1,0 +1,27 @@
+{
+  "caseId": "product-waterproof-trail",
+  "recordedAt": "2026-10-07T13:07:04.665Z",
+  "models": [
+    "openai/gpt-oss-120b",
+    "openai/gpt-oss-20b"
+  ],
+  "responses": [
+    {
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "fc_c81e28d1-9a87-4e1b-bbbf-95c7eefb0478",
+          "name": "searchProducts",
+          "args": {
+            "category": "trail",
+            "query": "waterproof trail running shoe"
+          }
+        }
+      ]
+    },
+    {
+      "content": "Here are a few waterproof trail‑running options currently in stock:\n\n| Product | Price | Key features |\n|---|---|---|\n| **Trail Runner X** (P‑006) | $129 | StormShield membrane, 5 mm grippy lugs, rock plate, colors: Black, Forest Green |\n| **Trail Runner Y** (P‑007) | $115 | Light‑weight StormShield membrane, nimble outsole, colors: Slate, Orange |\n| **Ridge Hiker Mid** (P‑008) | $150 | Mid‑cut, ankle support, stiff shank, deep lugs, colors: Brown, Black |\n\nAll three are available in a full range of U.S. sizes (6‑13).  \n\n**What size and color are you looking for?** Let me know and I’ll check the exact stock for you.",
+      "tool_calls": []
+    }
+  ]
+}

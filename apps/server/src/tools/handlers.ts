@@ -17,6 +17,7 @@ import type { Clock } from "../clock";
 import type { OrderRecord } from "../data/orderRecord";
 import type { Catalog } from "../domain/catalog";
 import type { OrderService } from "../domain/orders";
+import { nameSimilarity } from "../domain/fuzzy";
 import { evaluateReturn } from "../domain/returnRules";
 import type { ReturnStore } from "../domain/returnStore";
 import type { KnowledgeIndex, ProductIndex } from "../rag/indexes";
@@ -113,8 +114,11 @@ export function createToolHandlers(deps: ToolDeps) {
             : { ...summary, score, inStockInRequestedSize: summary.inStockSizes.includes(input.size) },
         ];
       });
-      // When a size was asked for, show what the customer can actually buy first (stable sort keeps relevance order).
-      products.sort((a, b) => Number(b.inStockInRequestedSize ?? 0) - Number(a.inStockInRequestedSize ?? 0));
+      // A product the customer named always comes first, even when sold out in their size (live
+      // finding: "Tempo Pro in size 9" fell off the list and the model searched in circles).
+      // After that, show what the customer can actually buy (stable sort keeps relevance order).
+      const named = (p: ProductHit) => Number(nameSimilarity(input.query, p.name) === 1 || input.query.toLowerCase().includes(p.name.toLowerCase()));
+      products.sort((a, b) => named(b) - named(a) || Number(b.inStockInRequestedSize ?? 0) - Number(a.inStockInRequestedSize ?? 0));
       return { ok: true, products: products.slice(0, MAX_PRODUCTS) };
     },
 
@@ -140,7 +144,7 @@ export function createToolHandlers(deps: ToolDeps) {
       const decision = evaluateReturn({
         order,
         item: found.item,
-        condition: input.itemCondition,
+        condition: input.itemCondition ?? "unworn",
         alreadyReturned: returns.has(found.item.itemId),
       });
       return { ok: true, item: itemRef(found.item), ...decision };
@@ -155,7 +159,7 @@ export function createToolHandlers(deps: ToolDeps) {
       if (!found.ok) return found.error;
       const { item } = found;
 
-      const decision = evaluateReturn({ order, item, condition: input.itemCondition, alreadyReturned: returns.has(item.itemId) });
+      const decision = evaluateReturn({ order, item, condition: input.itemCondition ?? "unworn", alreadyReturned: returns.has(item.itemId) });
       if (!decision.eligible) {
         return {
           ok: false,
