@@ -22,6 +22,20 @@ The agent is built to answer from real data only, to fail gracefully across 16 d
                                   └─ Groq (primary + fallback model)        LangSmith (optional tracing)
 ```
 
+## Screenshots
+
+Real conversations with the live agent (Groq), captured from the production build.
+
+| Order status: tool call → card with delivery progress | Sold-out size: in-stock alternatives as one-tap replies |
+|---|---|
+| ![Order status](docs/screenshots/02-order-status.png) | ![Sold-out alternatives](docs/screenshots/03-sold-out-alternatives.png) |
+| **Return not eligible:** reason, policy citation, warranty option | **Inspector:** tools called, cards, cited source, run id |
+| ![Return not eligible](docs/screenshots/04-return-not-eligible.png) | ![Inspector](docs/screenshots/05-inspector.png) |
+
+| Start screen | Mobile: policy answer with citation pills |
+|---|---|
+| ![Start screen](docs/screenshots/01-home.png) | <img src="docs/screenshots/06-mobile-policy-citations.png" alt="Mobile" width="300"> |
+
 ---
 
 ## 1. Prerequisites

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { orderCard, soldOut } from "@/test/fixtures";
+import { order, orderCard, soldOut } from "@/test/fixtures";
 import { newAssistantMessage, type AssistantMessage } from "./messages";
 import { suggestionsFor } from "./suggestions";
 
@@ -20,6 +20,12 @@ describe("suggestionsFor", () => {
   it("offers refund/exchange for an eligible return", () => {
     const eligibility = { ok: true as const, eligible: true as const, item: { itemId: "i", name: "x" }, daysSinceDelivery: 3, daysLeft: 27, options: ["refund" as const, "exchange" as const], policySource: "p" };
     expect(suggestionsFor(done({ cards: [{ kind: "return-eligibility", eligibility }] }))).toEqual(["I'd like a refund", "I'd like to exchange for a different size"]);
+  });
+
+  it("never suggests starting a return right after one was ruled out @F7", () => {
+    const delivered = { kind: "order" as const, order: { ...order, status: "delivered" as const } };
+    const eligibility = { ok: true as const, eligible: false as const, item: { itemId: "i", name: "Boot" }, reason: "OUTSIDE_WINDOW" as const, explanation: "x", policySource: "p", alternatives: ["warranty_claim" as const] };
+    expect(suggestionsFor(done({ cards: [delivered, { kind: "return-eligibility", eligibility }] }))).toEqual(["Track another order", "How do I make a warranty claim?"]);
   });
 
   it("shows nothing while streaming or after an error", () => {

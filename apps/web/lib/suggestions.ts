@@ -44,7 +44,10 @@ function fromCard(card: Card): string[] {
 /** Contextual quick replies after an answer, derived from what the agent just showed. */
 export function suggestionsFor(msg: AssistantMessage): string[] {
   if (msg.status !== "done" || msg.error) return [];
-  const chips = msg.cards.flatMap(fromCard);
+  let chips = msg.cards.flatMap(fromCard);
+  // Don't offer to start a return we just explained isn't possible.
+  const blocked = msg.cards.some((c) => c.kind === "return-eligibility" && !c.eligibility.eligible);
+  if (blocked) chips = chips.filter((c) => c !== "Start a return");
   if (!chips.length && msg.citations.length) chips.push("Track my order", "Find shoes");
   return [...new Set(chips)].slice(0, 3);
 }
