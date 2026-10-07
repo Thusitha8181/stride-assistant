@@ -19,7 +19,7 @@ All data is fake.
 |---|---|---|
 | 1 | Monorepo, fake data, Qdrant ingest, tools + tests, CI | ✅ |
 | 2 | Model factory, LangChain agent on Groq, streaming chat API, tracing | ✅ |
-| 3 | Eval harness (LangSmith datasets + evaluators) | ⏳ |
+| 3 | Eval harness: datasets, deterministic evaluators, record/replay, gates (LangSmith sync pending) | ✅ |
 | 4 | Guards, privacy layer, resilience (F1–F16) | ⏳ |
 | 5 | Next.js chat UI | ⏳ |
 | 6 | LLM-as-judge, live experiments, demo | ⏳ |
@@ -80,6 +80,45 @@ curl -N localhost:4000/api/chat -H 'Content-Type: application/json' \
 - It is built with LangChain's `createAgent`, with per-session memory.
 - The model comes from `initChatModel`. Switching provider means changing `LLM_PROVIDER`/`LLM_MODEL` and installing that provider's package.
 - Each turn allows at most 5 tool rounds. A runaway model is stopped *before* a 6th round of tools runs.
+
+## Agent evals (Milestone 3)
+
+Unit tests check the code. Evals check the **agent's behavior**: did it pick the right tool with the right arguments, retrieve the right knowledge, stay grounded, protect privacy, and answer helpfully?
+
+```bash
+npm run eval:mock      # replay recorded conversations: deterministic, offline, no API key (runs in CI)
+npm run eval           # live against the configured model (Groq); paces itself under rate limits
+npm run eval:record    # live, and re-record the cassettes eval:mock replays
+npm run eval -- --dataset happy-path --case order- --repeats 3 --model openai/gpt-oss-20b
+```
+
+- **Datasets** live in `apps/server/evals/cases/*.yaml`:
+  - `happy-path`: 26 single-turn cases
+  - `multi-turn`: 5 conversations that rely on memory
+  - `retrieval`: 18 knowledge-base queries, scored without an LLM
+
+  Each chat turn declares what must happen (tools, arguments, cards, citations, retrieved chunks, content) and what must not happen.
+- **Evaluators** are deterministic:
+  - tool use and arguments
+  - cards
+  - expected citations, and invented `[[citation]]` markers
+  - retrieval
+  - content
+  - **grounding**: every price and ID in an answer must come from a tool result
+  - **privacy**: no fixture PII in the answer *or in anything sent to the model*, other than what the customer typed
+  - unexpected errors
+- **Record/replay:** a live run records the model's responses as cassettes (`evals/cassettes/`). `eval:mock` replays them through the real agent, tools and evaluators, so CI catches any code change that breaks a previously good conversation. It also flags drift, where the agent makes more or fewer model calls than were recorded.
+- **Gates (PRD §9.3):**
+  - task success ≥ 90%
+  - tool accuracy ≥ 95%
+  - retrieval hit@3 ≥ 90%
+  - hallucination ≤ 2%
+  - citation validity ≥ 95%
+  - privacy violations = 0
+
+  The runner exits non-zero if any gate fails.
+- **Reports:** each run writes Markdown and JSON reports, with full transcripts for failing cases, to `evals/reports/`. `--update-baseline` stores pass/fail per case, and later runs report regressions against it.
+- Evals use in-memory retrieval with the same embedding model and cosine ranking as Qdrant, and a fixed date, so recordings replay identically without Docker.
 
 ## Tools (Milestone 1)
 

@@ -143,6 +143,14 @@ describe("model resilience in the agent", () => {
     expect(Date.now() - started).toBeLessThan(1000);
   });
 
+  it("keeps queueing until a model succeeds within the budget @F2", async () => {
+    const primary = fakeModel().respond(rateLimit("20s"));
+    const fallback = fakeModel().respond(rateLimit("50ms")).respond(rateLimit("50ms")).respond(new AIMessage("third time lucky"));
+    const { agent, logs } = run(primary, fallback);
+    expect(text(await turn(agent))).toBe("third time lucky");
+    expect(logs).toEqual(["model fallback", "model queued", "model queued"]);
+  });
+
   it("keeps tool calling working on the fallback model", async () => {
     const primary = fakeModel().respond(rateLimit("30s"));
     const fallback = fakeModel()

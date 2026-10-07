@@ -1,0 +1,26 @@
+{
+  "caseId": "faq-recycling",
+  "recordedAt": "2026-10-07T12:43:29.459Z",
+  "models": [
+    "openai/gpt-oss-120b",
+    "openai/gpt-oss-20b"
+  ],
+  "responses": [
+    {
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "fc_3c171596-d985-43fd-bdc7-4661131e9a46",
+          "name": "searchKnowledgeBase",
+          "args": {
+            "query": "Stride shoe recycling program worn-out shoes"
+          }
+        }
+      ]
+    },
+    {
+      "content": "Absolutely! Stride has a **Take‑back program** for worn‑out shoes. Just send us the pair with the free label we’ll provide, and we’ll recycle them into playground surfaces. For each pair you’ll receive a $10 voucher toward your next purchase [[sustainability#take-back-program]]. Let me know if you’d like the label sent to you!",
+      "tool_calls": []
+    }
+  ]
+}

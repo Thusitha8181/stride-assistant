@@ -1,7 +1,15 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "types": ["node"]
+    "types": [
+      "node"
+    ]
   },
-  "include": ["src", "scripts", "test", "vitest.config.ts"]
+  "include": [
+    "src",
+    "scripts",
+    "test",
+    "evals",
+    "vitest.config.ts"
+  ]
 }

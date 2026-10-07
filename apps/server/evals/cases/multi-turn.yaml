@@ -1,0 +1,63 @@
+dataset: multi-turn
+kind: chat
+description: Conversations that depend on memory across turns.
+cases:
+  - id: return-flow-refund
+    turns:
+      - user: I want to return the knit sneakers from order O-1046, my email is jane@example.com
+        expect:
+          toolsCalled: [checkReturnEligibility]
+          toolsNotCalled: [createReturn]
+      - user: A refund please, they're too small.
+        expect:
+          toolsCalled: [createReturn]
+          toolArgs: { createReturn: { type: refund, orderId: O-1046 } }
+          cards: [return-created]
+          mustContain: ["RMA-\\d{6}"]
+
+  - id: exchange-flow
+    turns:
+      - user: I'd like to exchange my Swift 3 from O-1001 for a bigger size. My email is alex.morgan@example.com
+        expect:
+          toolsCalled: [checkReturnEligibility]
+          toolsNotCalled: [createReturn]
+      - user: Size 10 please, they're too tight.
+        expect:
+          toolsCalled: [createReturn]
+          toolArgs: { createReturn: { type: exchange, exchangeSize: 10 } }
+          cards: [return-created]
+          mustContain: ["RMA-\\d{6}"]
+
+  - id: email-in-second-turn
+    turns:
+      - user: Where is my order O-1042?
+        expect:
+          toolsNotCalled: [getOrderStatus]
+          mustContain: ["email"]
+      - user: jane@example.com
+        expect:
+          toolsCalled: [getOrderStatus]
+          cards: [order]
+          mustContain: ["shipped"]
+
+  - id: remembers-shoe-size
+    turns:
+      - user: I'm looking for running shoes. I wear a size 10.5.
+        expect:
+          toolsCalled: [searchProducts]
+      - user: Anything under $100?
+        expect:
+          toolsCalled: [searchProducts]
+          toolArgs: { searchProducts: { size: 10.5, maxPrice: 100 } }
+          mustContain: ["Daily Jog"]
+
+  - id: stock-follow-up
+    turns:
+      - user: Do you have the Trail Runner X in 10 wide?
+        expect:
+          toolsCalled: [checkStock]
+      - user: OK, what about 10.5 wide in black?
+        expect:
+          toolsCalled: [checkStock]
+          toolArgs: { checkStock: { size: 10.5, width: wide, color: black } }
+          mustContain: ["in stock|available"]

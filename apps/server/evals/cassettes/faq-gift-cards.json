@@ -1,0 +1,26 @@
+{
+  "caseId": "faq-gift-cards",
+  "recordedAt": "2026-10-07T12:42:38.886Z",
+  "models": [
+    "openai/gpt-oss-120b",
+    "openai/gpt-oss-20b"
+  ],
+  "responses": [
+    {
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "fc_b4c7b1a1-bc2f-4423-bf43-b83833c2113a",
+          "name": "searchKnowledgeBase",
+          "args": {
+            "query": "gift cards Stride Footwear"
+          }
+        }
+      ]
+    },
+    {
+      "content": "Yes! We offer digital gift cards ranging from $25 to $500. They’re available on our website, never expire, and can’t be used to purchase other gift cards [[faq#do-you-offer-gift-cards]]. Let me know if you’d like to buy one or need help adding it to an order.",
+      "tool_calls": []
+    }
+  ]
+}

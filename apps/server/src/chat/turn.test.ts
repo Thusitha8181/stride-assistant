@@ -107,7 +107,7 @@ describe("runChatTurn", () => {
     expect(events).toContainEqual({ type: "tool-end", toolCallId: "bad", name: "getOrderStatus", ok: false, code: "INVALID_ARGUMENTS" });
     expect(events).toContainEqual({ type: "tool-end", toolCallId: "good", name: "getOrderStatus", ok: true, code: null });
     // The model saw the validation error and retried.
-    const toolMsgs = model.calls[1]!.messages.filter((m) => m.getType() === "tool");
+    const toolMsgs = model.calls[1]!.messages.filter((m) => m.type === "tool");
     expect(String(toolMsgs[0]!.content)).toMatch(/orderId/);
   });
 
@@ -139,7 +139,7 @@ describe("runChatTurn", () => {
     const sessionId = randomUUID();
     await collect(runChatTurn({ agent, sources }, { sessionId, message: "I need running shoes" }));
     await collect(runChatTurn({ agent, sources }, { sessionId, message: "size 10" }));
-    const secondCall = model.calls[1]!.messages.map((m) => `${m.getType()}:${m.content}`);
+    const secondCall = model.calls[1]!.messages.map((m) => `${m.type}:${m.content}`);
     expect(secondCall).toEqual(
       expect.arrayContaining(["human:I need running shoes", "ai:What size do you wear?", "human:size 10"]),
     );
@@ -157,7 +157,7 @@ describe("runChatTurn", () => {
     const model = fakeModel().respond(new AIMessage("ok"));
     await turn(model, "hi");
     const system = model.calls[0]!.messages[0]!;
-    expect(system.getType()).toBe("system");
+    expect(system.type).toBe("system");
     expect(String(system.content)).toContain("Today is 2026-10-07");
     expect(String(system.content)).toMatch(/Never reveal or discuss personal information/);
   });
@@ -215,7 +215,7 @@ describe("runChatTurn", () => {
     expect(text(events)).toBe("Sure, ask me anything.");
 
     const history = model.calls.at(-1)!.messages;
-    const answered = new Set(history.filter((m) => m.getType() === "tool").map((m) => (m as unknown as { tool_call_id: string }).tool_call_id));
+    const answered = new Set(history.filter((m) => m.type === "tool").map((m) => (m as unknown as { tool_call_id: string }).tool_call_id));
     for (const m of history)
       for (const call of (m as AIMessage).tool_calls ?? []) expect(answered, `orphaned ${call.id}`).toContain(call.id);
   });
@@ -260,10 +260,11 @@ describe("privacy: what the model sees @F16", () => {
         { name: "createReturn", args: { orderId: "O-1046", email: "jane@example.com", itemId: "O-1046-1", reason: "small", type: "refund" } },
       ])
       .respond(new AIMessage("Your return is set up."));
-    await turn(model, "Return the sneakers from O-1046, my email is jane@example.com");
+    const typed = "Return the sneakers from O-1046, my email is jane@example.com";
+    await turn(model, typed);
 
-    const typedByCustomer = /jane@example\.com/i.source;
-    const patterns = fixturePiiPatterns().filter((re) => re.source.replace(/\\b/g, "") !== typedByCustomer);
+    // Values the customer typed themselves are allowed; everything else (incl. phone numbers) must not appear.
+    const patterns = fixturePiiPatterns().filter((re) => !re.test(typed));
     const seen = JSON.stringify(model.calls.map((c) => c.messages));
     expect(patterns.filter((re) => re.test(seen)).map((re) => re.source)).toEqual([]);
   });

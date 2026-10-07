@@ -1,0 +1,223 @@
+dataset: happy-path
+kind: chat
+description: Single-turn questions the assistant must answer correctly, using the right tools and citing sources.
+cases:
+  # ---------------------------------------------------------------- company / policy (RAG)
+  - id: faq-return-window
+    turns:
+      - user: How many days do I have to return shoes?
+        expect:
+          toolsCalled: [searchKnowledgeBase]
+          retrieved: [returns-policy#return-window]
+          citations: [returns-policy#return-window]
+          mustContain: ["30"]
+
+  - id: faq-free-shipping
+    turns:
+      - user: Is shipping free?
+        expect:
+          toolsCalled: [searchKnowledgeBase]
+          retrieved: [shipping#shipping-costs]
+          mustContain: ["75"]
+
+  - id: faq-international-shipping
+    turns:
+      - user: Do you ship to Canada and how much does it cost?
+        expect:
+          toolsCalled: [searchKnowledgeBase]
+          retrieved: [shipping#international-shipping]
+          mustContain: ["14\\.95"]
+
+  - id: faq-warranty
+    turns:
+      - user: What does your warranty cover?
+        expect:
+          toolsCalled: [searchKnowledgeBase]
+          retrieved: [warranty#coverage]
+          mustContain: ["(1|one)[- ]year|12 months"]
+
+  - id: faq-final-sale
+    turns:
+      - user: Can I return something I bought on clearance?
+        expect:
+          toolsCalled: [searchKnowledgeBase]
+          retrieved: [returns-policy#final-sale-items]
+          mustContain: ["final sale"]
+
+  - id: faq-wide-fit
+    turns:
+      - user: Do your shoes come in wide sizes?
+        expect:
+          toolsAnyOf: [searchKnowledgeBase, searchProducts]
+          mustContain: ["wide"]
+
+  - id: faq-austin-store
+    turns:
+      - user: Is there a Stride store in Austin? When is it open?
+        expect:
+          toolsCalled: [searchKnowledgeBase]
+          retrieved: [stores#austin]
+          mustContain: ["Congress", "8 ?(pm|p\\.m\\.)"]
+
+  - id: faq-gift-cards
+    turns:
+      - user: Do you sell gift cards?
+        expect:
+          toolsCalled: [searchKnowledgeBase]
+          retrieved: [faq#do-you-offer-gift-cards]
+          mustContain: ["25"]
+
+  - id: faq-student-discount
+    turns:
+      - user: Is there a student discount?
+        expect:
+          toolsCalled: [searchKnowledgeBase]
+          retrieved: [faq#do-you-offer-discounts]
+          mustContain: ["15 ?%"]
+
+  - id: faq-refund-timing
+    turns:
+      - user: How long does it take to get my refund?
+        expect:
+          toolsCalled: [searchKnowledgeBase]
+          retrieved: [returns-policy#refunds]
+          mustContain: ["5"]
+
+  - id: faq-recycling
+    turns:
+      - user: Can I recycle my old worn-out shoes with you?
+        expect:
+          toolsCalled: [searchKnowledgeBase]
+          retrieved: [sustainability#take-back-program]
+          mustContain: ["\\$10|take-back|voucher"]
+
+  # ---------------------------------------------------------------- products and stock
+  - id: product-waterproof-trail
+    turns:
+      - user: I need waterproof shoes for trail running
+        expect:
+          toolsCalled: [searchProducts]
+          cards: [products]
+          mustContain: ["Trail Runner"]
+
+  - id: product-budget-running
+    turns:
+      - user: Show me running shoes under $90
+        expect:
+          toolsCalled: [searchProducts]
+          toolArgs: { searchProducts: { maxPrice: 90 } }
+          cards: [products]
+          mustContain: ["Daily Jog"]
+          mustNotContain: ["Tempo Pro", "Cloudpace"]
+
+  - id: product-winter-boots-size
+    turns:
+      - user: I want warm boots for snow, size 9
+        expect:
+          toolsAnyOf: [searchProducts, checkStock]
+          mustContain: ["Summit"]
+
+  - id: product-kids-size
+    turns:
+      - user: Do you have shoes for my kid? She wears a size 3
+        expect:
+          toolsCalled: [searchProducts]
+          toolArgs: { searchProducts: { size: 3 } }
+          mustContain: ["Kids"]
+
+  - id: stock-in-stock
+    turns:
+      - user: Is the Trail Runner X available in size 10 in black?
+        expect:
+          toolsCalled: [checkStock]
+          toolArgs: { checkStock: { size: 10, color: black } }
+          cards: [stock]
+          mustContain: ["in stock|available"]
+
+  - id: stock-sold-out-alternatives
+    description: F8 demo case; the answer must offer the in-stock 10.5 wide.
+    turns:
+      - user: Do you have the Trail Runner X in 10 wide?
+        expect:
+          toolsCalled: [checkStock]
+          toolArgs: { checkStock: { size: 10, width: wide } }
+          cards: [stock]
+          mustContain: ["10\\.5"]
+
+  - id: stock-size-sold-out
+    turns:
+      - user: Can I get the Tempo Pro in size 9?
+        expect:
+          toolsCalled: [checkStock]
+          toolArgs: { checkStock: { size: 9 } }
+          mustContain: ["sold out|out of stock|not available|unavailable|don't have|do not have"]
+
+  # ---------------------------------------------------------------- orders
+  - id: order-status-shipped
+    turns:
+      - user: Where is my order O-1042? My email is jane@example.com
+        expect:
+          toolsCalled: [getOrderStatus]
+          toolArgs: { getOrderStatus: { orderId: O-1042 } }
+          cards: [order]
+          mustContain: ["shipped"]
+
+  - id: order-status-delayed
+    turns:
+      - user: What's happening with order O-1023? Email fatima.khan@example.com
+        expect:
+          toolsCalled: [getOrderStatus]
+          cards: [order]
+          mustContain: ["delay|weather"]
+
+  - id: order-partially-shipped
+    turns:
+      - user: Status of O-1027 please, liam.oconnor@example.com
+        expect:
+          toolsCalled: [getOrderStatus]
+          cards: [order]
+          mustContain: ["Trail Runner Y", "backorder|processing|not (yet )?shipped|hasn't shipped|still"]
+
+  - id: order-asks-for-email
+    turns:
+      - user: Where is order O-1042?
+        expect:
+          toolsNotCalled: [getOrderStatus, checkReturnEligibility]
+          mustContain: ["email"]
+
+  # ---------------------------------------------------------------- returns
+  - id: return-eligible-needs-confirmation
+    description: Eligible, but the agent must confirm refund vs exchange before creating the return.
+    turns:
+      - user: I want to return the knit sneakers from order O-1046, my email is jane@example.com
+        expect:
+          toolsCalled: [checkReturnEligibility]
+          toolsNotCalled: [createReturn]
+          cards: [return-eligibility]
+          mustContain: ["refund|exchange"]
+
+  - id: return-outside-window
+    description: F7 demo case.
+    turns:
+      - user: Can I return the boots from order O-1007? My email is sam.lee@example.com
+        expect:
+          toolsCalled: [checkReturnEligibility]
+          toolsNotCalled: [createReturn]
+          citations: [returns-policy#return-window]
+          mustContain: ["30", "warranty"]
+
+  - id: return-final-sale
+    turns:
+      - user: Can I return the slides from O-1011? maria.garcia@example.com
+        expect:
+          toolsCalled: [checkReturnEligibility]
+          toolsNotCalled: [createReturn]
+          mustContain: ["final sale"]
+
+  - id: return-not-delivered
+    turns:
+      - user: I'd like to return the Cloudpace from order O-1003, email priya.shah@example.com
+        expect:
+          toolsCalled: [checkReturnEligibility]
+          toolsNotCalled: [createReturn]
+          mustContain: ["deliver|arriv|cancel"]

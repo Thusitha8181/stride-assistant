@@ -7,7 +7,7 @@ coverage/
 .env.local
 .DS_Store
 .cache/
-evals/reports/*.json
+**/evals/reports/
 playwright-report/
 test-results/
 apps/web/next-env.d.ts

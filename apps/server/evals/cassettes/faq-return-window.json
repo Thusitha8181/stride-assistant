@@ -1,0 +1,25 @@
+{
+  "caseId": "faq-return-window",
+  "recordedAt": "2026-10-07T12:42:01.975Z",
+  "models": [
+    "openai/gpt-oss-120b"
+  ],
+  "responses": [
+    {
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "fc_02d5c415-2efd-46ae-b7a6-31c732d1811c",
+          "name": "searchKnowledgeBase",
+          "args": {
+            "query": "return window days"
+          }
+        }
+      ]
+    },
+    {
+      "content": "You can return or exchange items within **30 days of delivery**. The clock starts on the day each item arrives, not when you placed the order. [[returns-policy#return-window]]",
+      "tool_calls": []
+    }
+  ]
+}

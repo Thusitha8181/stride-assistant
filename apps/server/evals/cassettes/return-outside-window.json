@@ -1,0 +1,42 @@
+{
+  "caseId": "return-outside-window",
+  "recordedAt": "2026-10-07T12:45:07.253Z",
+  "models": [
+    "openai/gpt-oss-120b",
+    "openai/gpt-oss-20b"
+  ],
+  "responses": [
+    {
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "fc_50a5444b-988d-496c-a7c9-f6c6a92c1046",
+          "name": "getOrderStatus",
+          "args": {
+            "email": "sam.lee@example.com",
+            "orderId": "O-1007"
+          }
+        }
+      ]
+    },
+    {
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "fc_0a5a4190-e940-4f99-ad06-80d0789bc2cd",
+          "name": "checkReturnEligibility",
+          "args": {
+            "email": "sam.lee@example.com",
+            "itemCondition": "unworn",
+            "itemId": "O-1007-1",
+            "orderId": "O-1007"
+          }
+        }
+      ]
+    },
+    {
+      "content": "I’m sorry, but the Highland Chelsea Boot from order **O‑1007** can’t be returned because it’s past the return window. It was delivered 45 days ago, and returns are only accepted within 30 days of delivery [[returns-policy#return-window]].\n\nYou still have a couple of options:\n\n- **Warranty claim** – if the boot is defective or has an issue, we can start a warranty process.  \n- **Contact support** – for any other assistance, you can email support@stride.example.\n\nLet me know which option you’d like to pursue, and I’ll help you get it started.",
+      "tool_calls": []
+    }
+  ]
+}

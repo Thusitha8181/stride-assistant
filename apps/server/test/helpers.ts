@@ -9,46 +9,17 @@ import { ReturnStore } from "../src/domain/returnStore";
 import { chunkMarkdown } from "../src/rag/chunk";
 import { HashEmbeddings } from "../src/rag/embeddings";
 import type { KnowledgeIndex, ProductIndex } from "../src/rag/indexes";
-import { productText } from "../src/rag/qdrant";
+import { memoryKnowledgeIndex as memoryKB, memoryProductIndex as memoryProducts } from "../src/rag/memory";
 import { createToolHandlers } from "../src/tools/handlers";
 
 export const clock = fixedClock("2026-10-07T12:00:00.000Z");
 
-const cosine = (a: number[], b: number[]) => a.reduce((sum, x, i) => sum + x * b[i]!, 0);
-
 /** In-memory KnowledgeIndex over the real KB, using the deterministic hash embeddings. */
-export function memoryKnowledgeIndex(): KnowledgeIndex {
-  const embeddings = new HashEmbeddings();
-  const chunks = loadCompanyDocs().flatMap(chunkMarkdown);
-  const vectors = chunks.map((c) => embeddings.embed(`${c.title}\n${c.text}`));
-  return {
-    async search(query, k) {
-      const q = embeddings.embed(query);
-      return chunks
-        .map((chunk, i) => ({ chunk, score: cosine(q, vectors[i]!) }))
-        .sort((a, b) => b.score - a.score)
-        .slice(0, k);
-    },
-  };
-}
+export const memoryKnowledgeIndex = (): KnowledgeIndex =>
+  memoryKB(new HashEmbeddings(), loadCompanyDocs().flatMap(chunkMarkdown));
 
 /** In-memory ProductIndex with the same filter semantics as the Qdrant adapter. */
-export function memoryProductIndex(catalog: Catalog): ProductIndex {
-  const embeddings = new HashEmbeddings();
-  const vectors = new Map(catalog.products.map((p) => [p.id, embeddings.embed(productText(p))]));
-  return {
-    async search(query, filter, k) {
-      const q = embeddings.embed(query);
-      return catalog.products
-        .filter((p) => !filter.category || p.category === filter.category)
-        .filter((p) => filter.maxPrice === undefined || p.price <= filter.maxPrice)
-        .filter((p) => filter.size === undefined || p.sizes.includes(filter.size))
-        .map((p) => ({ productId: p.id, score: cosine(q, vectors.get(p.id)!) }))
-        .sort((a, b) => b.score - a.score)
-        .slice(0, k);
-    },
-  };
-}
+export const memoryProductIndex = (catalog: Catalog): ProductIndex => memoryProducts(new HashEmbeddings(), catalog.products);
 
 export const failingIndex = {
   async search(): Promise<never> {
@@ -92,7 +63,8 @@ export function fixturePiiPatterns(): RegExp[] {
     o.shippingAddress.postalCode,
     o.payment.last4,
   ]);
-  return [...new Set(values)].map((v) => new RegExp(`\\b${escape(v)}\\b`, "i"));
+  // Lookarounds, not \b: \b never matches before "+", so phone numbers would slip through.
+  return [...new Set(values)].map((v) => new RegExp(`(?<![\\w])${escape(v)}(?![\\w])`, "i"));
 }
 
 export function findPii(value: unknown): string[] {

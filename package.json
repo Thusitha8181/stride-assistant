@@ -21,7 +21,10 @@
     "data:generate": "npm run data:generate --workspace=@stride/server",
     "prepare": "husky",
     "play": "npm run play --workspace=@stride/server --",
-    "chat": "npm run chat --workspace=@stride/server"
+    "chat": "npm run chat --workspace=@stride/server",
+    "eval": "npm run eval --workspace=@stride/server --",
+    "eval:mock": "npm run eval:mock --workspace=@stride/server --",
+    "eval:record": "npm run eval:record --workspace=@stride/server --"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

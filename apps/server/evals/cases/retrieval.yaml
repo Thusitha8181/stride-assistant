@@ -1,0 +1,22 @@
+dataset: retrieval
+kind: retrieval
+description: Knowledge-base retrieval quality, measured directly (no LLM). A hit = any expected chunk in the top k.
+cases:
+  - { id: kb-return-days, query: how many days do I have to return an item, expected: [returns-policy#return-window] }
+  - { id: kb-clearance, query: can I return something I bought on clearance, expected: [returns-policy#final-sale-items] }
+  - { id: kb-return-address, query: where do I send my return package, expected: [returns-policy#return-address] }
+  - { id: kb-refund-time, query: when will I get my money back, expected: [returns-policy#refunds] }
+  - { id: kb-exchange, query: can I swap for a different size, expected: [returns-policy#exchanges, sizing-guide#still-unsure] }
+  - { id: kb-free-shipping, query: is shipping free, expected: [shipping#shipping-costs] }
+  - { id: kb-canada, query: do you deliver to Canada, expected: [shipping#international-shipping] }
+  - { id: kb-late-package, query: my package is late, expected: [shipping#delays] }
+  - { id: kb-cancel, query: can I cancel my order, expected: [shipping#changing-or-cancelling-an-order] }
+  - { id: kb-sole-came-off, query: the sole came off my shoes after two months, expected: [warranty#coverage, warranty#how-to-make-a-warranty-claim] }
+  - { id: kb-wide, query: do you make wide shoes, expected: [sizing-guide#wide-fit] }
+  - { id: kb-measure, query: how do I measure my foot size, expected: [sizing-guide#measuring-your-foot] }
+  - { id: kb-denver-hours, query: Denver store opening hours, expected: [stores#denver] }
+  - { id: kb-student, query: student discount, expected: [faq#do-you-offer-discounts] }
+  - { id: kb-wash-knit, query: how do I wash knit sneakers, expected: [care#cleaning] }
+  - { id: kb-recycle, query: recycle my old shoes, expected: [sustainability#take-back-program] }
+  - { id: kb-support-hours, query: how do I contact customer service, expected: [contact#customer-support] }
+  - { id: kb-gift-card, query: buy a gift card for a friend, expected: [faq#do-you-offer-gift-cards] }

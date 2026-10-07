@@ -1,0 +1,23 @@
+{
+  "caseId": "return-not-delivered",
+  "recordedAt": "2026-10-07T12:45:28.518Z",
+  "models": [
+    "openai/gpt-oss-120b",
+    "openai/gpt-oss-20b"
+  ],
+  "responses": [
+    {
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "fc_392de99b-e1ca-425d-95dd-872e530305b9",
+          "name": "getOrderStatus",
+          "args": {
+            "email": "priya.shah@example.com",
+            "orderId": "O-1003"
+          }
+        }
+      ]
+    }
+  ]
+}

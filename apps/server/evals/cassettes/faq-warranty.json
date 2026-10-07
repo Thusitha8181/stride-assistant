@@ -1,0 +1,25 @@
+{
+  "caseId": "faq-warranty",
+  "recordedAt": "2026-10-07T12:42:10.467Z",
+  "models": [
+    "openai/gpt-oss-120b"
+  ],
+  "responses": [
+    {
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "fc_b51cbbaf-1bca-433c-a7fd-68c24b820bd2",
+          "name": "searchKnowledgeBase",
+          "args": {
+            "query": "Stride warranty coverage what is covered"
+          }
+        }
+      ]
+    },
+    {
+      "content": "Our warranty covers **manufacturing defects** for 1 year from the delivery date, including:\n\n- Sole separation  \n- Broken eyelets  \n- Seam failure  \n\n(Final‑sale items are covered as well) [[warranty#coverage]].",
+      "tool_calls": []
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "caseId": "product-winter-boots-size",
+  "recordedAt": "2026-10-07T12:43:47.921Z",
+  "models": [
+    "openai/gpt-oss-120b",
+    "openai/gpt-oss-20b"
+  ],
+  "responses": [
+    {
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "fc_3e8c5953-ffba-4454-b21c-89ba4045ed29",
+          "name": "searchProducts",
+          "args": {
+            "category": "boots",
+            "query": "warm snow boots",
+            "size": 9
+          }
+        }
+      ]
+    },
+    {
+      "content": "Here are a few warm‑snow boots in size 9 that are currently in stock:\n\n| Product | Price | Key features | Colors |\n|---------|-------|--------------|--------|\n| **Summit Winter Boot** | $189 | Insulated, waterproof, rated to –25 °C, slip‑resistant ice grip | Black, Tan |\n| **Workline Steel Toe** | $165 | Waterproof leather, steel‑toe, slip‑ and oil‑resistant outsole | Wheat, Black |\n| **Highland Chelsea Boot** | $175 | Full‑grain leather, elastic gussets, stacked heel | Brown, Black |\n\nAll three are available in size 9 right now.  \nWhich style or color would you like to order? If you need a different size or have any other preferences, just let me know.",
+      "tool_calls": []
+    }
+  ]
+}
