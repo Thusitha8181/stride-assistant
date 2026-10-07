@@ -1,15 +1,16 @@
 {
   "caseId": "order-partially-shipped",
-  "recordedAt": "2026-10-07T12:44:38.179Z",
+  "recordedAt": "2026-10-07T13:09:11.231Z",
   "models": [
-    "openai/gpt-oss-120b"
+    "openai/gpt-oss-120b",
+    "openai/gpt-oss-20b"
   ],
   "responses": [
     {
       "content": "",
       "tool_calls": [
         {
-          "id": "fc_5d623e4d-1f02-42ea-b242-17a84d593da8",
+          "id": "fc_5c38bc59-fb86-453d-b3e5-24d696c1ff41",
           "name": "getOrderStatus",
           "args": {
             "email": "liam.oconnor@example.com",
@@ -19,7 +20,7 @@
       ]
     },
     {
-      "content": "**Order O‑1027 – Liam O’Connor**  \n- **Status:** Partially shipped  \n- **Items:**  \n  • *Trail Runner Y* (size 11, Slate) – **Delivered** on Oct 4 2026  \n  • *Trailhead Sport Sandal* (size 11, Olive) – **Processing** (back‑ordered)  \n- **Estimated delivery for the remaining item:** Oct 13 2026  \n- **Carrier / Tracking:** UPS – Tracking # 1Z999AA10000000127  \n\nLet me know if you’d like to:\n\n- Check return/exchange eligibility for the delivered shoes  \n- Update the shipping address for the pending sandal  \n- Anything else about this order  \n\nI’m here to help!",
+      "content": "Here’s the latest on **O‑1027** (liam.oconnor@example.com):\n\n- **Trail Runner Y (size 11, Slate)** – Delivered Oct 4 2026.  \n- **Trailhead Sport Sandal (size 11, Olive)** – Still processing; back‑ordered.  \n- **Current order status:** *partially_shipped*  \n- **Estimated delivery for the sandal:** Oct 13 2026 via UPS (tracking 1Z999AA10000000127).  \n\nLet me know if you’d like to track the shipment, change the sandal’s size, or anything else!",
       "tool_calls": []
     }
   ]

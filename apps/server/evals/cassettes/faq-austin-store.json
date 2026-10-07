@@ -1,0 +1,26 @@
+{
+  "caseId": "faq-austin-store",
+  "recordedAt": "2026-10-07T13:05:59.835Z",
+  "models": [
+    "openai/gpt-oss-120b",
+    "openai/gpt-oss-20b"
+  ],
+  "responses": [
+    {
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "fc_e32248b8-c4e9-4595-94b6-dd5947691bf4",
+          "name": "searchKnowledgeBase",
+          "args": {
+            "query": "Stride store Austin"
+          }
+        }
+      ]
+    },
+    {
+      "content": "Yes! Stride has a store in Austin at 301 Congress Ave. It’s open every day from 10 am to 8 pm [[stores#austin]].",
+      "tool_calls": []
+    }
+  ]
+}

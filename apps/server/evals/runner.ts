@@ -33,6 +33,10 @@ export type CaseResult = {
   ranked?: string[];
   /** Infrastructure problem (rate limit exhausted, missing cassette), not agent behavior. */
   infraError?: string;
+  /** Server-side log lines (failed turns, retries, fallbacks) for diagnosis. */
+  logs?: string[];
+  /** Not run (pending recording); excluded from metrics and gates. */
+  skipped?: string;
 };
 
 export type EvalWorld = {
@@ -70,11 +74,14 @@ export async function runChatCase(
 ): Promise<{ result: CaseResult; cassette: Cassette }> {
   // Fresh tools state (returns) and memory per case; the world is shared.
   const handlers = createToolHandlers({ ...world, returns: new ReturnStore(), clock: EVAL_CLOCK });
+  const logs: string[] = [];
+  const log = (msg: string, meta: Record<string, unknown>) => logs.push(`${msg} ${JSON.stringify(meta)}`);
   const agent = createStrideAgent({
     model: models.model,
     fallbackModel: models.fallbackModel,
     handlers,
     clock: EVAL_CLOCK,
+    log,
     // Evals run unattended: wait out rate limits rather than fail.
     resilience: { maxQueueMs: 60_000 },
   });
@@ -85,7 +92,7 @@ export async function runChatCase(
   for (const turn of c.turns) {
     const started = Date.now();
     const events: ChatEvent[] = [];
-    for await (const e of runChatTurn({ agent, sources: world.sources, callbacks: [recorder] }, { sessionId, message: turn.user }))
+    for await (const e of runChatTurn({ agent, sources: world.sources, callbacks: [recorder], log }, { sessionId, message: turn.user }))
       events.push(e);
     const text = events.flatMap((e) => (e.type === "text-delta" ? [e.delta] : [])).join("");
     runs.push({ user: turn.user, expect: turn.expect, events, trace: recorder.take(), text, latencyMs: Date.now() - started });
@@ -113,12 +120,13 @@ export async function runChatCase(
       turns: runs.map((r) => ({
         user: r.user,
         text: r.text,
-        tools: r.events.flatMap((e) => (e.type === "tool-start" ? [e.name] : [])),
+        tools: r.trace.tools.map((t) => `${t.name}(${JSON.stringify(t.args)})`),
         models: [...new Set(r.trace.modelCalls.flatMap((m) => (m.model ? [m.model] : [])))],
         tokens: r.trace.modelCalls.reduce((s, m) => s + m.tokens, 0),
         latencyMs: r.latencyMs,
       })),
       ...(modelUnavailable && { infraError: "model unavailable (rate limit or outage)" }),
+      ...(logs.length && { logs }),
     },
     cassette: {
       caseId: c.id,

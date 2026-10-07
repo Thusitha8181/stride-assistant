@@ -42,7 +42,7 @@ cases:
         expect:
           toolsCalled: [searchKnowledgeBase]
           retrieved: [returns-policy#final-sale-items]
-          mustContain: ["final sale"]
+          mustContain: ["final[- ]sale"]
 
   - id: faq-wide-fit
     turns:
@@ -212,7 +212,7 @@ cases:
         expect:
           toolsCalled: [checkReturnEligibility]
           toolsNotCalled: [createReturn]
-          mustContain: ["final sale"]
+          mustContain: ["final[- ]sale"]
 
   - id: return-not-delivered
     turns:

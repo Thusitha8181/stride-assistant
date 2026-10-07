@@ -1,0 +1,27 @@
+{
+  "caseId": "stock-size-sold-out",
+  "recordedAt": "2026-10-07T13:08:26.776Z",
+  "models": [
+    "openai/gpt-oss-120b",
+    "openai/gpt-oss-20b"
+  ],
+  "responses": [
+    {
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "fc_5a741001-b174-48a0-8301-cc1f6c4b2dff",
+          "name": "checkStock",
+          "args": {
+            "product": "Tempo Pro",
+            "size": 9
+          }
+        }
+      ]
+    },
+    {
+      "content": "The Tempo Pro in size 9 is currently out of stock.  \nHere are a few options:\n\n- **Nearby sizes**  \n  • 8.5 (Volt – 1 unit, Black – 3 units)  \n  • 9.5 (Volt – 6 units, Black – 2 units)  \n- **Similar models**  \n  • Swift 3 – $120  \n  • Cloudpace – $140  \n  • Daily Jog – $85  \n\nWould you like to reserve one of these, or explore another model?",
+      "tool_calls": []
+    }
+  ]
+}

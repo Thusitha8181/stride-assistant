@@ -7,7 +7,9 @@ import {
   SearchKnowledgeBaseInput,
   SearchProductsInput,
 } from "@stride/shared";
+import type { BaseMessage } from "@langchain/core/messages";
 import type { ToolHandlers } from "../tools/handlers";
+import { repairCredentials } from "./credentials";
 
 /**
  * Wraps the tool handlers as LangChain tools. The zod schemas (with descriptions) become
@@ -17,6 +19,14 @@ import type { ToolHandlers } from "../tools/handlers";
  */
 export function createAgentTools(handlers: ToolHandlers) {
   const json = <I, O>(fn: (input: I) => Promise<O>) => async (input: I) => JSON.stringify(await fn(input));
+
+  /** Order tools: repair credentials the model mis-copied, using what the customer actually typed. */
+  const withTypedCredentials =
+    <I extends { orderId?: string; email?: string }, O>(fn: (input: I) => Promise<O>) =>
+    async (input: I, runtime?: { state?: unknown }) => {
+      const messages = (runtime?.state as { messages?: BaseMessage[] } | undefined)?.messages ?? [];
+      return JSON.stringify(await fn(repairCredentials(input, messages)));
+    };
 
   return [
     tool(json(handlers.searchKnowledgeBase), {
@@ -34,22 +44,22 @@ export function createAgentTools(handlers: ToolHandlers) {
     tool(json(handlers.checkStock), {
       name: "checkStock",
       description:
-        "Check live stock for one product in a specific size (and optional width/color). When unavailable, returns nearby sizes, other widths/colors and similar products to suggest.",
+        "Check live stock for one product in a specific size (and optional width/color). When the customer names a product, call this directly (no need to search first). When unavailable, returns nearby sizes, other widths/colors and similar products to suggest.",
       schema: CheckStockInput,
     }),
-    tool(json(handlers.getOrderStatus), {
+    tool(withTypedCredentials(handlers.getOrderStatus), {
       name: "getOrderStatus",
       description:
         "Get an order's status, items (with item ids), tracking timeline and delivery estimate. Requires BOTH the order number and the email address the customer gave you; never guess either.",
       schema: GetOrderStatusInput,
     }),
-    tool(json(handlers.checkReturnEligibility), {
+    tool(withTypedCredentials(handlers.checkReturnEligibility), {
       name: "checkReturnEligibility",
       description:
         "Check whether one item in an order can be returned or exchanged, and why not if it can't (with the policy id to cite and alternatives). Requires order number, email and the item id.",
       schema: CheckReturnEligibilityInput,
     }),
-    tool(json(handlers.createReturn), {
+    tool(withTypedCredentials(handlers.createReturn), {
       name: "createReturn",
       description:
         "Start a return or exchange and get an RMA number. Only call after checkReturnEligibility says eligible AND the customer has confirmed refund vs exchange (and the new size for exchanges).",

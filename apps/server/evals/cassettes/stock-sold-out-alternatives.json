@@ -1,0 +1,28 @@
+{
+  "caseId": "stock-sold-out-alternatives",
+  "recordedAt": "2026-10-07T13:08:10.664Z",
+  "models": [
+    "openai/gpt-oss-120b",
+    "openai/gpt-oss-20b"
+  ],
+  "responses": [
+    {
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "fc_6aae3e78-fda8-401b-9c38-0807b415192d",
+          "name": "checkStock",
+          "args": {
+            "product": "Trail Runner X",
+            "size": 10,
+            "width": "wide"
+          }
+        }
+      ]
+    },
+    {
+      "content": "The Trail Runner X in 10 wide is currently out of stock.  \nYou could consider:\n\n- **Nearby wide sizes**  \n  • 9.5 wide (Black – 10 units, Forest Green – 2 units)  \n  • 10.5 wide (Black – 4 units, Forest Green – 2 units)  \n- **Standard width 10** (Black – 6 units)  \n- **Similar models**  \n  • Trail Runner Y – $115  \n  • Ridge Hiker Mid – $150  \n\nLet me know if you’d like to reserve one of these or explore another option.",
+      "tool_calls": []
+    }
+  ]
+}

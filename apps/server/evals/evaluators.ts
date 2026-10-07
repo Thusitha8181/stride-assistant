@@ -27,7 +27,8 @@ export const normalize = (s: string) =>
     .replace(/[\u2010-\u2015\u2212]/g, "-")
     .replace(/[\u2018\u2019]/g, "'")
     .replace(/[\u201c\u201d]/g, '"')
-    .replace(/[\u00a0\u202f]/g, " ");
+    .replace(/[\u00a0\u202f]/g, " ")
+    .replace(/[\u200b-\u200d\u2060\ufeff]/g, ""); // zero-width chars (seen inside a model-written email)
 
 const escape = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 

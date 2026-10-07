@@ -19,8 +19,17 @@ export function errorChain(err: unknown): ProviderError[] {
 
 export const statusOf = (err: unknown) => errorChain(err).find((e) => typeof e.status === "number")?.status;
 
-/** 408/429/5xx, timeouts and network errors are transient; other 4xx (bad key, bad request) are not. */
+/**
+ * The provider rejected the model's own output (e.g. Groq validates tool calls against the
+ * schema and returns 400 "Tool call validation failed"). The model just generated a bad
+ * call: sampling again usually works, so this is retryable even though it is a 4xx (F3).
+ */
+export const isMalformedGeneration = (err: unknown) =>
+  errorChain(err).some((e) => /tool call validation failed|tool_use_failed|failed to call a function|output_parse_failed/i.test(e.message ?? ""));
+
+/** 408/429/5xx, timeouts, network errors and malformed generations are transient; other 4xx (bad key) are not. */
 export function isTransient(err: unknown): boolean {
+  if (isMalformedGeneration(err)) return true;
   const status = statusOf(err);
   if (typeof status === "number") return status === 408 || status === 429 || status >= 500;
   return errorChain(err).some((e) => /timeout|timed out|ECONNRESET|ECONNREFUSED|fetch failed|socket hang up/i.test(e.message ?? ""));
@@ -49,6 +58,9 @@ export type ResilienceOptions = {
   now?: () => number;
   log?: (msg: string, meta: Record<string, unknown>) => void;
 };
+
+/** Re-sample at most this many times when the provider rejects a malformed generation. */
+export const MAX_MALFORMED_RETRIES = 2;
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -87,6 +99,7 @@ export function modelResilienceMiddleware(options: ResilienceOptions) {
       const deadline = now() + maxQueueMs;
       let lastError: unknown;
       let lastFailed: Which | null = null;
+      let malformed = 0;
 
       for (;;) {
         const which = choose();
@@ -103,9 +116,11 @@ export function modelResilienceMiddleware(options: ResilienceOptions) {
           return await call(which);
         } catch (err) {
           if (!isTransient(err)) throw err;
+          if (isMalformedGeneration(err) && ++malformed > MAX_MALFORMED_RETRIES) throw err;
           lastError = err;
           lastFailed = which;
-          availableAt[which] = now() + (retryAfterMs(err) ?? outageCooldownMs);
+          // A malformed generation says nothing about availability: retry right away.
+          availableAt[which] = isMalformedGeneration(err) ? now() : now() + (retryAfterMs(err) ?? outageCooldownMs);
         }
       }
     },

@@ -1,0 +1,28 @@
+{
+  "caseId": "product-kids-size",
+  "recordedAt": "2026-10-07T13:07:51.578Z",
+  "models": [
+    "openai/gpt-oss-120b",
+    "openai/gpt-oss-20b"
+  ],
+  "responses": [
+    {
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "fc_50a918e9-0a37-41f9-8ef5-5c783026a0d6",
+          "name": "searchProducts",
+          "args": {
+            "category": "kids",
+            "query": "kids shoes",
+            "size": 3
+          }
+        }
+      ]
+    },
+    {
+      "content": "Here are a few kids’ shoes that fit a US size 3:\n\n| Product | Category | Price | Colors | In‑stock sizes |\n|---------|----------|-------|--------|----------------|\n| Kids Light‑Up Sneaker | Kids | $49 | Black, Purple | 1–6 |\n| Kids Dash Runner | Kids | $55 | Blue, Pink | 1–6 |\n| Kids Puddle Boot | Kids | $45 | Yellow, Green | 1–6 |\n\nAll three are in stock for size 3. Let me know which one you’d like, or if you’d like more options!",
+      "tool_calls": []
+    }
+  ]
+}

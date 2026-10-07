@@ -1,6 +1,6 @@
 {
   "caseId": "faq-warranty",
-  "recordedAt": "2026-10-07T12:42:10.467Z",
+  "recordedAt": "2026-10-07T13:05:54.159Z",
   "models": [
     "openai/gpt-oss-120b"
   ],
@@ -9,16 +9,16 @@
       "content": "",
       "tool_calls": [
         {
-          "id": "fc_b51cbbaf-1bca-433c-a7fd-68c24b820bd2",
+          "id": "fc_59c3196d-04e9-466d-8c15-1b86069d6432",
           "name": "searchKnowledgeBase",
           "args": {
-            "query": "Stride warranty coverage what is covered"
+            "query": "what does warranty cover stride footwear"
           }
         }
       ]
     },
     {
-      "content": "Our warranty covers **manufacturing defects** for 1 year from the delivery date, including:\n\n- Sole separation  \n- Broken eyelets  \n- Seam failure  \n\n(Final‑sale items are covered as well) [[warranty#coverage]].",
+      "content": "Our 1‑year warranty covers any manufacturing defects that appear within a year of delivery, such as:\n\n* Sole separation  \n* Broken eyelets  \n* Seam failure  \n\nEven final‑sale items are included.  \n\nIt does **not** cover normal wear‑and‑tear, damage from misuse, accidents, improper care, or shoes that have been used for more than 500 miles of running [[warranty#coverage]][[warranty#what-is-not-covered]].",
       "tool_calls": []
     }
   ]

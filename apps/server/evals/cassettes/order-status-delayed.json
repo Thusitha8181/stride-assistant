@@ -1,0 +1,39 @@
+{
+  "caseId": "order-status-delayed",
+  "recordedAt": "2026-10-07T13:09:01.784Z",
+  "models": [
+    "openai/gpt-oss-120b",
+    "openai/gpt-oss-20b"
+  ],
+  "responses": [
+    {
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "fc_88aad7ec-128d-41cb-a865-822dcdc488be",
+          "name": "getOrderStatus",
+          "args": {
+            "email": "fatima.khan@example.com",
+            "orderId": "O-1023"
+          }
+        }
+      ]
+    },
+    {
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "fc_bb91b663-c586-4bcc-bc65-9fedec15f3ce",
+          "name": "searchKnowledgeBase",
+          "args": {
+            "query": "order delayed shipping policy"
+          }
+        }
+      ]
+    },
+    {
+      "content": "Your order **O‑1023** is currently **delayed** because of severe weather at the carrier hub.  \n\n- **Current status:** shipped (Oct 2) → delayed (Oct 6)  \n- **New estimated delivery:** October 11, 2026  \n- **Tracking number:** 770000000123 (FedEx) – you can follow it on the FedEx site.  \n\nIf the package does not arrive by the new estimate (or is more than 5 business days late), please contact our support team so we can investigate further with the carrier [[shipping#delays]].  \n\nLet me know if you’d like the tracking link again or any other help!",
+      "tool_calls": []
+    }
+  ]
+}

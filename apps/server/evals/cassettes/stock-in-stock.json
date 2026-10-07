@@ -1,0 +1,28 @@
+{
+  "caseId": "stock-in-stock",
+  "recordedAt": "2026-10-07T13:08:09.206Z",
+  "models": [
+    "openai/gpt-oss-120b",
+    "openai/gpt-oss-20b"
+  ],
+  "responses": [
+    {
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "fc_3ae2e3a3-4ca0-4c0c-b01d-9b3a0f383c15",
+          "name": "checkStock",
+          "args": {
+            "color": "black",
+            "product": "Trail Runner X",
+            "size": 10
+          }
+        }
+      ]
+    },
+    {
+      "content": "Yes! The Trail Runner X in Black is in stock in US size 10 (6 pairs available). Let me know if you’d like to add it to your cart or need anything else.",
+      "tool_calls": []
+    }
+  ]
+}

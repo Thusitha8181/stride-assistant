@@ -26,7 +26,7 @@ describe("replay runner", () => {
     const { result, cassette } = await runChatCase(world, "happy-path", orderCase, { model: new ReplayChatModel(recorded) });
     expect(result.pass).toBe(true);
     expect(result.results.map((r) => r.key).sort()).toEqual(["cards", "content", "errors", "grounding", "privacy", "tools"]);
-    expect(result.turns![0]).toMatchObject({ tools: ["getOrderStatus"], text: "Your order O-1042 has shipped and costs $129." });
+    expect(result.turns![0]).toMatchObject({ tools: [`getOrderStatus({"orderId":"O-1042","email":"jane@example.com"})`], text: "Your order O-1042 has shipped and costs $129." });
     // What the model produced is captured for re-recording.
     expect(cassette.responses).toEqual(recorded);
   });

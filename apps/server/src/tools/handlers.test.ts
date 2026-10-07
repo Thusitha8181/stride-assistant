@@ -53,6 +53,13 @@ describe("searchProducts", () => {
     expect(r.products.find((p) => p.name === "Tempo Pro")?.inStockInRequestedSize).toBe(false);
   });
 
+  it("puts a product the customer named first, even when sold out in their size", async () => {
+    const { tools } = setup();
+    const r = await tools.searchProducts({ query: "Tempo Pro", size: 9 });
+    if (!r.ok) throw new Error("expected ok");
+    expect(r.products[0]).toMatchObject({ name: "Tempo Pro", inStockInRequestedSize: false });
+  });
+
   it("returns at most 5 products", async () => {
     const { tools } = setup();
     const r = await tools.searchProducts({ query: "shoe" });

@@ -1,6 +1,6 @@
 {
   "caseId": "faq-refund-timing",
-  "recordedAt": "2026-10-07T12:43:12.946Z",
+  "recordedAt": "2026-10-07T13:06:36.484Z",
   "models": [
     "openai/gpt-oss-120b",
     "openai/gpt-oss-20b"
@@ -10,16 +10,16 @@
       "content": "",
       "tool_calls": [
         {
-          "id": "fc_bd5c1f6a-2dc2-4c23-bdec-db9c192c8721",
+          "id": "fc_71758b7f-93ac-448a-83da-bd3dee155379",
           "name": "searchKnowledgeBase",
           "args": {
-            "query": "refund timeline how long does it take to receive a refund after return"
+            "query": "refund processing time policy"
           }
         }
       ]
     },
     {
-      "content": "Refunds are processed back to your original payment method within **5 to 7 business days** after we receive and inspect the returned item. Shipping charges are not refunded unless the item was defective or we made an error [[returns-policy#refunds]].",
+      "content": "Refunds are processed back to the original payment method within **5 to 7 business days** after we receive and inspect your returned item. Original shipping charges are only refunded if the item was defective or we made an error. [[returns-policy#refunds]]",
       "tool_calls": []
     }
   ]

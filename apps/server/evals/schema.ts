@@ -45,6 +45,12 @@ const CaseId = z.string().regex(/^[a-z0-9][a-z0-9-]*$/, "kebab-case ids");
 export const ChatCase = z.strictObject({
   id: CaseId,
   description: z.string().optional(),
+  /**
+   * Set while a case has no cassette yet (e.g. the provider's daily quota ran out mid-recording).
+   * Replay runs skip it visibly instead of failing; live runs still execute it. Remove the flag
+   * once `npm run eval:record -- --missing` has recorded it.
+   */
+  pendingRecording: z.string().optional(),
   turns: z.array(z.strictObject({ user: z.string().min(1), expect: TurnExpect.default(TurnExpect.parse({})) })).min(1),
 });
 export type ChatCase = z.infer<typeof ChatCase>;

@@ -8,14 +8,20 @@ import { Category, ProductRef, ProductSummary, ShoeSize, Width } from "./product
  * `ok` (plus `code` on failures) so failures are data, not exceptions.
  */
 
+/** Models sometimes emit zero-width characters or Unicode hyphens ("O‑1042") inside identifiers. */
+const clean = (s: string) => s.replace(/[\u200b-\u200d\u2060\ufeff]/g, "").replace(/[\u2010-\u2015\u2212]/g, "-").trim();
+
 const OrderId = z
   .string()
-  .trim()
-  .transform((s) => s.toUpperCase())
+  .transform((s) => clean(s).toUpperCase())
   .pipe(z.string().regex(/^O-\d{4}$/, "Order IDs look like O-1234"))
   .describe("Order number, e.g. O-1042");
 
-const Email = z.string().trim().toLowerCase().pipe(z.email()).describe("Email address the order was placed with");
+const Email = z
+  .string()
+  .transform((s) => clean(s).toLowerCase())
+  .pipe(z.email())
+  .describe("Email address the order was placed with");
 const ItemId = z
   .string()
   .trim()
@@ -185,7 +191,8 @@ export const CheckReturnEligibilityInput = z.strictObject({
   orderId: OrderId,
   email: Email,
   itemId: ItemId,
-  itemCondition: ItemCondition.default("unworn").describe("Ask the customer if unclear; defaults to unworn"),
+  // Optional (not defaulted): providers like Groq reject tool calls that omit a "required" field.
+  itemCondition: ItemCondition.optional().describe("Ask the customer if unclear; defaults to unworn"),
 });
 export type CheckReturnEligibilityInput = z.input<typeof CheckReturnEligibilityInput>;
 
@@ -239,7 +246,8 @@ export const CreateReturnInput = z
     reason: z.string().trim().min(1).max(500).describe("The customer's reason for the return, in their words"),
     type: ReturnType.describe("refund or exchange, as confirmed by the customer"),
     exchangeSize: ShoeSize.optional().describe("Required for exchanges: the new US size"),
-    itemCondition: ItemCondition.default("unworn").describe("Ask the customer if unclear; defaults to unworn"),
+    // Optional (not defaulted): providers like Groq reject tool calls that omit a "required" field.
+  itemCondition: ItemCondition.optional().describe("Ask the customer if unclear; defaults to unworn"),
   })
   .refine((v) => v.type !== "exchange" || v.exchangeSize !== undefined, {
     message: "exchangeSize is required for exchanges",
