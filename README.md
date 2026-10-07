@@ -18,7 +18,7 @@ All data is fake.
 | Milestone | Scope | State |
 |---|---|---|
 | 1 | Monorepo, fake data, Qdrant ingest, tools + tests, CI | ✅ |
-| 2 | Model factory, LangChain agent on Groq, streaming chat API, tracing | ⏳ |
+| 2 | Model factory, LangChain agent on Groq, streaming chat API, tracing | ✅ |
 | 3 | Eval harness (LangSmith datasets + evaluators) | ⏳ |
 | 4 | Guards, privacy layer, resilience (F1–F16) | ⏳ |
 | 5 | Next.js chat UI | ⏳ |
@@ -27,11 +27,17 @@ All data is fake.
 ## Quick start
 
 ```bash
-cp .env.example .env
+cp .env.example .env     # then set GROQ_API_KEY (free at https://console.groq.com/keys)
 npm install
 docker compose up -d     # Qdrant on :6333
 npm run ingest           # embeds the KB + catalog into Qdrant (downloads a ~25 MB local model once)
+npm run dev              # API on http://localhost:4000 (prints a health summary)
+npm run chat             # in a second terminal: chat with the agent in your terminal
 ```
+
+The terminal chat shows each tool call, the cards the UI will render, and citations. Type `/new` to start a fresh session.
+
+To trace every turn in LangSmith, set `LANGSMITH_TRACING=true` and `LANGSMITH_API_KEY` in `.env`. The `run` id printed after each reply is the trace's run id.
 
 To ingest with no model download, use the deterministic offline embeddings:
 
@@ -42,12 +48,38 @@ EMBEDDINGS_PROVIDER=hash npm run ingest
 ## Layout
 
 ```
-apps/server        Domain services, tools, retrieval (Qdrant), ingest
+apps/server        Chat API (Express + SSE), LangChain agent, domain services, tools, retrieval (Qdrant), ingest
 apps/web           Next.js app (chat UI arrives in Milestone 5)
 packages/shared    zod contracts shared by server, web and the model (tool I/O, order view)
 data/              Fake data: products.json (generated), orders.json, company/*.md (knowledge base)
 docs/PRD.md        Product requirements
 ```
+
+## Chat API (Milestone 2)
+
+`POST /api/chat` takes `{ "message": "...", "sessionId"?: "<uuid>" }` and streams Server-Sent Events. Each `data:` line is one JSON event from the shared contract (`packages/shared/src/chat.ts`):
+
+| Event | Meaning |
+|---|---|
+| `session` | Always first. Reuse its `sessionId` on later turns to keep conversation memory. |
+| `text-delta` | Streamed answer text. Policy citations appear inline as `[[chunk-id]]`. |
+| `tool-start` / `tool-end` | Tool calls, with the failure `code` when a tool fails (or `INVALID_ARGUMENTS` for malformed calls, F3). |
+| `card` | Products, stock, order, return eligibility or return created, built from tool results. |
+| `citation` | Sources the answer cited. Only real knowledge-base chunks are included. |
+| `error` | `MODEL_UNAVAILABLE`, `AGENT_LIMIT` or `INTERNAL`, plus a friendly message and `retryable`. |
+| `done` | Always last, with the LangSmith `runId`. |
+
+```bash
+curl -N localhost:4000/api/chat -H 'Content-Type: application/json' \
+  -d '{"message":"Where is order O-1042? My email is jane@example.com"}'
+```
+
+`GET /api/health` reports Qdrant, model and tracing status.
+
+**How the agent works:**
+- It is built with LangChain's `createAgent`, with per-session memory.
+- The model comes from `initChatModel`. Switching provider means changing `LLM_PROVIDER`/`LLM_MODEL` and installing that provider's package.
+- Each turn allows at most 5 tool rounds. A runaway model is stopped *before* a 6th round of tools runs.
 
 ## Tools (Milestone 1)
 
@@ -71,7 +103,7 @@ Privacy is enforced in code, not only in the prompt:
 npm run lint
 npm run typecheck
 npm run test:unit          # shared + server (coverage gate ≥ 80%) + web
-npm run test:integration   # real Qdrant via Testcontainers (needs Docker)
+npm run test:integration   # real Qdrant via Testcontainers (needs Docker); live Groq smoke tests run if GROQ_API_KEY is set
 TEST_LOCAL_EMBEDDINGS=1 npm run test:integration   # plus semantic retrieval with the real model
 ```
 

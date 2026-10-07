@@ -1,0 +1,1012 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ChatEvent > matches the contract snapshot 1`] = `
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "oneOf": [
+    {
+      "additionalProperties": false,
+      "properties": {
+        "sessionId": {
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$",
+          "type": "string",
+        },
+        "type": {
+          "const": "session",
+          "type": "string",
+        },
+      },
+      "required": [
+        "type",
+        "sessionId",
+      ],
+      "type": "object",
+    },
+    {
+      "additionalProperties": false,
+      "properties": {
+        "delta": {
+          "type": "string",
+        },
+        "type": {
+          "const": "text-delta",
+          "type": "string",
+        },
+      },
+      "required": [
+        "type",
+        "delta",
+      ],
+      "type": "object",
+    },
+    {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+        },
+        "toolCallId": {
+          "type": "string",
+        },
+        "type": {
+          "const": "tool-start",
+          "type": "string",
+        },
+      },
+      "required": [
+        "type",
+        "toolCallId",
+        "name",
+      ],
+      "type": "object",
+    },
+    {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "type": [
+            "string",
+            "null",
+          ],
+        },
+        "name": {
+          "type": "string",
+        },
+        "ok": {
+          "type": "boolean",
+        },
+        "toolCallId": {
+          "type": "string",
+        },
+        "type": {
+          "const": "tool-end",
+          "type": "string",
+        },
+      },
+      "required": [
+        "type",
+        "toolCallId",
+        "name",
+        "ok",
+        "code",
+      ],
+      "type": "object",
+    },
+    {
+      "additionalProperties": false,
+      "properties": {
+        "card": {
+          "oneOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "kind": {
+                  "const": "products",
+                  "type": "string",
+                },
+                "products": {
+                  "items": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "category": {
+                        "enum": [
+                          "running",
+                          "trail",
+                          "casual",
+                          "boots",
+                          "kids",
+                          "sandals",
+                        ],
+                        "type": "string",
+                      },
+                      "colors": {
+                        "items": {
+                          "type": "string",
+                        },
+                        "type": "array",
+                      },
+                      "description": {
+                        "type": "string",
+                      },
+                      "id": {
+                        "type": "string",
+                      },
+                      "inStockInRequestedSize": {
+                        "type": "boolean",
+                      },
+                      "inStockSizes": {
+                        "items": {
+                          "maximum": 16,
+                          "minimum": 1,
+                          "multipleOf": 0.5,
+                          "type": "number",
+                        },
+                        "type": "array",
+                      },
+                      "name": {
+                        "type": "string",
+                      },
+                      "price": {
+                        "type": "number",
+                      },
+                      "score": {
+                        "type": "number",
+                      },
+                      "sizes": {
+                        "items": {
+                          "maximum": 16,
+                          "minimum": 1,
+                          "multipleOf": 0.5,
+                          "type": "number",
+                        },
+                        "type": "array",
+                      },
+                      "widths": {
+                        "items": {
+                          "enum": [
+                            "standard",
+                            "wide",
+                          ],
+                          "type": "string",
+                        },
+                        "type": "array",
+                      },
+                    },
+                    "required": [
+                      "id",
+                      "name",
+                      "category",
+                      "price",
+                      "description",
+                      "colors",
+                      "widths",
+                      "sizes",
+                      "inStockSizes",
+                      "score",
+                    ],
+                    "type": "object",
+                  },
+                  "minItems": 1,
+                  "type": "array",
+                },
+              },
+              "required": [
+                "kind",
+                "products",
+              ],
+              "type": "object",
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "kind": {
+                  "const": "stock",
+                  "type": "string",
+                },
+                "stock": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "alternatives": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "nearbySizes": {
+                          "items": {
+                            "additionalProperties": false,
+                            "properties": {
+                              "color": {
+                                "type": "string",
+                              },
+                              "qty": {
+                                "maximum": 9007199254740991,
+                                "minimum": -9007199254740991,
+                                "type": "integer",
+                              },
+                              "size": {
+                                "maximum": 16,
+                                "minimum": 1,
+                                "multipleOf": 0.5,
+                                "type": "number",
+                              },
+                              "width": {
+                                "enum": [
+                                  "standard",
+                                  "wide",
+                                ],
+                                "type": "string",
+                              },
+                            },
+                            "required": [
+                              "size",
+                              "width",
+                              "color",
+                              "qty",
+                            ],
+                            "type": "object",
+                          },
+                          "type": "array",
+                        },
+                        "otherColors": {
+                          "items": {
+                            "additionalProperties": false,
+                            "properties": {
+                              "color": {
+                                "type": "string",
+                              },
+                              "qty": {
+                                "maximum": 9007199254740991,
+                                "minimum": -9007199254740991,
+                                "type": "integer",
+                              },
+                              "size": {
+                                "maximum": 16,
+                                "minimum": 1,
+                                "multipleOf": 0.5,
+                                "type": "number",
+                              },
+                              "width": {
+                                "enum": [
+                                  "standard",
+                                  "wide",
+                                ],
+                                "type": "string",
+                              },
+                            },
+                            "required": [
+                              "size",
+                              "width",
+                              "color",
+                              "qty",
+                            ],
+                            "type": "object",
+                          },
+                          "type": "array",
+                        },
+                        "otherWidths": {
+                          "items": {
+                            "additionalProperties": false,
+                            "properties": {
+                              "color": {
+                                "type": "string",
+                              },
+                              "qty": {
+                                "maximum": 9007199254740991,
+                                "minimum": -9007199254740991,
+                                "type": "integer",
+                              },
+                              "size": {
+                                "maximum": 16,
+                                "minimum": 1,
+                                "multipleOf": 0.5,
+                                "type": "number",
+                              },
+                              "width": {
+                                "enum": [
+                                  "standard",
+                                  "wide",
+                                ],
+                                "type": "string",
+                              },
+                            },
+                            "required": [
+                              "size",
+                              "width",
+                              "color",
+                              "qty",
+                            ],
+                            "type": "object",
+                          },
+                          "type": "array",
+                        },
+                        "similarProducts": {
+                          "items": {
+                            "additionalProperties": false,
+                            "properties": {
+                              "id": {
+                                "type": "string",
+                              },
+                              "name": {
+                                "type": "string",
+                              },
+                              "price": {
+                                "type": "number",
+                              },
+                            },
+                            "required": [
+                              "id",
+                              "name",
+                              "price",
+                            ],
+                            "type": "object",
+                          },
+                          "type": "array",
+                        },
+                      },
+                      "required": [
+                        "nearbySizes",
+                        "otherWidths",
+                        "otherColors",
+                        "similarProducts",
+                      ],
+                      "type": "object",
+                    },
+                    "available": {
+                      "type": "boolean",
+                    },
+                    "ok": {
+                      "const": true,
+                      "type": "boolean",
+                    },
+                    "product": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                        },
+                        "name": {
+                          "type": "string",
+                        },
+                        "price": {
+                          "type": "number",
+                        },
+                      },
+                      "required": [
+                        "id",
+                        "name",
+                        "price",
+                      ],
+                      "type": "object",
+                    },
+                    "quantity": {
+                      "maximum": 9007199254740991,
+                      "minimum": -9007199254740991,
+                      "type": "integer",
+                    },
+                    "requested": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "color": {
+                          "type": [
+                            "string",
+                            "null",
+                          ],
+                        },
+                        "size": {
+                          "maximum": 16,
+                          "minimum": 1,
+                          "multipleOf": 0.5,
+                          "type": "number",
+                        },
+                        "width": {
+                          "enum": [
+                            "standard",
+                            "wide",
+                          ],
+                          "type": "string",
+                        },
+                      },
+                      "required": [
+                        "size",
+                        "width",
+                        "color",
+                      ],
+                      "type": "object",
+                    },
+                  },
+                  "required": [
+                    "ok",
+                    "product",
+                    "requested",
+                    "available",
+                    "quantity",
+                    "alternatives",
+                  ],
+                  "type": "object",
+                },
+              },
+              "required": [
+                "kind",
+                "stock",
+              ],
+              "type": "object",
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "kind": {
+                  "const": "order",
+                  "type": "string",
+                },
+                "order": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "carrier": {
+                      "type": [
+                        "string",
+                        "null",
+                      ],
+                    },
+                    "destination": {
+                      "type": "string",
+                    },
+                    "estimatedDelivery": {
+                      "anyOf": [
+                        {
+                          "format": "date-time",
+                          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z))$",
+                          "type": "string",
+                        },
+                        {
+                          "type": "null",
+                        },
+                      ],
+                    },
+                    "items": {
+                      "items": {
+                        "additionalProperties": false,
+                        "properties": {
+                          "color": {
+                            "type": "string",
+                          },
+                          "finalSale": {
+                            "type": "boolean",
+                          },
+                          "itemId": {
+                            "type": "string",
+                          },
+                          "name": {
+                            "type": "string",
+                          },
+                          "productId": {
+                            "type": "string",
+                          },
+                          "quantity": {
+                            "exclusiveMinimum": 0,
+                            "maximum": 9007199254740991,
+                            "type": "integer",
+                          },
+                          "size": {
+                            "maximum": 16,
+                            "minimum": 1,
+                            "multipleOf": 0.5,
+                            "type": "number",
+                          },
+                          "status": {
+                            "enum": [
+                              "processing",
+                              "shipped",
+                              "delivered",
+                              "cancelled",
+                            ],
+                            "type": "string",
+                          },
+                          "unitPrice": {
+                            "type": "number",
+                          },
+                          "width": {
+                            "enum": [
+                              "standard",
+                              "wide",
+                            ],
+                            "type": "string",
+                          },
+                        },
+                        "required": [
+                          "itemId",
+                          "productId",
+                          "name",
+                          "size",
+                          "width",
+                          "color",
+                          "quantity",
+                          "unitPrice",
+                          "finalSale",
+                          "status",
+                        ],
+                        "type": "object",
+                      },
+                      "minItems": 1,
+                      "type": "array",
+                    },
+                    "orderId": {
+                      "type": "string",
+                    },
+                    "placedAt": {
+                      "format": "date-time",
+                      "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z))$",
+                      "type": "string",
+                    },
+                    "status": {
+                      "enum": [
+                        "processing",
+                        "shipped",
+                        "out_for_delivery",
+                        "delivered",
+                        "delayed",
+                        "partially_shipped",
+                        "cancelled",
+                      ],
+                      "type": "string",
+                    },
+                    "timeline": {
+                      "items": {
+                        "additionalProperties": false,
+                        "properties": {
+                          "at": {
+                            "format": "date-time",
+                            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z))$",
+                            "type": "string",
+                          },
+                          "note": {
+                            "type": "string",
+                          },
+                          "status": {
+                            "enum": [
+                              "ordered",
+                              "shipped",
+                              "out_for_delivery",
+                              "delivered",
+                              "delayed",
+                              "cancelled",
+                            ],
+                            "type": "string",
+                          },
+                        },
+                        "required": [
+                          "status",
+                          "at",
+                        ],
+                        "type": "object",
+                      },
+                      "type": "array",
+                    },
+                    "totals": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "shipping": {
+                          "type": "number",
+                        },
+                        "subtotal": {
+                          "type": "number",
+                        },
+                        "total": {
+                          "type": "number",
+                        },
+                      },
+                      "required": [
+                        "subtotal",
+                        "shipping",
+                        "total",
+                      ],
+                      "type": "object",
+                    },
+                    "trackingNumber": {
+                      "type": [
+                        "string",
+                        "null",
+                      ],
+                    },
+                  },
+                  "required": [
+                    "orderId",
+                    "status",
+                    "placedAt",
+                    "items",
+                    "timeline",
+                    "estimatedDelivery",
+                    "carrier",
+                    "trackingNumber",
+                    "destination",
+                    "totals",
+                  ],
+                  "type": "object",
+                },
+              },
+              "required": [
+                "kind",
+                "order",
+              ],
+              "type": "object",
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "eligibility": {
+                  "anyOf": [
+                    {
+                      "additionalProperties": false,
+                      "properties": {
+                        "daysLeft": {
+                          "maximum": 9007199254740991,
+                          "minimum": -9007199254740991,
+                          "type": "integer",
+                        },
+                        "daysSinceDelivery": {
+                          "maximum": 9007199254740991,
+                          "minimum": -9007199254740991,
+                          "type": "integer",
+                        },
+                        "eligible": {
+                          "const": true,
+                          "type": "boolean",
+                        },
+                        "item": {
+                          "additionalProperties": false,
+                          "properties": {
+                            "itemId": {
+                              "type": "string",
+                            },
+                            "name": {
+                              "type": "string",
+                            },
+                          },
+                          "required": [
+                            "itemId",
+                            "name",
+                          ],
+                          "type": "object",
+                        },
+                        "ok": {
+                          "const": true,
+                          "type": "boolean",
+                        },
+                        "options": {
+                          "items": {
+                            "enum": [
+                              "refund",
+                              "exchange",
+                            ],
+                            "type": "string",
+                          },
+                          "type": "array",
+                        },
+                        "policySource": {
+                          "type": "string",
+                        },
+                      },
+                      "required": [
+                        "ok",
+                        "eligible",
+                        "item",
+                        "daysSinceDelivery",
+                        "daysLeft",
+                        "options",
+                        "policySource",
+                      ],
+                      "type": "object",
+                    },
+                    {
+                      "additionalProperties": false,
+                      "properties": {
+                        "alternatives": {
+                          "items": {
+                            "enum": [
+                              "warranty_claim",
+                              "cancel_order",
+                              "track_order",
+                              "contact_support",
+                            ],
+                            "type": "string",
+                          },
+                          "type": "array",
+                        },
+                        "eligible": {
+                          "const": false,
+                          "type": "boolean",
+                        },
+                        "explanation": {
+                          "type": "string",
+                        },
+                        "item": {
+                          "additionalProperties": false,
+                          "properties": {
+                            "itemId": {
+                              "type": "string",
+                            },
+                            "name": {
+                              "type": "string",
+                            },
+                          },
+                          "required": [
+                            "itemId",
+                            "name",
+                          ],
+                          "type": "object",
+                        },
+                        "ok": {
+                          "const": true,
+                          "type": "boolean",
+                        },
+                        "policySource": {
+                          "type": "string",
+                        },
+                        "reason": {
+                          "enum": [
+                            "ORDER_CANCELLED",
+                            "NOT_DELIVERED",
+                            "OUTSIDE_WINDOW",
+                            "FINAL_SALE",
+                            "WORN_ITEM",
+                            "ALREADY_RETURNED",
+                          ],
+                          "type": "string",
+                        },
+                      },
+                      "required": [
+                        "ok",
+                        "eligible",
+                        "item",
+                        "reason",
+                        "explanation",
+                        "policySource",
+                        "alternatives",
+                      ],
+                      "type": "object",
+                    },
+                  ],
+                },
+                "kind": {
+                  "const": "return-eligibility",
+                  "type": "string",
+                },
+              },
+              "required": [
+                "kind",
+                "eligibility",
+              ],
+              "type": "object",
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "kind": {
+                  "const": "return-created",
+                  "type": "string",
+                },
+                "result": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "exchangeSize": {
+                      "anyOf": [
+                        {
+                          "maximum": 16,
+                          "minimum": 1,
+                          "multipleOf": 0.5,
+                          "type": "number",
+                        },
+                        {
+                          "type": "null",
+                        },
+                      ],
+                    },
+                    "item": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "itemId": {
+                          "type": "string",
+                        },
+                        "name": {
+                          "type": "string",
+                        },
+                      },
+                      "required": [
+                        "itemId",
+                        "name",
+                      ],
+                      "type": "object",
+                    },
+                    "nextSteps": {
+                      "items": {
+                        "type": "string",
+                      },
+                      "type": "array",
+                    },
+                    "ok": {
+                      "const": true,
+                      "type": "boolean",
+                    },
+                    "refundAmount": {
+                      "type": [
+                        "number",
+                        "null",
+                      ],
+                    },
+                    "rma": {
+                      "pattern": "^RMA-\\d{6}$",
+                      "type": "string",
+                    },
+                    "type": {
+                      "enum": [
+                        "refund",
+                        "exchange",
+                      ],
+                      "type": "string",
+                    },
+                  },
+                  "required": [
+                    "ok",
+                    "rma",
+                    "item",
+                    "type",
+                    "refundAmount",
+                    "exchangeSize",
+                    "nextSteps",
+                  ],
+                  "type": "object",
+                },
+              },
+              "required": [
+                "kind",
+                "result",
+              ],
+              "type": "object",
+            },
+          ],
+        },
+        "type": {
+          "const": "card",
+          "type": "string",
+        },
+      },
+      "required": [
+        "type",
+        "card",
+      ],
+      "type": "object",
+    },
+    {
+      "additionalProperties": false,
+      "properties": {
+        "sources": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+              },
+              "title": {
+                "type": "string",
+              },
+            },
+            "required": [
+              "id",
+              "title",
+            ],
+            "type": "object",
+          },
+          "minItems": 1,
+          "type": "array",
+        },
+        "type": {
+          "const": "citation",
+          "type": "string",
+        },
+      },
+      "required": [
+        "type",
+        "sources",
+      ],
+      "type": "object",
+    },
+    {
+      "additionalProperties": false,
+      "properties": {
+        "chips": {
+          "items": {
+            "type": "string",
+          },
+          "minItems": 1,
+          "type": "array",
+        },
+        "type": {
+          "const": "chips",
+          "type": "string",
+        },
+      },
+      "required": [
+        "type",
+        "chips",
+      ],
+      "type": "object",
+    },
+    {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "enum": [
+            "MODEL_UNAVAILABLE",
+            "AGENT_LIMIT",
+            "INTERNAL",
+          ],
+          "type": "string",
+        },
+        "message": {
+          "type": "string",
+        },
+        "retryable": {
+          "type": "boolean",
+        },
+        "type": {
+          "const": "error",
+          "type": "string",
+        },
+      },
+      "required": [
+        "type",
+        "code",
+        "message",
+        "retryable",
+      ],
+      "type": "object",
+    },
+    {
+      "additionalProperties": false,
+      "properties": {
+        "runId": {
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$",
+          "type": "string",
+        },
+        "sessionId": {
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$",
+          "type": "string",
+        },
+        "type": {
+          "const": "done",
+          "type": "string",
+        },
+      },
+      "required": [
+        "type",
+        "sessionId",
+        "runId",
+      ],
+      "type": "object",
+    },
+  ],
+}
+`;
+
+exports[`ChatEvent > matches the contract snapshot 2`] = `
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "message": {
+      "maxLength": 4000,
+      "minLength": 1,
+      "type": "string",
+    },
+    "sessionId": {
+      "format": "uuid",
+      "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$",
+      "type": "string",
+    },
+  },
+  "required": [
+    "message",
+  ],
+  "type": "object",
+}
+`;

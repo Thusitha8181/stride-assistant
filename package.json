@@ -10,6 +10,7 @@
     "node": ">=22.12.0"
   },
   "scripts": {
+    "dev": "npm run dev --workspace=@stride/server",
     "lint": "eslint .",
     "typecheck": "npm run typecheck --workspaces --if-present",
     "test": "npm run test:unit && npm run test:integration",
@@ -19,7 +20,8 @@
     "ingest": "npm run ingest --workspace=@stride/server",
     "data:generate": "npm run data:generate --workspace=@stride/server",
     "prepare": "husky",
-    "play": "npm run play --workspace=@stride/server --"
+    "play": "npm run play --workspace=@stride/server --",
+    "chat": "npm run chat --workspace=@stride/server"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
