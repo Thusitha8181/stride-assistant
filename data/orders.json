@@ -1,0 +1,320 @@
+[
+  {
+    "orderId": "O-1001",
+    "customer": { "name": "Alex Morgan", "email": "alex.morgan@example.com", "phone": "+1 206-555-0101" },
+    "shippingAddress": { "line1": "418 Pine St", "line2": "Apt 5", "city": "Seattle", "region": "WA", "postalCode": "98101", "country": "US" },
+    "payment": { "brand": "Visa", "last4": "4242" },
+    "status": "delivered",
+    "placedDaysAgo": 15,
+    "carrier": "UPS",
+    "trackingNumber": "1Z999AA10000000101",
+    "etaDaysFromNow": null,
+    "shippingCost": 0,
+    "items": [
+      { "itemId": "O-1001-1", "productId": "P-001", "size": 9.5, "width": "standard", "color": "Black", "quantity": 1, "unitPrice": 120, "finalSale": false, "status": "delivered", "deliveredDaysAgo": 10 },
+      { "itemId": "O-1001-2", "productId": "P-024", "size": 10, "width": "standard", "color": "Blue", "quantity": 1, "unitPrice": 40, "finalSale": false, "status": "delivered", "deliveredDaysAgo": 10 }
+    ],
+    "timeline": [
+      { "status": "ordered", "daysAgo": 15 },
+      { "status": "shipped", "daysAgo": 13 },
+      { "status": "delivered", "daysAgo": 10 }
+    ]
+  },
+  {
+    "orderId": "O-1003",
+    "customer": { "name": "Priya Shah", "email": "priya.shah@example.com", "phone": "+1 312-555-0103" },
+    "shippingAddress": { "line1": "77 Lakeview Ave", "city": "Chicago", "region": "IL", "postalCode": "60614", "country": "US" },
+    "payment": { "brand": "Mastercard", "last4": "5454" },
+    "status": "processing",
+    "placedDaysAgo": 1,
+    "carrier": null,
+    "trackingNumber": null,
+    "etaDaysFromNow": 5,
+    "shippingCost": 0,
+    "items": [
+      { "itemId": "O-1003-1", "productId": "P-002", "size": 8, "width": "standard", "color": "Coral", "quantity": 1, "unitPrice": 140, "finalSale": false, "status": "processing", "deliveredDaysAgo": null }
+    ],
+    "timeline": [{ "status": "ordered", "daysAgo": 1 }]
+  },
+  {
+    "orderId": "O-1007",
+    "customer": { "name": "Sam Lee", "email": "sam.lee@example.com", "phone": "+1 617-555-0107" },
+    "shippingAddress": { "line1": "9 Beacon St", "city": "Boston", "region": "MA", "postalCode": "02108", "country": "US" },
+    "payment": { "brand": "Amex", "last4": "0005" },
+    "status": "delivered",
+    "placedDaysAgo": 50,
+    "carrier": "FedEx",
+    "trackingNumber": "770000000107",
+    "etaDaysFromNow": null,
+    "shippingCost": 0,
+    "items": [
+      { "itemId": "O-1007-1", "productId": "P-015", "size": 11, "width": "standard", "color": "Brown", "quantity": 1, "unitPrice": 175, "finalSale": false, "status": "delivered", "deliveredDaysAgo": 45 }
+    ],
+    "timeline": [
+      { "status": "ordered", "daysAgo": 50 },
+      { "status": "shipped", "daysAgo": 48 },
+      { "status": "delivered", "daysAgo": 45 }
+    ]
+  },
+  {
+    "orderId": "O-1011",
+    "customer": { "name": "Maria Garcia", "email": "maria.garcia@example.com", "phone": "+1 305-555-0111" },
+    "shippingAddress": { "line1": "1200 Ocean Dr", "city": "Miami", "region": "FL", "postalCode": "33139", "country": "US" },
+    "payment": { "brand": "Visa", "last4": "1881" },
+    "status": "delivered",
+    "placedDaysAgo": 9,
+    "carrier": "USPS",
+    "trackingNumber": "9400100000000000001111",
+    "etaDaysFromNow": null,
+    "shippingCost": 0,
+    "items": [
+      { "itemId": "O-1011-1", "productId": "P-022", "size": 8, "width": "standard", "color": "Sand", "quantity": 1, "unitPrice": 21, "finalSale": true, "status": "delivered", "deliveredDaysAgo": 5 },
+      { "itemId": "O-1011-2", "productId": "P-010", "size": 8, "width": "standard", "color": "Oat", "quantity": 1, "unitPrice": 79, "finalSale": false, "status": "delivered", "deliveredDaysAgo": 5 }
+    ],
+    "timeline": [
+      { "status": "ordered", "daysAgo": 9 },
+      { "status": "shipped", "daysAgo": 7 },
+      { "status": "delivered", "daysAgo": 5 }
+    ]
+  },
+  {
+    "orderId": "O-1015",
+    "customer": { "name": "Chen Wei", "email": "chen.wei@example.com", "phone": "+1 415-555-0115" },
+    "shippingAddress": { "line1": "500 Market St", "city": "San Francisco", "region": "CA", "postalCode": "94105", "country": "US" },
+    "payment": { "brand": "Visa", "last4": "3131" },
+    "status": "shipped",
+    "placedDaysAgo": 3,
+    "carrier": "UPS",
+    "trackingNumber": "1Z999AA10000000115",
+    "etaDaysFromNow": 3,
+    "shippingCost": 0,
+    "items": [
+      { "itemId": "O-1015-1", "productId": "P-008", "size": 10, "width": "wide", "color": "Brown", "quantity": 1, "unitPrice": 150, "finalSale": false, "status": "shipped", "deliveredDaysAgo": null }
+    ],
+    "timeline": [
+      { "status": "ordered", "daysAgo": 3 },
+      { "status": "shipped", "daysAgo": 2 }
+    ]
+  },
+  {
+    "orderId": "O-1019",
+    "customer": { "name": "Jordan Taylor", "email": "jordan.taylor@example.com", "phone": "+1 720-555-0119" },
+    "shippingAddress": { "line1": "2400 Larimer St", "city": "Denver", "region": "CO", "postalCode": "80205", "country": "US" },
+    "payment": { "brand": "Discover", "last4": "6011" },
+    "status": "out_for_delivery",
+    "placedDaysAgo": 4,
+    "carrier": "UPS",
+    "trackingNumber": "1Z999AA10000000119",
+    "etaDaysFromNow": 0,
+    "shippingCost": 0,
+    "items": [
+      { "itemId": "O-1019-1", "productId": "P-016", "size": 9, "width": "wide", "color": "Black", "quantity": 1, "unitPrice": 189, "finalSale": false, "status": "shipped", "deliveredDaysAgo": null }
+    ],
+    "timeline": [
+      { "status": "ordered", "daysAgo": 4 },
+      { "status": "shipped", "daysAgo": 2 },
+      { "status": "out_for_delivery", "daysAgo": 0 }
+    ]
+  },
+  {
+    "orderId": "O-1023",
+    "customer": { "name": "Fatima Khan", "email": "fatima.khan@example.com", "phone": "+1 612-555-0123" },
+    "shippingAddress": { "line1": "88 Nicollet Mall", "city": "Minneapolis", "region": "MN", "postalCode": "55402", "country": "US" },
+    "payment": { "brand": "Mastercard", "last4": "2222" },
+    "status": "delayed",
+    "placedDaysAgo": 6,
+    "carrier": "FedEx",
+    "trackingNumber": "770000000123",
+    "etaDaysFromNow": 4,
+    "shippingCost": 0,
+    "items": [
+      { "itemId": "O-1023-1", "productId": "P-005", "size": 7.5, "width": "wide", "color": "Blue", "quantity": 1, "unitPrice": 135, "finalSale": false, "status": "shipped", "deliveredDaysAgo": null }
+    ],
+    "timeline": [
+      { "status": "ordered", "daysAgo": 6 },
+      { "status": "shipped", "daysAgo": 5 },
+      { "status": "delayed", "daysAgo": 1, "note": "Severe weather at carrier hub. New delivery estimate provided." }
+    ]
+  },
+  {
+    "orderId": "O-1027",
+    "customer": { "name": "Liam O'Connor", "email": "liam.oconnor@example.com", "phone": "+1 503-555-0127" },
+    "shippingAddress": { "line1": "31 NW 23rd Ave", "city": "Portland", "region": "OR", "postalCode": "97210", "country": "US" },
+    "payment": { "brand": "Visa", "last4": "7777" },
+    "status": "partially_shipped",
+    "placedDaysAgo": 7,
+    "carrier": "UPS",
+    "trackingNumber": "1Z999AA10000000127",
+    "etaDaysFromNow": 6,
+    "shippingCost": 0,
+    "items": [
+      { "itemId": "O-1027-1", "productId": "P-007", "size": 11, "width": "standard", "color": "Slate", "quantity": 1, "unitPrice": 115, "finalSale": false, "status": "delivered", "deliveredDaysAgo": 3 },
+      { "itemId": "O-1027-2", "productId": "P-023", "size": 11, "width": "standard", "color": "Olive", "quantity": 1, "unitPrice": 65, "finalSale": false, "status": "processing", "deliveredDaysAgo": null }
+    ],
+    "timeline": [
+      { "status": "ordered", "daysAgo": 7 },
+      { "status": "shipped", "daysAgo": 5, "note": "Trail Runner Y shipped. Trailhead Sport Sandal is backordered." },
+      { "status": "delivered", "daysAgo": 3, "note": "Trail Runner Y delivered." }
+    ]
+  },
+  {
+    "orderId": "O-1031",
+    "customer": { "name": "Emma Wilson", "email": "emma.wilson@example.com", "phone": "+1 512-555-0131" },
+    "shippingAddress": { "line1": "600 Congress Ave", "city": "Austin", "region": "TX", "postalCode": "78701", "country": "US" },
+    "payment": { "brand": "Visa", "last4": "9999" },
+    "status": "cancelled",
+    "placedDaysAgo": 12,
+    "carrier": null,
+    "trackingNumber": null,
+    "etaDaysFromNow": null,
+    "shippingCost": 6.95,
+    "items": [
+      { "itemId": "O-1031-1", "productId": "P-012", "size": 7, "width": "standard", "color": "Red", "quantity": 1, "unitPrice": 55, "finalSale": false, "status": "cancelled", "deliveredDaysAgo": null }
+    ],
+    "timeline": [
+      { "status": "ordered", "daysAgo": 12 },
+      { "status": "cancelled", "daysAgo": 11, "note": "Cancelled at customer request. Refund issued." }
+    ]
+  },
+  {
+    "orderId": "O-1035",
+    "customer": { "name": "Noah Brown", "email": "noah.brown@example.com", "phone": "+1 404-555-0135" },
+    "shippingAddress": { "line1": "191 Peachtree St", "city": "Atlanta", "region": "GA", "postalCode": "30303", "country": "US" },
+    "payment": { "brand": "Mastercard", "last4": "4444" },
+    "status": "delivered",
+    "placedDaysAgo": 35,
+    "carrier": "USPS",
+    "trackingNumber": "9400100000000000001135",
+    "etaDaysFromNow": null,
+    "shippingCost": 0,
+    "items": [
+      { "itemId": "O-1035-1", "productId": "P-011", "size": 10, "width": "standard", "color": "White", "quantity": 1, "unitPrice": 95, "finalSale": false, "status": "delivered", "deliveredDaysAgo": 30 }
+    ],
+    "timeline": [
+      { "status": "ordered", "daysAgo": 35 },
+      { "status": "shipped", "daysAgo": 33 },
+      { "status": "delivered", "daysAgo": 30 }
+    ]
+  },
+  {
+    "orderId": "O-1038",
+    "customer": { "name": "Olivia Martin", "email": "olivia.martin@example.com", "phone": "+1 602-555-0138" },
+    "shippingAddress": { "line1": "2 E Washington St", "city": "Phoenix", "region": "AZ", "postalCode": "85004", "country": "US" },
+    "payment": { "brand": "Visa", "last4": "1212" },
+    "status": "delivered",
+    "placedDaysAgo": 36,
+    "carrier": "USPS",
+    "trackingNumber": "9400100000000000001138",
+    "etaDaysFromNow": null,
+    "shippingCost": 0,
+    "items": [
+      { "itemId": "O-1038-1", "productId": "P-013", "size": 8.5, "width": "standard", "color": "Brown", "quantity": 1, "unitPrice": 89, "finalSale": false, "status": "delivered", "deliveredDaysAgo": 31 }
+    ],
+    "timeline": [
+      { "status": "ordered", "daysAgo": 36 },
+      { "status": "shipped", "daysAgo": 34 },
+      { "status": "delivered", "daysAgo": 31 }
+    ]
+  },
+  {
+    "orderId": "O-1042",
+    "customer": { "name": "Jane Doe", "email": "jane@example.com", "phone": "+1 512-555-0142" },
+    "shippingAddress": { "line1": "1100 S Lamar Blvd", "line2": "Unit 210", "city": "Austin", "region": "TX", "postalCode": "78704", "country": "US" },
+    "payment": { "brand": "Visa", "last4": "4111" },
+    "status": "shipped",
+    "placedDaysAgo": 2,
+    "carrier": "UPS",
+    "trackingNumber": "1Z999AA10000000142",
+    "etaDaysFromNow": 2,
+    "shippingCost": 0,
+    "items": [
+      { "itemId": "O-1042-1", "productId": "P-006", "size": 10, "width": "standard", "color": "Black", "quantity": 1, "unitPrice": 129, "finalSale": false, "status": "shipped", "deliveredDaysAgo": null }
+    ],
+    "timeline": [
+      { "status": "ordered", "daysAgo": 2 },
+      { "status": "shipped", "daysAgo": 1 }
+    ]
+  },
+  {
+    "orderId": "O-1046",
+    "customer": { "name": "Jane Doe", "email": "jane@example.com", "phone": "+1 512-555-0142" },
+    "shippingAddress": { "line1": "1100 S Lamar Blvd", "line2": "Unit 210", "city": "Austin", "region": "TX", "postalCode": "78704", "country": "US" },
+    "payment": { "brand": "Visa", "last4": "4111" },
+    "status": "delivered",
+    "placedDaysAgo": 16,
+    "carrier": "UPS",
+    "trackingNumber": "1Z999AA10000000146",
+    "etaDaysFromNow": null,
+    "shippingCost": 0,
+    "items": [
+      { "itemId": "O-1046-1", "productId": "P-010", "size": 9, "width": "standard", "color": "Black", "quantity": 1, "unitPrice": 79, "finalSale": false, "status": "delivered", "deliveredDaysAgo": 12 },
+      { "itemId": "O-1046-2", "productId": "P-019", "size": 3, "width": "standard", "color": "Blue", "quantity": 1, "unitPrice": 55, "finalSale": false, "status": "delivered", "deliveredDaysAgo": 12 }
+    ],
+    "timeline": [
+      { "status": "ordered", "daysAgo": 16 },
+      { "status": "shipped", "daysAgo": 14 },
+      { "status": "delivered", "daysAgo": 12 }
+    ]
+  },
+  {
+    "orderId": "O-1050",
+    "customer": { "name": "David Kim", "email": "david.kim@example.com", "phone": "+1 213-555-0150" },
+    "shippingAddress": { "line1": "350 S Grand Ave", "city": "Los Angeles", "region": "CA", "postalCode": "90071", "country": "US" },
+    "payment": { "brand": "Amex", "last4": "1005" },
+    "status": "delivered",
+    "placedDaysAgo": 25,
+    "carrier": "FedEx",
+    "trackingNumber": "770000000150",
+    "etaDaysFromNow": null,
+    "shippingCost": 0,
+    "items": [
+      { "itemId": "O-1050-1", "productId": "P-003", "size": 10, "width": "standard", "color": "Volt", "quantity": 1, "unitPrice": 160, "finalSale": false, "status": "delivered", "deliveredDaysAgo": 20, "returned": true }
+    ],
+    "timeline": [
+      { "status": "ordered", "daysAgo": 25 },
+      { "status": "shipped", "daysAgo": 23 },
+      { "status": "delivered", "daysAgo": 20 }
+    ]
+  },
+  {
+    "orderId": "O-1054",
+    "customer": { "name": "Sofia Rossi", "email": "sofia.rossi@example.com", "phone": "+1 416-555-0154" },
+    "shippingAddress": { "line1": "100 Queen St W", "city": "Toronto", "region": "ON", "postalCode": "M5H 2N2", "country": "CA" },
+    "payment": { "brand": "Mastercard", "last4": "8888" },
+    "status": "delivered",
+    "placedDaysAgo": 14,
+    "carrier": "Canada Post",
+    "trackingNumber": "CP000000000154",
+    "etaDaysFromNow": null,
+    "shippingCost": 14.95,
+    "items": [
+      { "itemId": "O-1054-1", "productId": "P-021", "size": 2, "width": "standard", "color": "Yellow", "quantity": 1, "unitPrice": 45, "finalSale": false, "status": "delivered", "deliveredDaysAgo": 8 },
+      { "itemId": "O-1054-2", "productId": "P-020", "size": 2, "width": "standard", "color": "Purple", "quantity": 1, "unitPrice": 49, "finalSale": false, "status": "delivered", "deliveredDaysAgo": 8 }
+    ],
+    "timeline": [
+      { "status": "ordered", "daysAgo": 14 },
+      { "status": "shipped", "daysAgo": 12 },
+      { "status": "delivered", "daysAgo": 8 }
+    ]
+  },
+  {
+    "orderId": "O-1058",
+    "customer": { "name": "Ethan Clark", "email": "ethan.clark@example.com", "phone": "+1 615-555-0158" },
+    "shippingAddress": { "line1": "501 Broadway", "city": "Nashville", "region": "TN", "postalCode": "37203", "country": "US" },
+    "payment": { "brand": "Visa", "last4": "5656" },
+    "status": "delivered",
+    "placedDaysAgo": 405,
+    "carrier": "UPS",
+    "trackingNumber": "1Z999AA10000000158",
+    "etaDaysFromNow": null,
+    "shippingCost": 0,
+    "items": [
+      { "itemId": "O-1058-1", "productId": "P-017", "size": 12, "width": "wide", "color": "Wheat", "quantity": 1, "unitPrice": 165, "finalSale": false, "status": "delivered", "deliveredDaysAgo": 400 }
+    ],
+    "timeline": [
+      { "status": "ordered", "daysAgo": 405 },
+      { "status": "shipped", "daysAgo": 403 },
+      { "status": "delivered", "daysAgo": 400 }
+    ]
+  }
+]

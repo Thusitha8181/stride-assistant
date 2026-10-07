@@ -1,0 +1,7518 @@
+[
+  {
+    "id": "P-001",
+    "name": "Swift 3",
+    "category": "running",
+    "price": 120,
+    "description": "Lightweight neutral daily trainer with a breathable engineered mesh upper and responsive foam for everyday road runs.",
+    "tags": [
+      "neutral",
+      "lightweight",
+      "daily trainer",
+      "breathable"
+    ],
+    "colors": [
+      "Black",
+      "Ocean Blue",
+      "White"
+    ],
+    "widths": [
+      "standard",
+      "wide"
+    ],
+    "sizes": [
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11,
+      11.5,
+      12,
+      12.5,
+      13
+    ],
+    "inventory": [
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 6,
+        "qty": 6
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 7,
+        "qty": 4
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 3
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 8,
+        "qty": 1
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 2
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 9,
+        "qty": 3
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 6
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 10,
+        "qty": 3
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 4
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 11,
+        "qty": 6
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 5
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 12,
+        "qty": 6
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 13,
+        "qty": 6
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 6,
+        "qty": 3
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 6.5,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 7,
+        "qty": 3
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 7.5,
+        "qty": 5
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 8,
+        "qty": 11
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 8.5,
+        "qty": 10
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 9,
+        "qty": 1
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 9.5,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 10,
+        "qty": 11
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 10.5,
+        "qty": 5
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 11,
+        "qty": 11
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 11.5,
+        "qty": 6
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 12,
+        "qty": 4
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 12.5,
+        "qty": 10
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 13,
+        "qty": 1
+      },
+      {
+        "color": "Ocean Blue",
+        "width": "standard",
+        "size": 6,
+        "qty": 7
+      },
+      {
+        "color": "Ocean Blue",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 1
+      },
+      {
+        "color": "Ocean Blue",
+        "width": "standard",
+        "size": 7,
+        "qty": 9
+      },
+      {
+        "color": "Ocean Blue",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 11
+      },
+      {
+        "color": "Ocean Blue",
+        "width": "standard",
+        "size": 8,
+        "qty": 1
+      },
+      {
+        "color": "Ocean Blue",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 9
+      },
+      {
+        "color": "Ocean Blue",
+        "width": "standard",
+        "size": 9,
+        "qty": 6
+      },
+      {
+        "color": "Ocean Blue",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 7
+      },
+      {
+        "color": "Ocean Blue",
+        "width": "standard",
+        "size": 10,
+        "qty": 6
+      },
+      {
+        "color": "Ocean Blue",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 2
+      },
+      {
+        "color": "Ocean Blue",
+        "width": "standard",
+        "size": 11,
+        "qty": 5
+      },
+      {
+        "color": "Ocean Blue",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 4
+      },
+      {
+        "color": "Ocean Blue",
+        "width": "standard",
+        "size": 12,
+        "qty": 12
+      },
+      {
+        "color": "Ocean Blue",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 3
+      },
+      {
+        "color": "Ocean Blue",
+        "width": "standard",
+        "size": 13,
+        "qty": 0
+      },
+      {
+        "color": "Ocean Blue",
+        "width": "wide",
+        "size": 6,
+        "qty": 12
+      },
+      {
+        "color": "Ocean Blue",
+        "width": "wide",
+        "size": 6.5,
+        "qty": 7
+      },
+      {
+        "color": "Ocean Blue",
+        "width": "wide",
+        "size": 7,
+        "qty": 9
+      },
+      {
+        "color": "Ocean Blue",
+        "width": "wide",
+        "size": 7.5,
+        "qty": 9
+      },
+      {
+        "color": "Ocean Blue",
+        "width": "wide",
+        "size": 8,
+        "qty": 2
+      },
+      {
+        "color": "Ocean Blue",
+        "width": "wide",
+        "size": 8.5,
+        "qty": 3
+      },
+      {
+        "color": "Ocean Blue",
+        "width": "wide",
+        "size": 9,
+        "qty": 4
+      },
+      {
+        "color": "Ocean Blue",
+        "width": "wide",
+        "size": 9.5,
+        "qty": 6
+      },
+      {
+        "color": "Ocean Blue",
+        "width": "wide",
+        "size": 10,
+        "qty": 11
+      },
+      {
+        "color": "Ocean Blue",
+        "width": "wide",
+        "size": 10.5,
+        "qty": 3
+      },
+      {
+        "color": "Ocean Blue",
+        "width": "wide",
+        "size": 11,
+        "qty": 10
+      },
+      {
+        "color": "Ocean Blue",
+        "width": "wide",
+        "size": 11.5,
+        "qty": 0
+      },
+      {
+        "color": "Ocean Blue",
+        "width": "wide",
+        "size": 12,
+        "qty": 9
+      },
+      {
+        "color": "Ocean Blue",
+        "width": "wide",
+        "size": 12.5,
+        "qty": 6
+      },
+      {
+        "color": "Ocean Blue",
+        "width": "wide",
+        "size": 13,
+        "qty": 6
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 6,
+        "qty": 7
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 0
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 7,
+        "qty": 7
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 0
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 8,
+        "qty": 12
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 5
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 9,
+        "qty": 11
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 6
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 10,
+        "qty": 12
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 11
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 11,
+        "qty": 2
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 0
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 12,
+        "qty": 11
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 3
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 13,
+        "qty": 5
+      },
+      {
+        "color": "White",
+        "width": "wide",
+        "size": 6,
+        "qty": 10
+      },
+      {
+        "color": "White",
+        "width": "wide",
+        "size": 6.5,
+        "qty": 11
+      },
+      {
+        "color": "White",
+        "width": "wide",
+        "size": 7,
+        "qty": 7
+      },
+      {
+        "color": "White",
+        "width": "wide",
+        "size": 7.5,
+        "qty": 2
+      },
+      {
+        "color": "White",
+        "width": "wide",
+        "size": 8,
+        "qty": 12
+      },
+      {
+        "color": "White",
+        "width": "wide",
+        "size": 8.5,
+        "qty": 7
+      },
+      {
+        "color": "White",
+        "width": "wide",
+        "size": 9,
+        "qty": 6
+      },
+      {
+        "color": "White",
+        "width": "wide",
+        "size": 9.5,
+        "qty": 6
+      },
+      {
+        "color": "White",
+        "width": "wide",
+        "size": 10,
+        "qty": 6
+      },
+      {
+        "color": "White",
+        "width": "wide",
+        "size": 10.5,
+        "qty": 3
+      },
+      {
+        "color": "White",
+        "width": "wide",
+        "size": 11,
+        "qty": 10
+      },
+      {
+        "color": "White",
+        "width": "wide",
+        "size": 11.5,
+        "qty": 3
+      },
+      {
+        "color": "White",
+        "width": "wide",
+        "size": 12,
+        "qty": 3
+      },
+      {
+        "color": "White",
+        "width": "wide",
+        "size": 12.5,
+        "qty": 0
+      },
+      {
+        "color": "White",
+        "width": "wide",
+        "size": 13,
+        "qty": 12
+      }
+    ]
+  },
+  {
+    "id": "P-002",
+    "name": "Cloudpace",
+    "category": "running",
+    "price": 140,
+    "description": "Maximum-cushion road shoe built for long runs and recovery days, with a plush heel and rocker sole.",
+    "tags": [
+      "max cushion",
+      "long distance",
+      "recovery"
+    ],
+    "colors": [
+      "Grey",
+      "Coral"
+    ],
+    "widths": [
+      "standard"
+    ],
+    "sizes": [
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11,
+      11.5,
+      12,
+      12.5,
+      13
+    ],
+    "inventory": [
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 6,
+        "qty": 10
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 4
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 7,
+        "qty": 8
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 12
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 8,
+        "qty": 0
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 10
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 9,
+        "qty": 9
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 9
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 10,
+        "qty": 0
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 3
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 11,
+        "qty": 0
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 11
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 12,
+        "qty": 2
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 4
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 13,
+        "qty": 0
+      },
+      {
+        "color": "Coral",
+        "width": "standard",
+        "size": 6,
+        "qty": 0
+      },
+      {
+        "color": "Coral",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 4
+      },
+      {
+        "color": "Coral",
+        "width": "standard",
+        "size": 7,
+        "qty": 6
+      },
+      {
+        "color": "Coral",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 10
+      },
+      {
+        "color": "Coral",
+        "width": "standard",
+        "size": 8,
+        "qty": 1
+      },
+      {
+        "color": "Coral",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 7
+      },
+      {
+        "color": "Coral",
+        "width": "standard",
+        "size": 9,
+        "qty": 2
+      },
+      {
+        "color": "Coral",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 0
+      },
+      {
+        "color": "Coral",
+        "width": "standard",
+        "size": 10,
+        "qty": 1
+      },
+      {
+        "color": "Coral",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 10
+      },
+      {
+        "color": "Coral",
+        "width": "standard",
+        "size": 11,
+        "qty": 4
+      },
+      {
+        "color": "Coral",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 12
+      },
+      {
+        "color": "Coral",
+        "width": "standard",
+        "size": 12,
+        "qty": 8
+      },
+      {
+        "color": "Coral",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 4
+      },
+      {
+        "color": "Coral",
+        "width": "standard",
+        "size": 13,
+        "qty": 5
+      }
+    ]
+  },
+  {
+    "id": "P-003",
+    "name": "Tempo Pro",
+    "category": "running",
+    "price": 160,
+    "description": "Race-day shoe with a full-length carbon plate and ultralight foam for 5K to marathon racing.",
+    "tags": [
+      "race",
+      "carbon plate",
+      "fast",
+      "marathon"
+    ],
+    "colors": [
+      "Volt",
+      "Black"
+    ],
+    "widths": [
+      "standard"
+    ],
+    "sizes": [
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11,
+      11.5,
+      12,
+      12.5,
+      13
+    ],
+    "inventory": [
+      {
+        "color": "Volt",
+        "width": "standard",
+        "size": 6,
+        "qty": 6
+      },
+      {
+        "color": "Volt",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 8
+      },
+      {
+        "color": "Volt",
+        "width": "standard",
+        "size": 7,
+        "qty": 9
+      },
+      {
+        "color": "Volt",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 10
+      },
+      {
+        "color": "Volt",
+        "width": "standard",
+        "size": 8,
+        "qty": 0
+      },
+      {
+        "color": "Volt",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 1
+      },
+      {
+        "color": "Volt",
+        "width": "standard",
+        "size": 9,
+        "qty": 0
+      },
+      {
+        "color": "Volt",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 6
+      },
+      {
+        "color": "Volt",
+        "width": "standard",
+        "size": 10,
+        "qty": 6
+      },
+      {
+        "color": "Volt",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 8
+      },
+      {
+        "color": "Volt",
+        "width": "standard",
+        "size": 11,
+        "qty": 3
+      },
+      {
+        "color": "Volt",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 11
+      },
+      {
+        "color": "Volt",
+        "width": "standard",
+        "size": 12,
+        "qty": 2
+      },
+      {
+        "color": "Volt",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 0
+      },
+      {
+        "color": "Volt",
+        "width": "standard",
+        "size": 13,
+        "qty": 4
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 6,
+        "qty": 11
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 7,
+        "qty": 5
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 10
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 8,
+        "qty": 1
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 3
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 9,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 2
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 10,
+        "qty": 5
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 5
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 11,
+        "qty": 4
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 12,
+        "qty": 12
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 7
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 13,
+        "qty": 9
+      }
+    ]
+  },
+  {
+    "id": "P-004",
+    "name": "Daily Jog",
+    "category": "running",
+    "price": 85,
+    "description": "Affordable, durable running shoe for beginners, gym sessions and casual jogs.",
+    "tags": [
+      "budget",
+      "beginner",
+      "gym"
+    ],
+    "colors": [
+      "Navy",
+      "Black",
+      "Red"
+    ],
+    "widths": [
+      "standard",
+      "wide"
+    ],
+    "sizes": [
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11,
+      11.5,
+      12,
+      12.5,
+      13
+    ],
+    "inventory": [
+      {
+        "color": "Navy",
+        "width": "standard",
+        "size": 6,
+        "qty": 4
+      },
+      {
+        "color": "Navy",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 4
+      },
+      {
+        "color": "Navy",
+        "width": "standard",
+        "size": 7,
+        "qty": 0
+      },
+      {
+        "color": "Navy",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 1
+      },
+      {
+        "color": "Navy",
+        "width": "standard",
+        "size": 8,
+        "qty": 6
+      },
+      {
+        "color": "Navy",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 3
+      },
+      {
+        "color": "Navy",
+        "width": "standard",
+        "size": 9,
+        "qty": 7
+      },
+      {
+        "color": "Navy",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 0
+      },
+      {
+        "color": "Navy",
+        "width": "standard",
+        "size": 10,
+        "qty": 6
+      },
+      {
+        "color": "Navy",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 6
+      },
+      {
+        "color": "Navy",
+        "width": "standard",
+        "size": 11,
+        "qty": 8
+      },
+      {
+        "color": "Navy",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 5
+      },
+      {
+        "color": "Navy",
+        "width": "standard",
+        "size": 12,
+        "qty": 7
+      },
+      {
+        "color": "Navy",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 1
+      },
+      {
+        "color": "Navy",
+        "width": "standard",
+        "size": 13,
+        "qty": 6
+      },
+      {
+        "color": "Navy",
+        "width": "wide",
+        "size": 6,
+        "qty": 11
+      },
+      {
+        "color": "Navy",
+        "width": "wide",
+        "size": 6.5,
+        "qty": 7
+      },
+      {
+        "color": "Navy",
+        "width": "wide",
+        "size": 7,
+        "qty": 7
+      },
+      {
+        "color": "Navy",
+        "width": "wide",
+        "size": 7.5,
+        "qty": 7
+      },
+      {
+        "color": "Navy",
+        "width": "wide",
+        "size": 8,
+        "qty": 8
+      },
+      {
+        "color": "Navy",
+        "width": "wide",
+        "size": 8.5,
+        "qty": 5
+      },
+      {
+        "color": "Navy",
+        "width": "wide",
+        "size": 9,
+        "qty": 9
+      },
+      {
+        "color": "Navy",
+        "width": "wide",
+        "size": 9.5,
+        "qty": 10
+      },
+      {
+        "color": "Navy",
+        "width": "wide",
+        "size": 10,
+        "qty": 10
+      },
+      {
+        "color": "Navy",
+        "width": "wide",
+        "size": 10.5,
+        "qty": 5
+      },
+      {
+        "color": "Navy",
+        "width": "wide",
+        "size": 11,
+        "qty": 0
+      },
+      {
+        "color": "Navy",
+        "width": "wide",
+        "size": 11.5,
+        "qty": 12
+      },
+      {
+        "color": "Navy",
+        "width": "wide",
+        "size": 12,
+        "qty": 3
+      },
+      {
+        "color": "Navy",
+        "width": "wide",
+        "size": 12.5,
+        "qty": 8
+      },
+      {
+        "color": "Navy",
+        "width": "wide",
+        "size": 13,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 6,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 9
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 7,
+        "qty": 10
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 5
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 8,
+        "qty": 10
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 8
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 9,
+        "qty": 12
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 9
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 10,
+        "qty": 10
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 5
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 11,
+        "qty": 3
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 12,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 3
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 13,
+        "qty": 2
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 6,
+        "qty": 1
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 6.5,
+        "qty": 12
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 7,
+        "qty": 12
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 7.5,
+        "qty": 9
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 8,
+        "qty": 9
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 8.5,
+        "qty": 9
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 9,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 9.5,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 10,
+        "qty": 2
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 10.5,
+        "qty": 1
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 11,
+        "qty": 8
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 11.5,
+        "qty": 7
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 12,
+        "qty": 8
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 12.5,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 13,
+        "qty": 9
+      },
+      {
+        "color": "Red",
+        "width": "standard",
+        "size": 6,
+        "qty": 3
+      },
+      {
+        "color": "Red",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 2
+      },
+      {
+        "color": "Red",
+        "width": "standard",
+        "size": 7,
+        "qty": 4
+      },
+      {
+        "color": "Red",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 0
+      },
+      {
+        "color": "Red",
+        "width": "standard",
+        "size": 8,
+        "qty": 7
+      },
+      {
+        "color": "Red",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 0
+      },
+      {
+        "color": "Red",
+        "width": "standard",
+        "size": 9,
+        "qty": 2
+      },
+      {
+        "color": "Red",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 0
+      },
+      {
+        "color": "Red",
+        "width": "standard",
+        "size": 10,
+        "qty": 2
+      },
+      {
+        "color": "Red",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 8
+      },
+      {
+        "color": "Red",
+        "width": "standard",
+        "size": 11,
+        "qty": 10
+      },
+      {
+        "color": "Red",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 4
+      },
+      {
+        "color": "Red",
+        "width": "standard",
+        "size": 12,
+        "qty": 9
+      },
+      {
+        "color": "Red",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 6
+      },
+      {
+        "color": "Red",
+        "width": "standard",
+        "size": 13,
+        "qty": 10
+      },
+      {
+        "color": "Red",
+        "width": "wide",
+        "size": 6,
+        "qty": 3
+      },
+      {
+        "color": "Red",
+        "width": "wide",
+        "size": 6.5,
+        "qty": 4
+      },
+      {
+        "color": "Red",
+        "width": "wide",
+        "size": 7,
+        "qty": 4
+      },
+      {
+        "color": "Red",
+        "width": "wide",
+        "size": 7.5,
+        "qty": 11
+      },
+      {
+        "color": "Red",
+        "width": "wide",
+        "size": 8,
+        "qty": 0
+      },
+      {
+        "color": "Red",
+        "width": "wide",
+        "size": 8.5,
+        "qty": 4
+      },
+      {
+        "color": "Red",
+        "width": "wide",
+        "size": 9,
+        "qty": 7
+      },
+      {
+        "color": "Red",
+        "width": "wide",
+        "size": 9.5,
+        "qty": 1
+      },
+      {
+        "color": "Red",
+        "width": "wide",
+        "size": 10,
+        "qty": 8
+      },
+      {
+        "color": "Red",
+        "width": "wide",
+        "size": 10.5,
+        "qty": 1
+      },
+      {
+        "color": "Red",
+        "width": "wide",
+        "size": 11,
+        "qty": 9
+      },
+      {
+        "color": "Red",
+        "width": "wide",
+        "size": 11.5,
+        "qty": 3
+      },
+      {
+        "color": "Red",
+        "width": "wide",
+        "size": 12,
+        "qty": 7
+      },
+      {
+        "color": "Red",
+        "width": "wide",
+        "size": 12.5,
+        "qty": 5
+      },
+      {
+        "color": "Red",
+        "width": "wide",
+        "size": 13,
+        "qty": 11
+      }
+    ]
+  },
+  {
+    "id": "P-005",
+    "name": "Stability GT",
+    "category": "running",
+    "price": 135,
+    "description": "Supportive stability shoe with a guide rail midsole for runners who overpronate.",
+    "tags": [
+      "stability",
+      "overpronation",
+      "support"
+    ],
+    "colors": [
+      "Blue",
+      "Grey"
+    ],
+    "widths": [
+      "standard",
+      "wide"
+    ],
+    "sizes": [
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11,
+      11.5,
+      12,
+      12.5,
+      13
+    ],
+    "inventory": [
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 6,
+        "qty": 3
+      },
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 3
+      },
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 7,
+        "qty": 4
+      },
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 6
+      },
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 8,
+        "qty": 11
+      },
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 1
+      },
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 9,
+        "qty": 4
+      },
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 1
+      },
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 10,
+        "qty": 1
+      },
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 9
+      },
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 11,
+        "qty": 8
+      },
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 5
+      },
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 12,
+        "qty": 9
+      },
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 9
+      },
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 13,
+        "qty": 10
+      },
+      {
+        "color": "Blue",
+        "width": "wide",
+        "size": 6,
+        "qty": 7
+      },
+      {
+        "color": "Blue",
+        "width": "wide",
+        "size": 6.5,
+        "qty": 2
+      },
+      {
+        "color": "Blue",
+        "width": "wide",
+        "size": 7,
+        "qty": 12
+      },
+      {
+        "color": "Blue",
+        "width": "wide",
+        "size": 7.5,
+        "qty": 10
+      },
+      {
+        "color": "Blue",
+        "width": "wide",
+        "size": 8,
+        "qty": 7
+      },
+      {
+        "color": "Blue",
+        "width": "wide",
+        "size": 8.5,
+        "qty": 12
+      },
+      {
+        "color": "Blue",
+        "width": "wide",
+        "size": 9,
+        "qty": 6
+      },
+      {
+        "color": "Blue",
+        "width": "wide",
+        "size": 9.5,
+        "qty": 1
+      },
+      {
+        "color": "Blue",
+        "width": "wide",
+        "size": 10,
+        "qty": 6
+      },
+      {
+        "color": "Blue",
+        "width": "wide",
+        "size": 10.5,
+        "qty": 8
+      },
+      {
+        "color": "Blue",
+        "width": "wide",
+        "size": 11,
+        "qty": 8
+      },
+      {
+        "color": "Blue",
+        "width": "wide",
+        "size": 11.5,
+        "qty": 3
+      },
+      {
+        "color": "Blue",
+        "width": "wide",
+        "size": 12,
+        "qty": 5
+      },
+      {
+        "color": "Blue",
+        "width": "wide",
+        "size": 12.5,
+        "qty": 5
+      },
+      {
+        "color": "Blue",
+        "width": "wide",
+        "size": 13,
+        "qty": 4
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 6,
+        "qty": 10
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 10
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 7,
+        "qty": 10
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 11
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 8,
+        "qty": 6
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 1
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 9,
+        "qty": 0
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 8
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 10,
+        "qty": 4
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 6
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 11,
+        "qty": 6
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 3
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 12,
+        "qty": 5
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 1
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 13,
+        "qty": 0
+      },
+      {
+        "color": "Grey",
+        "width": "wide",
+        "size": 6,
+        "qty": 8
+      },
+      {
+        "color": "Grey",
+        "width": "wide",
+        "size": 6.5,
+        "qty": 11
+      },
+      {
+        "color": "Grey",
+        "width": "wide",
+        "size": 7,
+        "qty": 5
+      },
+      {
+        "color": "Grey",
+        "width": "wide",
+        "size": 7.5,
+        "qty": 3
+      },
+      {
+        "color": "Grey",
+        "width": "wide",
+        "size": 8,
+        "qty": 12
+      },
+      {
+        "color": "Grey",
+        "width": "wide",
+        "size": 8.5,
+        "qty": 0
+      },
+      {
+        "color": "Grey",
+        "width": "wide",
+        "size": 9,
+        "qty": 7
+      },
+      {
+        "color": "Grey",
+        "width": "wide",
+        "size": 9.5,
+        "qty": 6
+      },
+      {
+        "color": "Grey",
+        "width": "wide",
+        "size": 10,
+        "qty": 7
+      },
+      {
+        "color": "Grey",
+        "width": "wide",
+        "size": 10.5,
+        "qty": 10
+      },
+      {
+        "color": "Grey",
+        "width": "wide",
+        "size": 11,
+        "qty": 9
+      },
+      {
+        "color": "Grey",
+        "width": "wide",
+        "size": 11.5,
+        "qty": 9
+      },
+      {
+        "color": "Grey",
+        "width": "wide",
+        "size": 12,
+        "qty": 4
+      },
+      {
+        "color": "Grey",
+        "width": "wide",
+        "size": 12.5,
+        "qty": 5
+      },
+      {
+        "color": "Grey",
+        "width": "wide",
+        "size": 13,
+        "qty": 2
+      }
+    ]
+  },
+  {
+    "id": "P-006",
+    "name": "Trail Runner X",
+    "category": "trail",
+    "price": 129,
+    "description": "Waterproof trail running shoe with a StormShield membrane, 5mm grippy lugs and a rock plate for technical terrain.",
+    "tags": [
+      "waterproof",
+      "grip",
+      "mud",
+      "rock plate"
+    ],
+    "colors": [
+      "Black",
+      "Forest Green"
+    ],
+    "widths": [
+      "standard",
+      "wide"
+    ],
+    "sizes": [
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11,
+      11.5,
+      12,
+      12.5,
+      13
+    ],
+    "inventory": [
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 6,
+        "qty": 10
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 7,
+        "qty": 9
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 8,
+        "qty": 7
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 9,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 12
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 10,
+        "qty": 6
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 12
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 11,
+        "qty": 10
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 2
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 12,
+        "qty": 9
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 5
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 13,
+        "qty": 3
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 6,
+        "qty": 10
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 6.5,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 7,
+        "qty": 5
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 7.5,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 8,
+        "qty": 3
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 8.5,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 9,
+        "qty": 1
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 9.5,
+        "qty": 10
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 10,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 10.5,
+        "qty": 4
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 11,
+        "qty": 4
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 11.5,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 12,
+        "qty": 3
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 12.5,
+        "qty": 12
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 13,
+        "qty": 4
+      },
+      {
+        "color": "Forest Green",
+        "width": "standard",
+        "size": 6,
+        "qty": 0
+      },
+      {
+        "color": "Forest Green",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 9
+      },
+      {
+        "color": "Forest Green",
+        "width": "standard",
+        "size": 7,
+        "qty": 7
+      },
+      {
+        "color": "Forest Green",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 12
+      },
+      {
+        "color": "Forest Green",
+        "width": "standard",
+        "size": 8,
+        "qty": 5
+      },
+      {
+        "color": "Forest Green",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 3
+      },
+      {
+        "color": "Forest Green",
+        "width": "standard",
+        "size": 9,
+        "qty": 1
+      },
+      {
+        "color": "Forest Green",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 3
+      },
+      {
+        "color": "Forest Green",
+        "width": "standard",
+        "size": 10,
+        "qty": 0
+      },
+      {
+        "color": "Forest Green",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 1
+      },
+      {
+        "color": "Forest Green",
+        "width": "standard",
+        "size": 11,
+        "qty": 8
+      },
+      {
+        "color": "Forest Green",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 6
+      },
+      {
+        "color": "Forest Green",
+        "width": "standard",
+        "size": 12,
+        "qty": 5
+      },
+      {
+        "color": "Forest Green",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 4
+      },
+      {
+        "color": "Forest Green",
+        "width": "standard",
+        "size": 13,
+        "qty": 12
+      },
+      {
+        "color": "Forest Green",
+        "width": "wide",
+        "size": 6,
+        "qty": 7
+      },
+      {
+        "color": "Forest Green",
+        "width": "wide",
+        "size": 6.5,
+        "qty": 5
+      },
+      {
+        "color": "Forest Green",
+        "width": "wide",
+        "size": 7,
+        "qty": 10
+      },
+      {
+        "color": "Forest Green",
+        "width": "wide",
+        "size": 7.5,
+        "qty": 4
+      },
+      {
+        "color": "Forest Green",
+        "width": "wide",
+        "size": 8,
+        "qty": 11
+      },
+      {
+        "color": "Forest Green",
+        "width": "wide",
+        "size": 8.5,
+        "qty": 2
+      },
+      {
+        "color": "Forest Green",
+        "width": "wide",
+        "size": 9,
+        "qty": 9
+      },
+      {
+        "color": "Forest Green",
+        "width": "wide",
+        "size": 9.5,
+        "qty": 2
+      },
+      {
+        "color": "Forest Green",
+        "width": "wide",
+        "size": 10,
+        "qty": 0
+      },
+      {
+        "color": "Forest Green",
+        "width": "wide",
+        "size": 10.5,
+        "qty": 2
+      },
+      {
+        "color": "Forest Green",
+        "width": "wide",
+        "size": 11,
+        "qty": 3
+      },
+      {
+        "color": "Forest Green",
+        "width": "wide",
+        "size": 11.5,
+        "qty": 0
+      },
+      {
+        "color": "Forest Green",
+        "width": "wide",
+        "size": 12,
+        "qty": 9
+      },
+      {
+        "color": "Forest Green",
+        "width": "wide",
+        "size": 12.5,
+        "qty": 9
+      },
+      {
+        "color": "Forest Green",
+        "width": "wide",
+        "size": 13,
+        "qty": 5
+      }
+    ]
+  },
+  {
+    "id": "P-007",
+    "name": "Trail Runner Y",
+    "category": "trail",
+    "price": 115,
+    "description": "Lighter waterproof trail runner with a StormShield membrane and a nimble outsole for fast, wet trail runs.",
+    "tags": [
+      "waterproof",
+      "lightweight",
+      "trail"
+    ],
+    "colors": [
+      "Slate",
+      "Orange"
+    ],
+    "widths": [
+      "standard",
+      "wide"
+    ],
+    "sizes": [
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11,
+      11.5,
+      12,
+      12.5,
+      13
+    ],
+    "inventory": [
+      {
+        "color": "Slate",
+        "width": "standard",
+        "size": 6,
+        "qty": 11
+      },
+      {
+        "color": "Slate",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 4
+      },
+      {
+        "color": "Slate",
+        "width": "standard",
+        "size": 7,
+        "qty": 10
+      },
+      {
+        "color": "Slate",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 6
+      },
+      {
+        "color": "Slate",
+        "width": "standard",
+        "size": 8,
+        "qty": 3
+      },
+      {
+        "color": "Slate",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 8
+      },
+      {
+        "color": "Slate",
+        "width": "standard",
+        "size": 9,
+        "qty": 2
+      },
+      {
+        "color": "Slate",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 0
+      },
+      {
+        "color": "Slate",
+        "width": "standard",
+        "size": 10,
+        "qty": 9
+      },
+      {
+        "color": "Slate",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 0
+      },
+      {
+        "color": "Slate",
+        "width": "standard",
+        "size": 11,
+        "qty": 7
+      },
+      {
+        "color": "Slate",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 10
+      },
+      {
+        "color": "Slate",
+        "width": "standard",
+        "size": 12,
+        "qty": 4
+      },
+      {
+        "color": "Slate",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 0
+      },
+      {
+        "color": "Slate",
+        "width": "standard",
+        "size": 13,
+        "qty": 9
+      },
+      {
+        "color": "Slate",
+        "width": "wide",
+        "size": 6,
+        "qty": 4
+      },
+      {
+        "color": "Slate",
+        "width": "wide",
+        "size": 6.5,
+        "qty": 0
+      },
+      {
+        "color": "Slate",
+        "width": "wide",
+        "size": 7,
+        "qty": 0
+      },
+      {
+        "color": "Slate",
+        "width": "wide",
+        "size": 7.5,
+        "qty": 6
+      },
+      {
+        "color": "Slate",
+        "width": "wide",
+        "size": 8,
+        "qty": 5
+      },
+      {
+        "color": "Slate",
+        "width": "wide",
+        "size": 8.5,
+        "qty": 0
+      },
+      {
+        "color": "Slate",
+        "width": "wide",
+        "size": 9,
+        "qty": 7
+      },
+      {
+        "color": "Slate",
+        "width": "wide",
+        "size": 9.5,
+        "qty": 7
+      },
+      {
+        "color": "Slate",
+        "width": "wide",
+        "size": 10,
+        "qty": 5
+      },
+      {
+        "color": "Slate",
+        "width": "wide",
+        "size": 10.5,
+        "qty": 2
+      },
+      {
+        "color": "Slate",
+        "width": "wide",
+        "size": 11,
+        "qty": 9
+      },
+      {
+        "color": "Slate",
+        "width": "wide",
+        "size": 11.5,
+        "qty": 10
+      },
+      {
+        "color": "Slate",
+        "width": "wide",
+        "size": 12,
+        "qty": 6
+      },
+      {
+        "color": "Slate",
+        "width": "wide",
+        "size": 12.5,
+        "qty": 11
+      },
+      {
+        "color": "Slate",
+        "width": "wide",
+        "size": 13,
+        "qty": 6
+      },
+      {
+        "color": "Orange",
+        "width": "standard",
+        "size": 6,
+        "qty": 12
+      },
+      {
+        "color": "Orange",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 1
+      },
+      {
+        "color": "Orange",
+        "width": "standard",
+        "size": 7,
+        "qty": 0
+      },
+      {
+        "color": "Orange",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 10
+      },
+      {
+        "color": "Orange",
+        "width": "standard",
+        "size": 8,
+        "qty": 0
+      },
+      {
+        "color": "Orange",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 10
+      },
+      {
+        "color": "Orange",
+        "width": "standard",
+        "size": 9,
+        "qty": 4
+      },
+      {
+        "color": "Orange",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 12
+      },
+      {
+        "color": "Orange",
+        "width": "standard",
+        "size": 10,
+        "qty": 10
+      },
+      {
+        "color": "Orange",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 4
+      },
+      {
+        "color": "Orange",
+        "width": "standard",
+        "size": 11,
+        "qty": 11
+      },
+      {
+        "color": "Orange",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 6
+      },
+      {
+        "color": "Orange",
+        "width": "standard",
+        "size": 12,
+        "qty": 8
+      },
+      {
+        "color": "Orange",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 9
+      },
+      {
+        "color": "Orange",
+        "width": "standard",
+        "size": 13,
+        "qty": 7
+      },
+      {
+        "color": "Orange",
+        "width": "wide",
+        "size": 6,
+        "qty": 11
+      },
+      {
+        "color": "Orange",
+        "width": "wide",
+        "size": 6.5,
+        "qty": 3
+      },
+      {
+        "color": "Orange",
+        "width": "wide",
+        "size": 7,
+        "qty": 1
+      },
+      {
+        "color": "Orange",
+        "width": "wide",
+        "size": 7.5,
+        "qty": 6
+      },
+      {
+        "color": "Orange",
+        "width": "wide",
+        "size": 8,
+        "qty": 0
+      },
+      {
+        "color": "Orange",
+        "width": "wide",
+        "size": 8.5,
+        "qty": 4
+      },
+      {
+        "color": "Orange",
+        "width": "wide",
+        "size": 9,
+        "qty": 8
+      },
+      {
+        "color": "Orange",
+        "width": "wide",
+        "size": 9.5,
+        "qty": 0
+      },
+      {
+        "color": "Orange",
+        "width": "wide",
+        "size": 10,
+        "qty": 9
+      },
+      {
+        "color": "Orange",
+        "width": "wide",
+        "size": 10.5,
+        "qty": 8
+      },
+      {
+        "color": "Orange",
+        "width": "wide",
+        "size": 11,
+        "qty": 7
+      },
+      {
+        "color": "Orange",
+        "width": "wide",
+        "size": 11.5,
+        "qty": 8
+      },
+      {
+        "color": "Orange",
+        "width": "wide",
+        "size": 12,
+        "qty": 9
+      },
+      {
+        "color": "Orange",
+        "width": "wide",
+        "size": 12.5,
+        "qty": 5
+      },
+      {
+        "color": "Orange",
+        "width": "wide",
+        "size": 13,
+        "qty": 9
+      }
+    ]
+  },
+  {
+    "id": "P-008",
+    "name": "Ridge Hiker Mid",
+    "category": "trail",
+    "price": 150,
+    "description": "Waterproof mid-cut hiking shoe with ankle support, a stiff shank and deep lugs for day hikes and backpacking.",
+    "tags": [
+      "waterproof",
+      "hiking",
+      "ankle support",
+      "mid"
+    ],
+    "colors": [
+      "Brown",
+      "Black"
+    ],
+    "widths": [
+      "standard",
+      "wide"
+    ],
+    "sizes": [
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11,
+      11.5,
+      12,
+      12.5,
+      13
+    ],
+    "inventory": [
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 6,
+        "qty": 11
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 5
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 7,
+        "qty": 8
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 8
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 8,
+        "qty": 5
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 9
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 9,
+        "qty": 1
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 1
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 10,
+        "qty": 7
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 12
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 11,
+        "qty": 12
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 5
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 12,
+        "qty": 11
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 1
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 13,
+        "qty": 1
+      },
+      {
+        "color": "Brown",
+        "width": "wide",
+        "size": 6,
+        "qty": 10
+      },
+      {
+        "color": "Brown",
+        "width": "wide",
+        "size": 6.5,
+        "qty": 0
+      },
+      {
+        "color": "Brown",
+        "width": "wide",
+        "size": 7,
+        "qty": 11
+      },
+      {
+        "color": "Brown",
+        "width": "wide",
+        "size": 7.5,
+        "qty": 0
+      },
+      {
+        "color": "Brown",
+        "width": "wide",
+        "size": 8,
+        "qty": 6
+      },
+      {
+        "color": "Brown",
+        "width": "wide",
+        "size": 8.5,
+        "qty": 1
+      },
+      {
+        "color": "Brown",
+        "width": "wide",
+        "size": 9,
+        "qty": 7
+      },
+      {
+        "color": "Brown",
+        "width": "wide",
+        "size": 9.5,
+        "qty": 0
+      },
+      {
+        "color": "Brown",
+        "width": "wide",
+        "size": 10,
+        "qty": 12
+      },
+      {
+        "color": "Brown",
+        "width": "wide",
+        "size": 10.5,
+        "qty": 4
+      },
+      {
+        "color": "Brown",
+        "width": "wide",
+        "size": 11,
+        "qty": 7
+      },
+      {
+        "color": "Brown",
+        "width": "wide",
+        "size": 11.5,
+        "qty": 9
+      },
+      {
+        "color": "Brown",
+        "width": "wide",
+        "size": 12,
+        "qty": 0
+      },
+      {
+        "color": "Brown",
+        "width": "wide",
+        "size": 12.5,
+        "qty": 11
+      },
+      {
+        "color": "Brown",
+        "width": "wide",
+        "size": 13,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 6,
+        "qty": 10
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 9
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 7,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 5
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 8,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 5
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 9,
+        "qty": 6
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 8
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 10,
+        "qty": 9
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 5
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 11,
+        "qty": 1
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 12,
+        "qty": 1
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 6
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 13,
+        "qty": 4
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 6,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 6.5,
+        "qty": 9
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 7,
+        "qty": 12
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 7.5,
+        "qty": 11
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 8,
+        "qty": 6
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 8.5,
+        "qty": 5
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 9,
+        "qty": 12
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 9.5,
+        "qty": 1
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 10,
+        "qty": 4
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 10.5,
+        "qty": 8
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 11,
+        "qty": 2
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 11.5,
+        "qty": 4
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 12,
+        "qty": 6
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 12.5,
+        "qty": 9
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 13,
+        "qty": 5
+      }
+    ]
+  },
+  {
+    "id": "P-009",
+    "name": "Mudlark Trail",
+    "category": "trail",
+    "price": 99,
+    "description": "Fast-draining, non-waterproof trail shoe with an aggressive outsole for muddy, wet conditions.",
+    "tags": [
+      "trail",
+      "drainage",
+      "grip"
+    ],
+    "colors": [
+      "Olive",
+      "Grey"
+    ],
+    "widths": [
+      "standard"
+    ],
+    "sizes": [
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11,
+      11.5,
+      12,
+      12.5,
+      13
+    ],
+    "inventory": [
+      {
+        "color": "Olive",
+        "width": "standard",
+        "size": 6,
+        "qty": 2
+      },
+      {
+        "color": "Olive",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 8
+      },
+      {
+        "color": "Olive",
+        "width": "standard",
+        "size": 7,
+        "qty": 0
+      },
+      {
+        "color": "Olive",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 9
+      },
+      {
+        "color": "Olive",
+        "width": "standard",
+        "size": 8,
+        "qty": 9
+      },
+      {
+        "color": "Olive",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 4
+      },
+      {
+        "color": "Olive",
+        "width": "standard",
+        "size": 9,
+        "qty": 3
+      },
+      {
+        "color": "Olive",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 4
+      },
+      {
+        "color": "Olive",
+        "width": "standard",
+        "size": 10,
+        "qty": 8
+      },
+      {
+        "color": "Olive",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 10
+      },
+      {
+        "color": "Olive",
+        "width": "standard",
+        "size": 11,
+        "qty": 2
+      },
+      {
+        "color": "Olive",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 7
+      },
+      {
+        "color": "Olive",
+        "width": "standard",
+        "size": 12,
+        "qty": 2
+      },
+      {
+        "color": "Olive",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 0
+      },
+      {
+        "color": "Olive",
+        "width": "standard",
+        "size": 13,
+        "qty": 7
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 6,
+        "qty": 0
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 7
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 7,
+        "qty": 10
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 0
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 8,
+        "qty": 0
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 12
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 9,
+        "qty": 11
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 6
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 10,
+        "qty": 11
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 5
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 11,
+        "qty": 6
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 0
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 12,
+        "qty": 1
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 1
+      },
+      {
+        "color": "Grey",
+        "width": "standard",
+        "size": 13,
+        "qty": 8
+      }
+    ]
+  },
+  {
+    "id": "P-010",
+    "name": "Everyday Knit Sneaker",
+    "category": "casual",
+    "price": 79,
+    "description": "Soft knit everyday sneaker with a cushioned footbed. Machine washable and great for walking.",
+    "tags": [
+      "knit",
+      "comfortable",
+      "walking",
+      "machine washable"
+    ],
+    "colors": [
+      "Black",
+      "Oat",
+      "Sky"
+    ],
+    "widths": [
+      "standard",
+      "wide"
+    ],
+    "sizes": [
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11,
+      11.5,
+      12,
+      12.5,
+      13
+    ],
+    "inventory": [
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 6,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 6
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 7,
+        "qty": 11
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 12
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 8,
+        "qty": 12
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 3
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 9,
+        "qty": 6
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 12
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 10,
+        "qty": 4
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 11
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 11,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 1
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 12,
+        "qty": 8
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 9
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 13,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 6,
+        "qty": 2
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 6.5,
+        "qty": 11
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 7,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 7.5,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 8,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 8.5,
+        "qty": 9
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 9,
+        "qty": 11
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 9.5,
+        "qty": 4
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 10,
+        "qty": 9
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 10.5,
+        "qty": 5
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 11,
+        "qty": 10
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 11.5,
+        "qty": 10
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 12,
+        "qty": 1
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 12.5,
+        "qty": 9
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 13,
+        "qty": 9
+      },
+      {
+        "color": "Oat",
+        "width": "standard",
+        "size": 6,
+        "qty": 2
+      },
+      {
+        "color": "Oat",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 7
+      },
+      {
+        "color": "Oat",
+        "width": "standard",
+        "size": 7,
+        "qty": 6
+      },
+      {
+        "color": "Oat",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 3
+      },
+      {
+        "color": "Oat",
+        "width": "standard",
+        "size": 8,
+        "qty": 5
+      },
+      {
+        "color": "Oat",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 2
+      },
+      {
+        "color": "Oat",
+        "width": "standard",
+        "size": 9,
+        "qty": 2
+      },
+      {
+        "color": "Oat",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 9
+      },
+      {
+        "color": "Oat",
+        "width": "standard",
+        "size": 10,
+        "qty": 7
+      },
+      {
+        "color": "Oat",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 11
+      },
+      {
+        "color": "Oat",
+        "width": "standard",
+        "size": 11,
+        "qty": 9
+      },
+      {
+        "color": "Oat",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 4
+      },
+      {
+        "color": "Oat",
+        "width": "standard",
+        "size": 12,
+        "qty": 6
+      },
+      {
+        "color": "Oat",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 4
+      },
+      {
+        "color": "Oat",
+        "width": "standard",
+        "size": 13,
+        "qty": 5
+      },
+      {
+        "color": "Oat",
+        "width": "wide",
+        "size": 6,
+        "qty": 3
+      },
+      {
+        "color": "Oat",
+        "width": "wide",
+        "size": 6.5,
+        "qty": 2
+      },
+      {
+        "color": "Oat",
+        "width": "wide",
+        "size": 7,
+        "qty": 6
+      },
+      {
+        "color": "Oat",
+        "width": "wide",
+        "size": 7.5,
+        "qty": 1
+      },
+      {
+        "color": "Oat",
+        "width": "wide",
+        "size": 8,
+        "qty": 7
+      },
+      {
+        "color": "Oat",
+        "width": "wide",
+        "size": 8.5,
+        "qty": 6
+      },
+      {
+        "color": "Oat",
+        "width": "wide",
+        "size": 9,
+        "qty": 1
+      },
+      {
+        "color": "Oat",
+        "width": "wide",
+        "size": 9.5,
+        "qty": 6
+      },
+      {
+        "color": "Oat",
+        "width": "wide",
+        "size": 10,
+        "qty": 0
+      },
+      {
+        "color": "Oat",
+        "width": "wide",
+        "size": 10.5,
+        "qty": 1
+      },
+      {
+        "color": "Oat",
+        "width": "wide",
+        "size": 11,
+        "qty": 6
+      },
+      {
+        "color": "Oat",
+        "width": "wide",
+        "size": 11.5,
+        "qty": 1
+      },
+      {
+        "color": "Oat",
+        "width": "wide",
+        "size": 12,
+        "qty": 2
+      },
+      {
+        "color": "Oat",
+        "width": "wide",
+        "size": 12.5,
+        "qty": 9
+      },
+      {
+        "color": "Oat",
+        "width": "wide",
+        "size": 13,
+        "qty": 1
+      },
+      {
+        "color": "Sky",
+        "width": "standard",
+        "size": 6,
+        "qty": 2
+      },
+      {
+        "color": "Sky",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 6
+      },
+      {
+        "color": "Sky",
+        "width": "standard",
+        "size": 7,
+        "qty": 0
+      },
+      {
+        "color": "Sky",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 1
+      },
+      {
+        "color": "Sky",
+        "width": "standard",
+        "size": 8,
+        "qty": 7
+      },
+      {
+        "color": "Sky",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 12
+      },
+      {
+        "color": "Sky",
+        "width": "standard",
+        "size": 9,
+        "qty": 3
+      },
+      {
+        "color": "Sky",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 12
+      },
+      {
+        "color": "Sky",
+        "width": "standard",
+        "size": 10,
+        "qty": 4
+      },
+      {
+        "color": "Sky",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 5
+      },
+      {
+        "color": "Sky",
+        "width": "standard",
+        "size": 11,
+        "qty": 9
+      },
+      {
+        "color": "Sky",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 5
+      },
+      {
+        "color": "Sky",
+        "width": "standard",
+        "size": 12,
+        "qty": 12
+      },
+      {
+        "color": "Sky",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 9
+      },
+      {
+        "color": "Sky",
+        "width": "standard",
+        "size": 13,
+        "qty": 4
+      },
+      {
+        "color": "Sky",
+        "width": "wide",
+        "size": 6,
+        "qty": 12
+      },
+      {
+        "color": "Sky",
+        "width": "wide",
+        "size": 6.5,
+        "qty": 9
+      },
+      {
+        "color": "Sky",
+        "width": "wide",
+        "size": 7,
+        "qty": 6
+      },
+      {
+        "color": "Sky",
+        "width": "wide",
+        "size": 7.5,
+        "qty": 11
+      },
+      {
+        "color": "Sky",
+        "width": "wide",
+        "size": 8,
+        "qty": 0
+      },
+      {
+        "color": "Sky",
+        "width": "wide",
+        "size": 8.5,
+        "qty": 12
+      },
+      {
+        "color": "Sky",
+        "width": "wide",
+        "size": 9,
+        "qty": 4
+      },
+      {
+        "color": "Sky",
+        "width": "wide",
+        "size": 9.5,
+        "qty": 3
+      },
+      {
+        "color": "Sky",
+        "width": "wide",
+        "size": 10,
+        "qty": 12
+      },
+      {
+        "color": "Sky",
+        "width": "wide",
+        "size": 10.5,
+        "qty": 7
+      },
+      {
+        "color": "Sky",
+        "width": "wide",
+        "size": 11,
+        "qty": 4
+      },
+      {
+        "color": "Sky",
+        "width": "wide",
+        "size": 11.5,
+        "qty": 0
+      },
+      {
+        "color": "Sky",
+        "width": "wide",
+        "size": 12,
+        "qty": 0
+      },
+      {
+        "color": "Sky",
+        "width": "wide",
+        "size": 12.5,
+        "qty": 0
+      },
+      {
+        "color": "Sky",
+        "width": "wide",
+        "size": 13,
+        "qty": 0
+      }
+    ]
+  },
+  {
+    "id": "P-011",
+    "name": "Court Classic",
+    "category": "casual",
+    "price": 95,
+    "description": "Timeless leather court sneaker with a padded collar and cupsole.",
+    "tags": [
+      "leather",
+      "classic",
+      "tennis style"
+    ],
+    "colors": [
+      "White",
+      "White/Green"
+    ],
+    "widths": [
+      "standard"
+    ],
+    "sizes": [
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11,
+      11.5,
+      12,
+      12.5,
+      13
+    ],
+    "inventory": [
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 6,
+        "qty": 11
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 0
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 7,
+        "qty": 0
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 10
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 8,
+        "qty": 10
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 5
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 9,
+        "qty": 9
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 11
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 10,
+        "qty": 12
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 9
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 11,
+        "qty": 6
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 0
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 12,
+        "qty": 4
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 1
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 13,
+        "qty": 7
+      },
+      {
+        "color": "White/Green",
+        "width": "standard",
+        "size": 6,
+        "qty": 0
+      },
+      {
+        "color": "White/Green",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 8
+      },
+      {
+        "color": "White/Green",
+        "width": "standard",
+        "size": 7,
+        "qty": 4
+      },
+      {
+        "color": "White/Green",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 10
+      },
+      {
+        "color": "White/Green",
+        "width": "standard",
+        "size": 8,
+        "qty": 10
+      },
+      {
+        "color": "White/Green",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 8
+      },
+      {
+        "color": "White/Green",
+        "width": "standard",
+        "size": 9,
+        "qty": 9
+      },
+      {
+        "color": "White/Green",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 12
+      },
+      {
+        "color": "White/Green",
+        "width": "standard",
+        "size": 10,
+        "qty": 3
+      },
+      {
+        "color": "White/Green",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 5
+      },
+      {
+        "color": "White/Green",
+        "width": "standard",
+        "size": 11,
+        "qty": 11
+      },
+      {
+        "color": "White/Green",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 5
+      },
+      {
+        "color": "White/Green",
+        "width": "standard",
+        "size": 12,
+        "qty": 5
+      },
+      {
+        "color": "White/Green",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 1
+      },
+      {
+        "color": "White/Green",
+        "width": "standard",
+        "size": 13,
+        "qty": 12
+      }
+    ]
+  },
+  {
+    "id": "P-012",
+    "name": "Canvas Low",
+    "category": "casual",
+    "price": 55,
+    "description": "Lightweight canvas low-top with a vulcanized rubber sole.",
+    "tags": [
+      "canvas",
+      "lightweight",
+      "summer"
+    ],
+    "colors": [
+      "Navy",
+      "White",
+      "Red"
+    ],
+    "widths": [
+      "standard"
+    ],
+    "sizes": [
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11,
+      11.5,
+      12,
+      12.5,
+      13
+    ],
+    "inventory": [
+      {
+        "color": "Navy",
+        "width": "standard",
+        "size": 6,
+        "qty": 10
+      },
+      {
+        "color": "Navy",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 1
+      },
+      {
+        "color": "Navy",
+        "width": "standard",
+        "size": 7,
+        "qty": 11
+      },
+      {
+        "color": "Navy",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 5
+      },
+      {
+        "color": "Navy",
+        "width": "standard",
+        "size": 8,
+        "qty": 10
+      },
+      {
+        "color": "Navy",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 3
+      },
+      {
+        "color": "Navy",
+        "width": "standard",
+        "size": 9,
+        "qty": 0
+      },
+      {
+        "color": "Navy",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 7
+      },
+      {
+        "color": "Navy",
+        "width": "standard",
+        "size": 10,
+        "qty": 4
+      },
+      {
+        "color": "Navy",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 6
+      },
+      {
+        "color": "Navy",
+        "width": "standard",
+        "size": 11,
+        "qty": 9
+      },
+      {
+        "color": "Navy",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 8
+      },
+      {
+        "color": "Navy",
+        "width": "standard",
+        "size": 12,
+        "qty": 12
+      },
+      {
+        "color": "Navy",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 9
+      },
+      {
+        "color": "Navy",
+        "width": "standard",
+        "size": 13,
+        "qty": 1
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 6,
+        "qty": 3
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 6
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 7,
+        "qty": 4
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 12
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 8,
+        "qty": 1
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 8
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 9,
+        "qty": 2
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 2
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 10,
+        "qty": 2
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 5
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 11,
+        "qty": 0
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 0
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 12,
+        "qty": 6
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 5
+      },
+      {
+        "color": "White",
+        "width": "standard",
+        "size": 13,
+        "qty": 7
+      },
+      {
+        "color": "Red",
+        "width": "standard",
+        "size": 6,
+        "qty": 3
+      },
+      {
+        "color": "Red",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 7
+      },
+      {
+        "color": "Red",
+        "width": "standard",
+        "size": 7,
+        "qty": 9
+      },
+      {
+        "color": "Red",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 1
+      },
+      {
+        "color": "Red",
+        "width": "standard",
+        "size": 8,
+        "qty": 3
+      },
+      {
+        "color": "Red",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 2
+      },
+      {
+        "color": "Red",
+        "width": "standard",
+        "size": 9,
+        "qty": 8
+      },
+      {
+        "color": "Red",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 3
+      },
+      {
+        "color": "Red",
+        "width": "standard",
+        "size": 10,
+        "qty": 1
+      },
+      {
+        "color": "Red",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 5
+      },
+      {
+        "color": "Red",
+        "width": "standard",
+        "size": 11,
+        "qty": 7
+      },
+      {
+        "color": "Red",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 0
+      },
+      {
+        "color": "Red",
+        "width": "standard",
+        "size": 12,
+        "qty": 0
+      },
+      {
+        "color": "Red",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 7
+      },
+      {
+        "color": "Red",
+        "width": "standard",
+        "size": 13,
+        "qty": 8
+      }
+    ]
+  },
+  {
+    "id": "P-013",
+    "name": "Comfort Slip-On",
+    "category": "casual",
+    "price": 89,
+    "description": "Slip-on loafer with memory foam and a flexible sole, smart enough for the office.",
+    "tags": [
+      "slip-on",
+      "loafer",
+      "comfortable",
+      "office"
+    ],
+    "colors": [
+      "Brown",
+      "Black"
+    ],
+    "widths": [
+      "standard",
+      "wide"
+    ],
+    "sizes": [
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11,
+      11.5,
+      12,
+      12.5,
+      13
+    ],
+    "inventory": [
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 6,
+        "qty": 6
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 1
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 7,
+        "qty": 2
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 10
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 8,
+        "qty": 2
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 2
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 9,
+        "qty": 1
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 11
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 10,
+        "qty": 7
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 11
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 11,
+        "qty": 6
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 4
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 12,
+        "qty": 11
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 0
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 13,
+        "qty": 7
+      },
+      {
+        "color": "Brown",
+        "width": "wide",
+        "size": 6,
+        "qty": 7
+      },
+      {
+        "color": "Brown",
+        "width": "wide",
+        "size": 6.5,
+        "qty": 6
+      },
+      {
+        "color": "Brown",
+        "width": "wide",
+        "size": 7,
+        "qty": 3
+      },
+      {
+        "color": "Brown",
+        "width": "wide",
+        "size": 7.5,
+        "qty": 10
+      },
+      {
+        "color": "Brown",
+        "width": "wide",
+        "size": 8,
+        "qty": 1
+      },
+      {
+        "color": "Brown",
+        "width": "wide",
+        "size": 8.5,
+        "qty": 9
+      },
+      {
+        "color": "Brown",
+        "width": "wide",
+        "size": 9,
+        "qty": 0
+      },
+      {
+        "color": "Brown",
+        "width": "wide",
+        "size": 9.5,
+        "qty": 8
+      },
+      {
+        "color": "Brown",
+        "width": "wide",
+        "size": 10,
+        "qty": 4
+      },
+      {
+        "color": "Brown",
+        "width": "wide",
+        "size": 10.5,
+        "qty": 4
+      },
+      {
+        "color": "Brown",
+        "width": "wide",
+        "size": 11,
+        "qty": 8
+      },
+      {
+        "color": "Brown",
+        "width": "wide",
+        "size": 11.5,
+        "qty": 0
+      },
+      {
+        "color": "Brown",
+        "width": "wide",
+        "size": 12,
+        "qty": 10
+      },
+      {
+        "color": "Brown",
+        "width": "wide",
+        "size": 12.5,
+        "qty": 8
+      },
+      {
+        "color": "Brown",
+        "width": "wide",
+        "size": 13,
+        "qty": 4
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 6,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 10
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 7,
+        "qty": 4
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 3
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 8,
+        "qty": 12
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 4
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 9,
+        "qty": 8
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 9
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 10,
+        "qty": 1
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 3
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 11,
+        "qty": 8
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 4
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 12,
+        "qty": 1
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 13,
+        "qty": 8
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 6,
+        "qty": 8
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 6.5,
+        "qty": 11
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 7,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 7.5,
+        "qty": 8
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 8,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 8.5,
+        "qty": 1
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 9,
+        "qty": 1
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 9.5,
+        "qty": 2
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 10,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 10.5,
+        "qty": 3
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 11,
+        "qty": 4
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 11.5,
+        "qty": 6
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 12,
+        "qty": 7
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 12.5,
+        "qty": 2
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 13,
+        "qty": 7
+      }
+    ]
+  },
+  {
+    "id": "P-014",
+    "name": "EcoStep Sneaker",
+    "category": "casual",
+    "price": 99,
+    "description": "Vegan sneaker made from 70% recycled materials with a natural rubber sole.",
+    "tags": [
+      "recycled",
+      "sustainable",
+      "vegan"
+    ],
+    "colors": [
+      "Sand",
+      "Charcoal"
+    ],
+    "widths": [
+      "standard"
+    ],
+    "sizes": [
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11,
+      11.5,
+      12,
+      12.5,
+      13
+    ],
+    "inventory": [
+      {
+        "color": "Sand",
+        "width": "standard",
+        "size": 6,
+        "qty": 0
+      },
+      {
+        "color": "Sand",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 10
+      },
+      {
+        "color": "Sand",
+        "width": "standard",
+        "size": 7,
+        "qty": 2
+      },
+      {
+        "color": "Sand",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 9
+      },
+      {
+        "color": "Sand",
+        "width": "standard",
+        "size": 8,
+        "qty": 3
+      },
+      {
+        "color": "Sand",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 12
+      },
+      {
+        "color": "Sand",
+        "width": "standard",
+        "size": 9,
+        "qty": 4
+      },
+      {
+        "color": "Sand",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 6
+      },
+      {
+        "color": "Sand",
+        "width": "standard",
+        "size": 10,
+        "qty": 9
+      },
+      {
+        "color": "Sand",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 5
+      },
+      {
+        "color": "Sand",
+        "width": "standard",
+        "size": 11,
+        "qty": 5
+      },
+      {
+        "color": "Sand",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 1
+      },
+      {
+        "color": "Sand",
+        "width": "standard",
+        "size": 12,
+        "qty": 12
+      },
+      {
+        "color": "Sand",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 0
+      },
+      {
+        "color": "Sand",
+        "width": "standard",
+        "size": 13,
+        "qty": 10
+      },
+      {
+        "color": "Charcoal",
+        "width": "standard",
+        "size": 6,
+        "qty": 0
+      },
+      {
+        "color": "Charcoal",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 7
+      },
+      {
+        "color": "Charcoal",
+        "width": "standard",
+        "size": 7,
+        "qty": 0
+      },
+      {
+        "color": "Charcoal",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 9
+      },
+      {
+        "color": "Charcoal",
+        "width": "standard",
+        "size": 8,
+        "qty": 6
+      },
+      {
+        "color": "Charcoal",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 10
+      },
+      {
+        "color": "Charcoal",
+        "width": "standard",
+        "size": 9,
+        "qty": 7
+      },
+      {
+        "color": "Charcoal",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 0
+      },
+      {
+        "color": "Charcoal",
+        "width": "standard",
+        "size": 10,
+        "qty": 4
+      },
+      {
+        "color": "Charcoal",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 6
+      },
+      {
+        "color": "Charcoal",
+        "width": "standard",
+        "size": 11,
+        "qty": 7
+      },
+      {
+        "color": "Charcoal",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 11
+      },
+      {
+        "color": "Charcoal",
+        "width": "standard",
+        "size": 12,
+        "qty": 1
+      },
+      {
+        "color": "Charcoal",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 4
+      },
+      {
+        "color": "Charcoal",
+        "width": "standard",
+        "size": 13,
+        "qty": 11
+      }
+    ]
+  },
+  {
+    "id": "P-015",
+    "name": "Highland Chelsea Boot",
+    "category": "boots",
+    "price": 175,
+    "description": "Full-grain leather Chelsea boot with elastic gussets and a stacked heel.",
+    "tags": [
+      "leather",
+      "chelsea",
+      "dress boot"
+    ],
+    "colors": [
+      "Brown",
+      "Black"
+    ],
+    "widths": [
+      "standard"
+    ],
+    "sizes": [
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11,
+      11.5,
+      12,
+      12.5,
+      13
+    ],
+    "inventory": [
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 6,
+        "qty": 9
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 9
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 7,
+        "qty": 5
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 0
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 8,
+        "qty": 6
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 11
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 9,
+        "qty": 8
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 7
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 10,
+        "qty": 5
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 9
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 11,
+        "qty": 11
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 3
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 12,
+        "qty": 5
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 3
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 13,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 6,
+        "qty": 4
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 6
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 7,
+        "qty": 5
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 5
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 8,
+        "qty": 12
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 11
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 9,
+        "qty": 9
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 12
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 10,
+        "qty": 10
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 8
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 11,
+        "qty": 12
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 8
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 12,
+        "qty": 2
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 10
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 13,
+        "qty": 11
+      }
+    ]
+  },
+  {
+    "id": "P-016",
+    "name": "Summit Winter Boot",
+    "category": "boots",
+    "price": 189,
+    "description": "Insulated, waterproof winter boot rated to -25°C with a slip-resistant ice grip outsole.",
+    "tags": [
+      "waterproof",
+      "insulated",
+      "snow",
+      "winter"
+    ],
+    "colors": [
+      "Black",
+      "Tan"
+    ],
+    "widths": [
+      "standard",
+      "wide"
+    ],
+    "sizes": [
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11,
+      11.5,
+      12,
+      12.5,
+      13
+    ],
+    "inventory": [
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 6,
+        "qty": 11
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 6
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 7,
+        "qty": 12
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 8,
+        "qty": 5
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 9
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 9,
+        "qty": 10
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 8
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 10,
+        "qty": 8
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 10
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 11,
+        "qty": 11
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 3
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 12,
+        "qty": 6
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 8
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 13,
+        "qty": 2
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 6,
+        "qty": 12
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 6.5,
+        "qty": 4
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 7,
+        "qty": 1
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 7.5,
+        "qty": 12
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 8,
+        "qty": 5
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 8.5,
+        "qty": 4
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 9,
+        "qty": 2
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 9.5,
+        "qty": 7
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 10,
+        "qty": 10
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 10.5,
+        "qty": 2
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 11,
+        "qty": 3
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 11.5,
+        "qty": 6
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 12,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 12.5,
+        "qty": 1
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 13,
+        "qty": 4
+      },
+      {
+        "color": "Tan",
+        "width": "standard",
+        "size": 6,
+        "qty": 4
+      },
+      {
+        "color": "Tan",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 9
+      },
+      {
+        "color": "Tan",
+        "width": "standard",
+        "size": 7,
+        "qty": 9
+      },
+      {
+        "color": "Tan",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 4
+      },
+      {
+        "color": "Tan",
+        "width": "standard",
+        "size": 8,
+        "qty": 6
+      },
+      {
+        "color": "Tan",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 10
+      },
+      {
+        "color": "Tan",
+        "width": "standard",
+        "size": 9,
+        "qty": 10
+      },
+      {
+        "color": "Tan",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 8
+      },
+      {
+        "color": "Tan",
+        "width": "standard",
+        "size": 10,
+        "qty": 2
+      },
+      {
+        "color": "Tan",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 12
+      },
+      {
+        "color": "Tan",
+        "width": "standard",
+        "size": 11,
+        "qty": 6
+      },
+      {
+        "color": "Tan",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 12
+      },
+      {
+        "color": "Tan",
+        "width": "standard",
+        "size": 12,
+        "qty": 9
+      },
+      {
+        "color": "Tan",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 7
+      },
+      {
+        "color": "Tan",
+        "width": "standard",
+        "size": 13,
+        "qty": 8
+      },
+      {
+        "color": "Tan",
+        "width": "wide",
+        "size": 6,
+        "qty": 10
+      },
+      {
+        "color": "Tan",
+        "width": "wide",
+        "size": 6.5,
+        "qty": 11
+      },
+      {
+        "color": "Tan",
+        "width": "wide",
+        "size": 7,
+        "qty": 6
+      },
+      {
+        "color": "Tan",
+        "width": "wide",
+        "size": 7.5,
+        "qty": 5
+      },
+      {
+        "color": "Tan",
+        "width": "wide",
+        "size": 8,
+        "qty": 10
+      },
+      {
+        "color": "Tan",
+        "width": "wide",
+        "size": 8.5,
+        "qty": 10
+      },
+      {
+        "color": "Tan",
+        "width": "wide",
+        "size": 9,
+        "qty": 1
+      },
+      {
+        "color": "Tan",
+        "width": "wide",
+        "size": 9.5,
+        "qty": 4
+      },
+      {
+        "color": "Tan",
+        "width": "wide",
+        "size": 10,
+        "qty": 5
+      },
+      {
+        "color": "Tan",
+        "width": "wide",
+        "size": 10.5,
+        "qty": 5
+      },
+      {
+        "color": "Tan",
+        "width": "wide",
+        "size": 11,
+        "qty": 5
+      },
+      {
+        "color": "Tan",
+        "width": "wide",
+        "size": 11.5,
+        "qty": 0
+      },
+      {
+        "color": "Tan",
+        "width": "wide",
+        "size": 12,
+        "qty": 1
+      },
+      {
+        "color": "Tan",
+        "width": "wide",
+        "size": 12.5,
+        "qty": 0
+      },
+      {
+        "color": "Tan",
+        "width": "wide",
+        "size": 13,
+        "qty": 7
+      }
+    ]
+  },
+  {
+    "id": "P-017",
+    "name": "Workline Steel Toe",
+    "category": "boots",
+    "price": 165,
+    "description": "Steel-toe work boot with slip- and oil-resistant outsole and a waterproof leather upper.",
+    "tags": [
+      "safety",
+      "steel toe",
+      "work",
+      "slip resistant"
+    ],
+    "colors": [
+      "Wheat",
+      "Black"
+    ],
+    "widths": [
+      "standard",
+      "wide"
+    ],
+    "sizes": [
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11,
+      11.5,
+      12,
+      12.5,
+      13
+    ],
+    "inventory": [
+      {
+        "color": "Wheat",
+        "width": "standard",
+        "size": 6,
+        "qty": 0
+      },
+      {
+        "color": "Wheat",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 9
+      },
+      {
+        "color": "Wheat",
+        "width": "standard",
+        "size": 7,
+        "qty": 0
+      },
+      {
+        "color": "Wheat",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 4
+      },
+      {
+        "color": "Wheat",
+        "width": "standard",
+        "size": 8,
+        "qty": 11
+      },
+      {
+        "color": "Wheat",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 10
+      },
+      {
+        "color": "Wheat",
+        "width": "standard",
+        "size": 9,
+        "qty": 6
+      },
+      {
+        "color": "Wheat",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 2
+      },
+      {
+        "color": "Wheat",
+        "width": "standard",
+        "size": 10,
+        "qty": 0
+      },
+      {
+        "color": "Wheat",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 1
+      },
+      {
+        "color": "Wheat",
+        "width": "standard",
+        "size": 11,
+        "qty": 6
+      },
+      {
+        "color": "Wheat",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 0
+      },
+      {
+        "color": "Wheat",
+        "width": "standard",
+        "size": 12,
+        "qty": 12
+      },
+      {
+        "color": "Wheat",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 7
+      },
+      {
+        "color": "Wheat",
+        "width": "standard",
+        "size": 13,
+        "qty": 0
+      },
+      {
+        "color": "Wheat",
+        "width": "wide",
+        "size": 6,
+        "qty": 7
+      },
+      {
+        "color": "Wheat",
+        "width": "wide",
+        "size": 6.5,
+        "qty": 0
+      },
+      {
+        "color": "Wheat",
+        "width": "wide",
+        "size": 7,
+        "qty": 7
+      },
+      {
+        "color": "Wheat",
+        "width": "wide",
+        "size": 7.5,
+        "qty": 3
+      },
+      {
+        "color": "Wheat",
+        "width": "wide",
+        "size": 8,
+        "qty": 3
+      },
+      {
+        "color": "Wheat",
+        "width": "wide",
+        "size": 8.5,
+        "qty": 0
+      },
+      {
+        "color": "Wheat",
+        "width": "wide",
+        "size": 9,
+        "qty": 3
+      },
+      {
+        "color": "Wheat",
+        "width": "wide",
+        "size": 9.5,
+        "qty": 8
+      },
+      {
+        "color": "Wheat",
+        "width": "wide",
+        "size": 10,
+        "qty": 4
+      },
+      {
+        "color": "Wheat",
+        "width": "wide",
+        "size": 10.5,
+        "qty": 3
+      },
+      {
+        "color": "Wheat",
+        "width": "wide",
+        "size": 11,
+        "qty": 10
+      },
+      {
+        "color": "Wheat",
+        "width": "wide",
+        "size": 11.5,
+        "qty": 2
+      },
+      {
+        "color": "Wheat",
+        "width": "wide",
+        "size": 12,
+        "qty": 10
+      },
+      {
+        "color": "Wheat",
+        "width": "wide",
+        "size": 12.5,
+        "qty": 4
+      },
+      {
+        "color": "Wheat",
+        "width": "wide",
+        "size": 13,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 6,
+        "qty": 12
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 2
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 7,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 7
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 8,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 9,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 5
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 10,
+        "qty": 3
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 1
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 11,
+        "qty": 9
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 1
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 12,
+        "qty": 7
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 10
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 13,
+        "qty": 12
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 6,
+        "qty": 11
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 6.5,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 7,
+        "qty": 9
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 7.5,
+        "qty": 6
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 8,
+        "qty": 2
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 8.5,
+        "qty": 5
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 9,
+        "qty": 9
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 9.5,
+        "qty": 6
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 10,
+        "qty": 9
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 10.5,
+        "qty": 6
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 11,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 11.5,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 12,
+        "qty": 12
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 12.5,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "wide",
+        "size": 13,
+        "qty": 8
+      }
+    ]
+  },
+  {
+    "id": "P-018",
+    "name": "Desert Chukka",
+    "category": "boots",
+    "price": 130,
+    "description": "Classic suede chukka boot with a crepe sole.",
+    "tags": [
+      "suede",
+      "chukka",
+      "casual boot"
+    ],
+    "colors": [
+      "Sand Suede",
+      "Brown Suede"
+    ],
+    "widths": [
+      "standard"
+    ],
+    "sizes": [
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11,
+      11.5,
+      12,
+      12.5,
+      13
+    ],
+    "inventory": [
+      {
+        "color": "Sand Suede",
+        "width": "standard",
+        "size": 6,
+        "qty": 8
+      },
+      {
+        "color": "Sand Suede",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 10
+      },
+      {
+        "color": "Sand Suede",
+        "width": "standard",
+        "size": 7,
+        "qty": 10
+      },
+      {
+        "color": "Sand Suede",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 4
+      },
+      {
+        "color": "Sand Suede",
+        "width": "standard",
+        "size": 8,
+        "qty": 11
+      },
+      {
+        "color": "Sand Suede",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 5
+      },
+      {
+        "color": "Sand Suede",
+        "width": "standard",
+        "size": 9,
+        "qty": 1
+      },
+      {
+        "color": "Sand Suede",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 0
+      },
+      {
+        "color": "Sand Suede",
+        "width": "standard",
+        "size": 10,
+        "qty": 2
+      },
+      {
+        "color": "Sand Suede",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 8
+      },
+      {
+        "color": "Sand Suede",
+        "width": "standard",
+        "size": 11,
+        "qty": 2
+      },
+      {
+        "color": "Sand Suede",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 0
+      },
+      {
+        "color": "Sand Suede",
+        "width": "standard",
+        "size": 12,
+        "qty": 10
+      },
+      {
+        "color": "Sand Suede",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 0
+      },
+      {
+        "color": "Sand Suede",
+        "width": "standard",
+        "size": 13,
+        "qty": 0
+      },
+      {
+        "color": "Brown Suede",
+        "width": "standard",
+        "size": 6,
+        "qty": 0
+      },
+      {
+        "color": "Brown Suede",
+        "width": "standard",
+        "size": 6.5,
+        "qty": 0
+      },
+      {
+        "color": "Brown Suede",
+        "width": "standard",
+        "size": 7,
+        "qty": 7
+      },
+      {
+        "color": "Brown Suede",
+        "width": "standard",
+        "size": 7.5,
+        "qty": 5
+      },
+      {
+        "color": "Brown Suede",
+        "width": "standard",
+        "size": 8,
+        "qty": 1
+      },
+      {
+        "color": "Brown Suede",
+        "width": "standard",
+        "size": 8.5,
+        "qty": 3
+      },
+      {
+        "color": "Brown Suede",
+        "width": "standard",
+        "size": 9,
+        "qty": 8
+      },
+      {
+        "color": "Brown Suede",
+        "width": "standard",
+        "size": 9.5,
+        "qty": 2
+      },
+      {
+        "color": "Brown Suede",
+        "width": "standard",
+        "size": 10,
+        "qty": 11
+      },
+      {
+        "color": "Brown Suede",
+        "width": "standard",
+        "size": 10.5,
+        "qty": 0
+      },
+      {
+        "color": "Brown Suede",
+        "width": "standard",
+        "size": 11,
+        "qty": 3
+      },
+      {
+        "color": "Brown Suede",
+        "width": "standard",
+        "size": 11.5,
+        "qty": 6
+      },
+      {
+        "color": "Brown Suede",
+        "width": "standard",
+        "size": 12,
+        "qty": 6
+      },
+      {
+        "color": "Brown Suede",
+        "width": "standard",
+        "size": 12.5,
+        "qty": 0
+      },
+      {
+        "color": "Brown Suede",
+        "width": "standard",
+        "size": 13,
+        "qty": 5
+      }
+    ]
+  },
+  {
+    "id": "P-019",
+    "name": "Kids Dash Runner",
+    "category": "kids",
+    "price": 55,
+    "description": "Durable kids' running shoe with easy hook-and-loop straps and a reinforced toe.",
+    "tags": [
+      "kids",
+      "running",
+      "velcro"
+    ],
+    "colors": [
+      "Blue",
+      "Pink"
+    ],
+    "widths": [
+      "standard",
+      "wide"
+    ],
+    "sizes": [
+      1,
+      1.5,
+      2,
+      2.5,
+      3,
+      3.5,
+      4,
+      4.5,
+      5,
+      5.5,
+      6
+    ],
+    "inventory": [
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 1,
+        "qty": 0
+      },
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 1.5,
+        "qty": 2
+      },
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 2,
+        "qty": 0
+      },
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 2.5,
+        "qty": 1
+      },
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 3,
+        "qty": 0
+      },
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 3.5,
+        "qty": 8
+      },
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 4,
+        "qty": 6
+      },
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 4.5,
+        "qty": 9
+      },
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 5,
+        "qty": 10
+      },
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 5.5,
+        "qty": 9
+      },
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 6,
+        "qty": 12
+      },
+      {
+        "color": "Blue",
+        "width": "wide",
+        "size": 1,
+        "qty": 10
+      },
+      {
+        "color": "Blue",
+        "width": "wide",
+        "size": 1.5,
+        "qty": 2
+      },
+      {
+        "color": "Blue",
+        "width": "wide",
+        "size": 2,
+        "qty": 3
+      },
+      {
+        "color": "Blue",
+        "width": "wide",
+        "size": 2.5,
+        "qty": 11
+      },
+      {
+        "color": "Blue",
+        "width": "wide",
+        "size": 3,
+        "qty": 0
+      },
+      {
+        "color": "Blue",
+        "width": "wide",
+        "size": 3.5,
+        "qty": 12
+      },
+      {
+        "color": "Blue",
+        "width": "wide",
+        "size": 4,
+        "qty": 11
+      },
+      {
+        "color": "Blue",
+        "width": "wide",
+        "size": 4.5,
+        "qty": 9
+      },
+      {
+        "color": "Blue",
+        "width": "wide",
+        "size": 5,
+        "qty": 2
+      },
+      {
+        "color": "Blue",
+        "width": "wide",
+        "size": 5.5,
+        "qty": 2
+      },
+      {
+        "color": "Blue",
+        "width": "wide",
+        "size": 6,
+        "qty": 3
+      },
+      {
+        "color": "Pink",
+        "width": "standard",
+        "size": 1,
+        "qty": 2
+      },
+      {
+        "color": "Pink",
+        "width": "standard",
+        "size": 1.5,
+        "qty": 2
+      },
+      {
+        "color": "Pink",
+        "width": "standard",
+        "size": 2,
+        "qty": 8
+      },
+      {
+        "color": "Pink",
+        "width": "standard",
+        "size": 2.5,
+        "qty": 7
+      },
+      {
+        "color": "Pink",
+        "width": "standard",
+        "size": 3,
+        "qty": 10
+      },
+      {
+        "color": "Pink",
+        "width": "standard",
+        "size": 3.5,
+        "qty": 11
+      },
+      {
+        "color": "Pink",
+        "width": "standard",
+        "size": 4,
+        "qty": 9
+      },
+      {
+        "color": "Pink",
+        "width": "standard",
+        "size": 4.5,
+        "qty": 11
+      },
+      {
+        "color": "Pink",
+        "width": "standard",
+        "size": 5,
+        "qty": 10
+      },
+      {
+        "color": "Pink",
+        "width": "standard",
+        "size": 5.5,
+        "qty": 12
+      },
+      {
+        "color": "Pink",
+        "width": "standard",
+        "size": 6,
+        "qty": 3
+      },
+      {
+        "color": "Pink",
+        "width": "wide",
+        "size": 1,
+        "qty": 2
+      },
+      {
+        "color": "Pink",
+        "width": "wide",
+        "size": 1.5,
+        "qty": 0
+      },
+      {
+        "color": "Pink",
+        "width": "wide",
+        "size": 2,
+        "qty": 3
+      },
+      {
+        "color": "Pink",
+        "width": "wide",
+        "size": 2.5,
+        "qty": 3
+      },
+      {
+        "color": "Pink",
+        "width": "wide",
+        "size": 3,
+        "qty": 0
+      },
+      {
+        "color": "Pink",
+        "width": "wide",
+        "size": 3.5,
+        "qty": 4
+      },
+      {
+        "color": "Pink",
+        "width": "wide",
+        "size": 4,
+        "qty": 12
+      },
+      {
+        "color": "Pink",
+        "width": "wide",
+        "size": 4.5,
+        "qty": 5
+      },
+      {
+        "color": "Pink",
+        "width": "wide",
+        "size": 5,
+        "qty": 12
+      },
+      {
+        "color": "Pink",
+        "width": "wide",
+        "size": 5.5,
+        "qty": 4
+      },
+      {
+        "color": "Pink",
+        "width": "wide",
+        "size": 6,
+        "qty": 6
+      }
+    ]
+  },
+  {
+    "id": "P-020",
+    "name": "Kids Light-Up Sneaker",
+    "category": "kids",
+    "price": 49,
+    "description": "Kids' sneaker with LED lights in the sole that flash with every step.",
+    "tags": [
+      "kids",
+      "light-up",
+      "fun"
+    ],
+    "colors": [
+      "Black",
+      "Purple"
+    ],
+    "widths": [
+      "standard"
+    ],
+    "sizes": [
+      1,
+      1.5,
+      2,
+      2.5,
+      3,
+      3.5,
+      4,
+      4.5,
+      5,
+      5.5,
+      6
+    ],
+    "inventory": [
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 1,
+        "qty": 4
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 1.5,
+        "qty": 4
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 2,
+        "qty": 11
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 2.5,
+        "qty": 8
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 3,
+        "qty": 9
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 3.5,
+        "qty": 10
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 4,
+        "qty": 11
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 4.5,
+        "qty": 8
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 5,
+        "qty": 3
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 5.5,
+        "qty": 10
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 6,
+        "qty": 6
+      },
+      {
+        "color": "Purple",
+        "width": "standard",
+        "size": 1,
+        "qty": 12
+      },
+      {
+        "color": "Purple",
+        "width": "standard",
+        "size": 1.5,
+        "qty": 11
+      },
+      {
+        "color": "Purple",
+        "width": "standard",
+        "size": 2,
+        "qty": 7
+      },
+      {
+        "color": "Purple",
+        "width": "standard",
+        "size": 2.5,
+        "qty": 5
+      },
+      {
+        "color": "Purple",
+        "width": "standard",
+        "size": 3,
+        "qty": 7
+      },
+      {
+        "color": "Purple",
+        "width": "standard",
+        "size": 3.5,
+        "qty": 10
+      },
+      {
+        "color": "Purple",
+        "width": "standard",
+        "size": 4,
+        "qty": 10
+      },
+      {
+        "color": "Purple",
+        "width": "standard",
+        "size": 4.5,
+        "qty": 2
+      },
+      {
+        "color": "Purple",
+        "width": "standard",
+        "size": 5,
+        "qty": 2
+      },
+      {
+        "color": "Purple",
+        "width": "standard",
+        "size": 5.5,
+        "qty": 7
+      },
+      {
+        "color": "Purple",
+        "width": "standard",
+        "size": 6,
+        "qty": 0
+      }
+    ]
+  },
+  {
+    "id": "P-021",
+    "name": "Kids Puddle Boot",
+    "category": "kids",
+    "price": 45,
+    "description": "Waterproof kids' rain boot with easy pull-on handles.",
+    "tags": [
+      "kids",
+      "waterproof",
+      "rain boot"
+    ],
+    "colors": [
+      "Yellow",
+      "Green"
+    ],
+    "widths": [
+      "standard"
+    ],
+    "sizes": [
+      1,
+      1.5,
+      2,
+      2.5,
+      3,
+      3.5,
+      4,
+      4.5,
+      5,
+      5.5,
+      6
+    ],
+    "inventory": [
+      {
+        "color": "Yellow",
+        "width": "standard",
+        "size": 1,
+        "qty": 8
+      },
+      {
+        "color": "Yellow",
+        "width": "standard",
+        "size": 1.5,
+        "qty": 3
+      },
+      {
+        "color": "Yellow",
+        "width": "standard",
+        "size": 2,
+        "qty": 0
+      },
+      {
+        "color": "Yellow",
+        "width": "standard",
+        "size": 2.5,
+        "qty": 0
+      },
+      {
+        "color": "Yellow",
+        "width": "standard",
+        "size": 3,
+        "qty": 12
+      },
+      {
+        "color": "Yellow",
+        "width": "standard",
+        "size": 3.5,
+        "qty": 11
+      },
+      {
+        "color": "Yellow",
+        "width": "standard",
+        "size": 4,
+        "qty": 1
+      },
+      {
+        "color": "Yellow",
+        "width": "standard",
+        "size": 4.5,
+        "qty": 9
+      },
+      {
+        "color": "Yellow",
+        "width": "standard",
+        "size": 5,
+        "qty": 0
+      },
+      {
+        "color": "Yellow",
+        "width": "standard",
+        "size": 5.5,
+        "qty": 9
+      },
+      {
+        "color": "Yellow",
+        "width": "standard",
+        "size": 6,
+        "qty": 7
+      },
+      {
+        "color": "Green",
+        "width": "standard",
+        "size": 1,
+        "qty": 0
+      },
+      {
+        "color": "Green",
+        "width": "standard",
+        "size": 1.5,
+        "qty": 0
+      },
+      {
+        "color": "Green",
+        "width": "standard",
+        "size": 2,
+        "qty": 4
+      },
+      {
+        "color": "Green",
+        "width": "standard",
+        "size": 2.5,
+        "qty": 4
+      },
+      {
+        "color": "Green",
+        "width": "standard",
+        "size": 3,
+        "qty": 2
+      },
+      {
+        "color": "Green",
+        "width": "standard",
+        "size": 3.5,
+        "qty": 9
+      },
+      {
+        "color": "Green",
+        "width": "standard",
+        "size": 4,
+        "qty": 2
+      },
+      {
+        "color": "Green",
+        "width": "standard",
+        "size": 4.5,
+        "qty": 1
+      },
+      {
+        "color": "Green",
+        "width": "standard",
+        "size": 5,
+        "qty": 3
+      },
+      {
+        "color": "Green",
+        "width": "standard",
+        "size": 5.5,
+        "qty": 3
+      },
+      {
+        "color": "Green",
+        "width": "standard",
+        "size": 6,
+        "qty": 4
+      }
+    ]
+  },
+  {
+    "id": "P-022",
+    "name": "Coastline Slide",
+    "category": "sandals",
+    "price": 35,
+    "description": "Cushioned slide sandal for the beach and pool.",
+    "tags": [
+      "slide",
+      "beach",
+      "pool"
+    ],
+    "colors": [
+      "Black",
+      "Sand"
+    ],
+    "widths": [
+      "standard"
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "inventory": [
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 6,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 7,
+        "qty": 4
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 8,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 9,
+        "qty": 11
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 10,
+        "qty": 8
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 11,
+        "qty": 11
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 12,
+        "qty": 1
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 13,
+        "qty": 0
+      },
+      {
+        "color": "Sand",
+        "width": "standard",
+        "size": 6,
+        "qty": 4
+      },
+      {
+        "color": "Sand",
+        "width": "standard",
+        "size": 7,
+        "qty": 2
+      },
+      {
+        "color": "Sand",
+        "width": "standard",
+        "size": 8,
+        "qty": 9
+      },
+      {
+        "color": "Sand",
+        "width": "standard",
+        "size": 9,
+        "qty": 11
+      },
+      {
+        "color": "Sand",
+        "width": "standard",
+        "size": 10,
+        "qty": 11
+      },
+      {
+        "color": "Sand",
+        "width": "standard",
+        "size": 11,
+        "qty": 2
+      },
+      {
+        "color": "Sand",
+        "width": "standard",
+        "size": 12,
+        "qty": 1
+      },
+      {
+        "color": "Sand",
+        "width": "standard",
+        "size": 13,
+        "qty": 11
+      }
+    ]
+  },
+  {
+    "id": "P-023",
+    "name": "Trailhead Sport Sandal",
+    "category": "sandals",
+    "price": 65,
+    "description": "Adjustable sport sandal with a grippy outsole for river crossings and light hikes.",
+    "tags": [
+      "sport sandal",
+      "hiking",
+      "water",
+      "adjustable"
+    ],
+    "colors": [
+      "Black",
+      "Olive"
+    ],
+    "widths": [
+      "standard"
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "inventory": [
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 6,
+        "qty": 12
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 7,
+        "qty": 8
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 8,
+        "qty": 3
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 9,
+        "qty": 2
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 10,
+        "qty": 3
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 11,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 12,
+        "qty": 10
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 13,
+        "qty": 0
+      },
+      {
+        "color": "Olive",
+        "width": "standard",
+        "size": 6,
+        "qty": 7
+      },
+      {
+        "color": "Olive",
+        "width": "standard",
+        "size": 7,
+        "qty": 1
+      },
+      {
+        "color": "Olive",
+        "width": "standard",
+        "size": 8,
+        "qty": 0
+      },
+      {
+        "color": "Olive",
+        "width": "standard",
+        "size": 9,
+        "qty": 1
+      },
+      {
+        "color": "Olive",
+        "width": "standard",
+        "size": 10,
+        "qty": 11
+      },
+      {
+        "color": "Olive",
+        "width": "standard",
+        "size": 11,
+        "qty": 1
+      },
+      {
+        "color": "Olive",
+        "width": "standard",
+        "size": 12,
+        "qty": 8
+      },
+      {
+        "color": "Olive",
+        "width": "standard",
+        "size": 13,
+        "qty": 5
+      }
+    ]
+  },
+  {
+    "id": "P-024",
+    "name": "Recovery Flip",
+    "category": "sandals",
+    "price": 40,
+    "description": "Supportive recovery flip-flop with arch support for post-run comfort.",
+    "tags": [
+      "recovery",
+      "flip-flop",
+      "arch support"
+    ],
+    "colors": [
+      "Black",
+      "Blue"
+    ],
+    "widths": [
+      "standard"
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "inventory": [
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 6,
+        "qty": 7
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 7,
+        "qty": 4
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 8,
+        "qty": 1
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 9,
+        "qty": 0
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 10,
+        "qty": 10
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 11,
+        "qty": 4
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 12,
+        "qty": 9
+      },
+      {
+        "color": "Black",
+        "width": "standard",
+        "size": 13,
+        "qty": 8
+      },
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 6,
+        "qty": 10
+      },
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 7,
+        "qty": 5
+      },
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 8,
+        "qty": 8
+      },
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 9,
+        "qty": 4
+      },
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 10,
+        "qty": 2
+      },
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 11,
+        "qty": 8
+      },
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 12,
+        "qty": 3
+      },
+      {
+        "color": "Blue",
+        "width": "standard",
+        "size": 13,
+        "qty": 7
+      }
+    ]
+  },
+  {
+    "id": "P-025",
+    "name": "Harbor Leather Sandal",
+    "category": "sandals",
+    "price": 70,
+    "description": "Leather strap sandal with a contoured cork footbed.",
+    "tags": [
+      "leather",
+      "sandal",
+      "summer"
+    ],
+    "colors": [
+      "Tan",
+      "Brown"
+    ],
+    "widths": [
+      "standard"
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "inventory": [
+      {
+        "color": "Tan",
+        "width": "standard",
+        "size": 6,
+        "qty": 4
+      },
+      {
+        "color": "Tan",
+        "width": "standard",
+        "size": 7,
+        "qty": 8
+      },
+      {
+        "color": "Tan",
+        "width": "standard",
+        "size": 8,
+        "qty": 7
+      },
+      {
+        "color": "Tan",
+        "width": "standard",
+        "size": 9,
+        "qty": 4
+      },
+      {
+        "color": "Tan",
+        "width": "standard",
+        "size": 10,
+        "qty": 8
+      },
+      {
+        "color": "Tan",
+        "width": "standard",
+        "size": 11,
+        "qty": 0
+      },
+      {
+        "color": "Tan",
+        "width": "standard",
+        "size": 12,
+        "qty": 8
+      },
+      {
+        "color": "Tan",
+        "width": "standard",
+        "size": 13,
+        "qty": 4
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 6,
+        "qty": 11
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 7,
+        "qty": 12
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 8,
+        "qty": 6
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 9,
+        "qty": 11
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 10,
+        "qty": 4
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 11,
+        "qty": 7
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 12,
+        "qty": 0
+      },
+      {
+        "color": "Brown",
+        "width": "standard",
+        "size": 13,
+        "qty": 3
+      }
+    ]
+  }
+]
